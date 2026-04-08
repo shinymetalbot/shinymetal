@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-synth-dark text-synth-text font-sans selection:bg-synth-cyan/30;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono text-white tracking-tight;
+  }
+}
+
+@layer components {
+  /* CRT Scanline Effect */
+  .crt::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+    z-index: 9999;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
+  .glow-cyan {
+    @apply shadow-neon-cyan border-synth-cyan/50 text-synth-cyan;
+  }
+  
+  .glow-pink {
+    @apply shadow-neon-pink border-synth-pink/50 text-synth-pink;
+  }
+
+  .card-retro {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-synth-cyan/30 transition-all;
+  }
+}
+
+/* Background grid */
+.grid-overlay {
+  @apply fixed inset-0 bg-grid-pattern;
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
+  pointer-events: none;
+  z-index: -1;
+}
