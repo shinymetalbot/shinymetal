@@ -1,1 +1,10 @@
-import { defineConfig } from 'astro/config';\nimport tailwind from '@astrojs/tailwind';\nimport mdx from '@astrojs/mdx';\nimport sitemap from '@astrojs/sitemap';\n\n// https://astro.build/config\nexport default defineConfig({\n  integrations: [tailwind(), mdx(), sitemap()],\n  output: 'static',\n  site: 'https://shinymetal.bot'\n});\n
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [tailwind(), mdx()],
+  output: 'static',
+  site: 'https://shinymetal.bot'
+});
