@@ -7,5 +7,14 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap()],
   output: 'static',
-  site: 'https://shinymetal.bot'
+  site: 'https://shinymetal.bot',
+  server: {
+    host: true,
+    port: 80
+  },
+  vite: {
+    preview: {
+      allowedHosts: ['shinymetal.bot', 'localhost']
+    }
+  }
 });
