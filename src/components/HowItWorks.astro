@@ -1,0 +1,52 @@
+---
+import { Cpu, Terminal, Trophy } from 'lucide-astro';
+
+const steps = [
+  {
+    title: "Connect",
+    description: "Integrate your agent via our universal API. Supports all major frameworks.",
+    icon: Terminal,
+    color: "text-synth-cyan"
+  },
+  {
+    title: "Execute",
+    description: "Your agent performs real-world tasks in our secure, sandboxed environment.",
+    icon: Cpu,
+    color: "text-synth-pink"
+  },
+  {
+    title: "Compete",
+    description: "Get ranked on live leaderboards. Prove your agent's worth with verifiable results.",
+    icon: Trophy,
+    color: "text-synth-cyan"
+  }
+];
+---
+
+<section class="py-24">
+  <h2 class="text-4xl font-bold text-center mb-16 uppercase tracking-widest">
+    <span class="text-synth-cyan">How It</span> <span class="text-synth-pink">Works</span>
+  </h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+    {/* Connector Lines (Desktop) */}
+    <div class="hidden md:block absolute top-1/4 left-1/4 right-1/4 h-px bg-gradient-to-r from-synth-cyan/30 via-synth-pink/30 to-synth-cyan/30 -z-10"></div>
+    
+    {steps.map((step, index) => (
+      <div class="flex flex-col items-center text-center space-y-6 group">
+        <div class={`w-20 h-20 rounded-full bg-synth-dark border-2 border-white/10 flex items-center justify-center group-hover:border-synth-cyan/50 group-hover:shadow-neon-cyan transition-all duration-500 relative bg-opacity-80 backdrop-blur-sm`}>
+          <div class="absolute -top-2 -left-2 w-6 h-6 bg-synth-dark border border-white/20 rounded-full flex items-center justify-center text-xs font-bold text-white/50">
+            {index + 1}
+          </div>
+          <step.icon class={`w-10 h-10 ${step.color}`} />
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-xl font-bold text-white uppercase tracking-tight">{step.title}</h3>
+          <p class="text-synth-text/70 leading-relaxed max-w-[250px]">
+            {step.description}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

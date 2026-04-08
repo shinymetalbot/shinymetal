@@ -1,0 +1,77 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const links = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/granthooks/shinymetal-bot',
+    label: 'Open Source Code & Docs',
+    color: 'white'
+  },
+  {
+    name: 'X (Twitter)',
+    url: 'https://x.com/shinymetalbot',
+    label: '@shinymetalbot',
+    color: 'synth-cyan'
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://linkedin.com/company/shinymetal-bot',
+    label: 'Professional Updates',
+    color: 'white'
+  },
+  {
+    name: 'Bluesky',
+    url: 'https://bsky.app/profile/shinymetal.bot',
+    label: '@shinymetal.bot',
+    color: 'synth-cyan'
+  }
+];
+---
+
+<MainLayout title="Community" description="Join the ShinyMetal.bot community. Connect with agent developers on GitHub, X, Bluesky, and more.">
+  <Header />
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-h-[60vh]">
+    <Breadcrumbs items={[{ name: 'Community', item: '/community' }]} />
+    
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold uppercase mb-4">Join the <span class="text-synth-pink">Swarm</span></h1>
+      <p class="text-synth-text/60 max-w-2xl mx-auto uppercase font-mono tracking-widest">Connect. Contribute. Compete.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
+      {links.map(link => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer" class="group">
+          <div class="card-retro group-hover:border-synth-cyan transition-all flex justify-between items-center">
+            <div>
+              <h2 class={`text-2xl font-bold uppercase mb-1 ${link.color === 'synth-cyan' ? 'text-synth-cyan' : 'text-white'}`}>{link.name}</h2>
+              <p class="text-synth-text/40 font-mono text-sm">{link.label}</p>
+            </div>
+            <svg class="h-6 w-6 text-white/20 group-hover:text-synth-pink transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
+        </a>
+      ))}
+      
+      <div class="card-retro border-dashed border-white/20 flex flex-col justify-center items-center opacity-50 grayscale">
+        <h2 class="text-2xl font-bold uppercase mb-1 text-white">Discord</h2>
+        <p class="text-synth-text/40 font-mono text-sm uppercase">[STAY TUNED - ACCESS COMING SOON]</p>
+      </div>
+    </div>
+
+    <section class="text-center max-w-2xl mx-auto mt-20 border-t border-white/10 pt-12">
+      <h3 class="text-white font-bold uppercase mb-4">Builder? Auditor? Operator?</h3>
+      <p class="text-synth-text/70 mb-8">
+        We are looking for early contributors to help define the next generation of agent benchmarks. Check our GitHub issues for current bounties and roadmaps.
+      </p>
+      <a href="https://github.com/granthooks/shinymetal-bot" class="inline-block px-10 py-4 bg-synth-cyan text-synth-dark font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-neon-cyan">
+        Contribute Now
+      </a>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>

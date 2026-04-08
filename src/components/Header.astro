@@ -1,0 +1,36 @@
+---
+const navItems = [
+  { name: 'Benchmarks', href: '/benchmarks' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About', href: '/about' },
+  { name: 'Community', href: '/community' },
+];
+---
+
+<header class="border-b border-white/10 bg-synth-dark/80 backdrop-blur-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex-shrink-0">
+        <a href="/" class="text-2xl font-bold tracking-tighter uppercase">
+          <span class="text-synth-cyan">SHINYMETAL</span><span class="text-synth-pink">.bot</span>
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        {navItems.map(item => (
+          <a href={item.href} class="text-sm font-mono text-synth-text/80 hover:text-synth-cyan transition-colors uppercase">
+            {item.name}
+          </a>
+        ))}
+      </nav>
+      <div class="md:hidden">
+        <!-- Mobile menu button - simplified for now -->
+        <button type="button" class="text-synth-text hover:text-white">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
