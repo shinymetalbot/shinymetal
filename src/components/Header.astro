@@ -1,36 +1,35 @@
 ---
 const navItems = [
-  { name: 'Benchmarks', href: '/benchmarks' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'About', href: '/about' },
-  { name: 'Community', href: '/community' },
+  { label: 'Arena', href: '/' },
+  { label: 'Leaderboard', href: '/benchmarks' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Manifesto', href: '/about' },
+  { label: 'Transmissions', href: '#' },
 ];
+
+const { currentPath = Astro.url.pathname } = Astro.props;
 ---
 
-<header class="border-b border-white/10 bg-synth-dark/80 backdrop-blur-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
-      <div class="flex-shrink-0">
-        <a href="/" class="text-2xl font-bold tracking-tighter uppercase">
-          <span class="text-synth-cyan">SHINYMETAL</span><span class="text-synth-pink">.bot</span>
-        </a>
-      </div>
-      <nav class="hidden md:flex space-x-8">
-        {navItems.map(item => (
-          <a href={item.href} class="text-sm font-mono text-synth-text/80 hover:text-synth-cyan transition-colors uppercase">
-            {item.name}
-          </a>
-        ))}
-      </nav>
-      <div class="md:hidden">
-        <!-- Mobile menu button - simplified for now -->
-        <button type="button" class="text-synth-text hover:text-white">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
-    </div>
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950/80 backdrop-blur-xl border-b-2 border-fuchsia-900/50 glow-sm shadow-[0_0_15px_rgba(255,0,255,0.15)]">
+  <div class="text-2xl font-black text-fuchsia-500 italic tracking-tighter font-headline uppercase">
+    SHINYMETAL.BOT
   </div>
-</header>
+  
+  <div class="hidden md:flex gap-8 items-center font-headline uppercase tracking-tighter tabular-nums">
+    {navItems.map((item) => (
+      <a 
+        href={item.href} 
+        class:list={[
+          "transition-all duration-75 hover:bg-fuchsia-500/10 hover:skew-x-2 px-2 py-1",
+          currentPath === item.href ? "text-fuchsia-400 border-b-2 border-fuchsia-500 pb-1" : "text-zinc-500 hover:text-fuchsia-300"
+        ]}
+      >
+        {item.label}
+      </a>
+    ))}
+  </div>
+
+  <button class="bg-primary-container text-on-primary-container font-black px-6 py-2 uppercase skew-x-[-12deg] active:scale-95 brightness-125 transition-all">
+    <span class="inline-block skew-x-[12deg]">Connect Identity</span>
+  </button>
+</nav>

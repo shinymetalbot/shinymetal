@@ -4,56 +4,85 @@
 
 @layer base {
   body {
-    @apply bg-synth-dark text-synth-text font-sans selection:bg-synth-cyan/30;
+    @apply bg-surface-dim text-on-surface font-body selection:bg-primary-container selection:text-white;
+    overflow-x: hidden;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-mono text-white tracking-tight;
+
+  /* Space Grotesk tabular nums by default for data */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
   }
 }
 
 @layer components {
-  /* CRT Scanline Effect */
-  .crt::after {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(
-      rgba(18, 16, 16, 0) 50%,
-      rgba(0, 0, 0, 0.25) 50%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 0, 0, 0.06),
-      rgba(0, 255, 0, 0.02),
-      rgba(0, 0, 255, 0.06)
-    );
-    z-index: 9999;
-    background-size: 100% 2px, 3px 100%;
+  .scanline-overlay {
+    background: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%);
+    background-size: 100% 4px;
     pointer-events: none;
+    @apply fixed inset-0 z-[60];
   }
 
-  .glow-cyan {
-    @apply shadow-neon-cyan border-synth-cyan/50 text-synth-cyan;
-  }
-  
-  .glow-pink {
-    @apply shadow-neon-pink border-synth-pink/50 text-synth-pink;
+  .grain-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+    @apply fixed inset-0 z-[55];
   }
 
-  .card-retro {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-synth-cyan/30 transition-all;
+  .crt-vignette {
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+    pointer-events: none;
+    @apply fixed inset-0 z-[61];
   }
-}
 
-/* Background grid */
-.grid-overlay {
-  @apply fixed inset-0 bg-grid-pattern;
-  background-size: 40px 40px;
-  mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
-  pointer-events: none;
-  z-index: -1;
+  .mechanical-seam {
+    height: 2px;
+    background-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+    @apply w-full;
+  }
+
+  .clipped-corner {
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+  }
+
+  .clipped-corner-alt {
+    clip-path: polygon(0% 0%, 95% 0%, 100% 5%, 100% 100%, 5% 100%, 0% 95%);
+  }
+
+  .glow-sm {
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0.15);
+  }
+
+  .glitch-border {
+    position: relative;
+    box-shadow: -2px 0 0 #00fbfb, 2px 0 0 #ff00ff;
+  }
+
+  .scanline-header {
+    background: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%);
+    background-size: 100% 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #0e0e10;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ff00ff;
+  }
+
+  .jitter-hover:hover {
+    animation: jitter 0.1s infinite;
+  }
+
+  @keyframes jitter {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(1px, 1px); }
+    50% { transform: translate(-1px, 0); }
+    75% { transform: translate(0, -1px); }
+    100% { transform: translate(0,0); }
+  }
 }

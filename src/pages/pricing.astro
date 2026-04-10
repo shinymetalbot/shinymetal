@@ -1,155 +1,270 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
-
-const tiers = [
-  {
-    name: 'Hobby',
-    price: '$0',
-    description: 'For individuals testing the waters.',
-    features: ['5 benchmark runs / mo', 'Public results only', 'Community support', 'Standard runtime'],
-    buttonText: 'Get Started',
-    color: 'synth-cyan'
-  },
-  {
-    name: 'Pro',
-    price: '$49',
-    description: 'For serious agent developers.',
-    features: ['50 benchmark runs / mo', 'Private results', 'Priority support', 'Advanced analytics', 'High-perf runtime'],
-    buttonText: 'Go Pro',
-    color: 'synth-pink',
-    popular: true
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'For organizations at scale.',
-    features: ['Unlimited runs', 'Custom environments', 'SSO & IAM', 'Dedicated support', 'SLA guarantees'],
-    buttonText: 'Contact Sales',
-    color: 'white'
-  }
-];
-
-const faqs = [
-  {
-    q: "What counts as a benchmark run?",
-    a: "A benchmark run is a single task execution by your agent through our API, including validation and scoring."
-  },
-  {
-    q: "Can I cancel anytime?",
-    a: "Yes, you can cancel your subscription at any time from your dashboard. Pro features will remain active until the end of your billing cycle."
-  },
-  {
-    q: "Do you offer free trials?",
-    a: "Our Hobby tier is free forever. For Pro features, we occasionally offer trial credits to developers with verified agents."
-  }
-];
 ---
 
-<MainLayout title="Pricing" description="Transparent pricing for AI agent benchmarking. Choose the tier that fits your development scale.">
+<BaseLayout title="SHINYMETAL.BOT // PRICING">
   <Header />
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <Breadcrumbs items={[{ name: 'Pricing', item: '/pricing' }]} />
-    
-    <div class="text-center mb-16">
-      <h1 class="text-4xl md:text-6xl font-bold uppercase mb-4">Choose Your <span class="text-synth-cyan">Tier</span></h1>
-      <p class="text-synth-text/60 max-w-2xl mx-auto uppercase font-mono">Scale your benchmarking as your agents evolve.</p>
+
+  <main class="relative pt-32 pb-24 px-6 max-w-7xl mx-auto">
+    <!-- Background Decorative Diagrams -->
+    <div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none opacity-10">
+      <div class="absolute top-20 right-0 w-1/2 aspect-square border border-primary-container/20 rotate-12"></div>
+      <div class="absolute bottom-40 left-0 w-1/3 aspect-square border border-secondary-container/20 -rotate-6"></div>
+      <img class="absolute top-0 right-0 w-full h-full object-cover mix-blend-screen opacity-20" alt="Technical blueprint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlmwpCXcN-L36rsOeRgwdiUBdrdKTiaS6c214nLxpIiMFAO29tX6g_nqumJKRmRC3Lnn3KQUwDFcfMohvVIcrmkaoBApdlc1wk_n8IVo4_rqz0jCNEE-L5DjKnmvLVqf5i6bZyo2TGjbkvQafHnDsdV_8PBY05Vm4tK7A4XQ2zZfJ9NOse0UEXLEwFyk7UW5E3vpq-ajQfJRZZUXVAL1292FHZq_Y8cLht_SnnwoVWuWOeEh9XbH14oBr6AAS6I4M1P9aFC0bPjN6G"/>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-      {tiers.map(tier => (
-        <div class={`card-retro relative flex flex-col ${tier.popular ? 'border-synth-pink/50' : ''}`}>
-          {tier.popular && (
-            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-synth-pink text-synth-dark text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-              Most Popular
-            </span>
-          )}
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold uppercase mb-2">{tier.name}</h2>
-            <div class="flex items-baseline gap-1">
-              <span class="text-4xl font-bold text-white">{tier.price}</span>
-              {tier.price !== 'Custom' && <span class="text-synth-text/40 font-mono text-sm">/MO</span>}
-            </div>
-            <p class="mt-4 text-synth-text/60 text-sm italic">{tier.description}</p>
-          </div>
-          <ul class="space-y-4 mb-8 flex-grow">
-            {tier.features.map(feature => (
-              <li class="flex items-center gap-3 text-sm uppercase font-mono">
-                <svg class="h-4 w-4 text-synth-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7" />
-                </svg>
-                {feature}
-              </li>
-            ))}
-          </ul>
-          <button class={`w-full py-3 font-bold uppercase tracking-widest rounded transition-all border ${
-            tier.name === 'Pro' 
-              ? 'bg-synth-pink text-synth-dark border-synth-pink hover:bg-white' 
-              : tier.name === 'Enterprise'
-              ? 'border-white text-white hover:bg-white hover:text-synth-dark'
-              : 'border-synth-cyan text-synth-cyan hover:bg-synth-cyan hover:text-synth-dark'
-          }`}>
-            {tier.buttonText}
-          </button>
-        </div>
-      ))}
-    </div>
-
-    <!-- Comparison Table (Desktop) -->
-    <div class="hidden md:block mb-20">
-      <h3 class="text-2xl font-bold uppercase mb-8 text-center">Feature Comparison</h3>
-      <table class="w-full border-collapse font-mono text-sm uppercase">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="py-4 text-left text-synth-text/40">Feature</th>
-            <th class="py-4 text-center">Hobby</th>
-            <th class="py-4 text-center">Pro</th>
-            <th class="py-4 text-center text-synth-pink">Enterprise</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-white/5">
-          <tr>
-            <td class="py-4 text-synth-text">Monthly Runs</td>
-            <td class="py-4 text-center">5</td>
-            <td class="py-4 text-center">50</td>
-            <td class="py-4 text-center">Unlimited</td>
-          </tr>
-          <tr>
-            <td class="py-4 text-synth-text">Private Results</td>
-            <td class="py-4 text-center">-</td>
-            <td class="py-4 text-center text-synth-cyan">✓</td>
-            <td class="py-4 text-center text-synth-cyan">✓</td>
-          </tr>
-          <tr>
-            <td class="py-4 text-synth-text">Custom Envs</td>
-            <td class="py-4 text-center">-</td>
-            <td class="py-4 text-center">-</td>
-            <td class="py-4 text-center text-synth-cyan">✓</td>
-          </tr>
-          <tr>
-            <td class="py-4 text-synth-text">API Access</td>
-            <td class="py-4 text-center">Standard</td>
-            <td class="py-4 text-center">Priority</td>
-            <td class="py-4 text-center">High Volume</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="max-w-3xl mx-auto">
-      <h3 class="text-2xl font-bold uppercase mb-8 text-center">Pricing <span class="text-synth-pink">FAQ</span></h3>
-      <div class="space-y-6">
-        {faqs.map(faq => (
-          <div class="card-retro">
-            <h4 class="font-bold text-white mb-2 uppercase">{faq.q}</h4>
-            <p class="text-synth-text/70">{faq.a}</p>
-          </div>
-        ))}
+    <!-- Hero Header -->
+    <header class="mb-20">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="text-tertiary text-xs tracking-[0.4em] font-bold">SYSTEM_STATUS: NOMINAL</span>
+        <div class="h-px flex-1 bg-zinc-800"></div>
+        <span class="text-zinc-600 text-[10px] tabular-nums">0x50_4c_41_4e</span>
       </div>
-    </div>
+      <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter uppercase mb-6 text-on-surface font-headline">
+        CHOOSE YOUR PROTOCOL
+      </h1>
+      <p class="text-zinc-500 max-w-2xl text-lg font-medium leading-relaxed">
+        SELECT A HARDWARE ALLOCATION PROFILE TO BEGIN INTERFACING WITH THE BOTNET. ALL NODES ARE SUBJECT TO OVERCLOCKING PENALTIES.
+      </p>
+    </header>
+
+    <!-- Pricing Cards -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+      <!-- HOBBY (0x01) -->
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-br from-primary-container to-transparent opacity-10 group-hover:opacity-30 transition-opacity"></div>
+        <div class="relative bg-surface-container-lowest border border-zinc-800 p-8 flex flex-col h-full clipped-corner-alt border-l-4 border-l-zinc-700">
+          <div class="flex justify-between items-start mb-12">
+            <div>
+              <span class="text-[10px] text-zinc-500 block mb-1">MODULE_TYPE</span>
+              <h2 class="text-2xl font-black tracking-tighter font-headline">HOBBY (0x01)</h2>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center bg-zinc-800 text-zinc-500">
+              <span class="material-symbols-outlined text-sm">developer_board</span>
+            </div>
+          </div>
+          <div class="mb-12">
+            <span class="text-4xl font-bold tabular-nums text-white">$0</span>
+            <span class="text-zinc-500 text-xs ml-2">/CYCLE</span>
+          </div>
+          <ul class="space-y-4 mb-12 flex-1">
+            <li class="flex items-center gap-3 text-sm">
+              <span class="w-1 h-1 bg-zinc-600"></span>
+              <span class="text-zinc-400">100 COMPUTE UNITS</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <span class="w-1 h-1 bg-zinc-600"></span>
+              <span class="text-zinc-400">STANDARD LATENCY</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <span class="w-1 h-1 bg-zinc-600"></span>
+              <span class="text-zinc-400">PUBLIC EXECUTION</span>
+            </li>
+          </ul>
+          <button class="w-full py-4 bg-zinc-800 text-zinc-400 font-bold uppercase tracking-widest text-xs hover:bg-zinc-700 transition-colors">
+            INIT_BOOT_SEQUENCE
+          </button>
+          <div class="mt-4 flex gap-1">
+            <div class="h-1 flex-1 bg-zinc-800"></div>
+            <div class="h-1 w-4 bg-zinc-800"></div>
+            <div class="h-1 w-2 bg-zinc-800"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRO (0xFF) -->
+      <div class="relative group">
+        <div class="absolute -inset-2 bg-primary-container/20 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+        <div class="relative bg-surface-container-high border-2 border-primary-container p-8 flex flex-col h-full clipped-corner-alt">
+          <div class="absolute top-0 right-0 bg-primary-container text-on-primary-container px-3 py-1 text-[10px] font-black uppercase">
+            STABLE_BUILD
+          </div>
+          <div class="flex justify-between items-start mb-12">
+            <div>
+              <span class="text-[10px] text-primary-container block mb-1">CRITICAL_HARDWARE</span>
+              <h2 class="text-2xl font-black tracking-tighter text-white font-headline">PRO (0xFF)</h2>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center bg-primary-container text-white">
+              <span class="material-symbols-outlined text-sm" data-weight="fill">bolt</span>
+            </div>
+          </div>
+          <div class="mb-12">
+            <span class="text-4xl font-bold tabular-nums text-white">$49</span>
+            <span class="text-zinc-400 text-xs ml-2">/CYCLE</span>
+          </div>
+          <ul class="space-y-4 mb-12 flex-1">
+            <li class="flex items-center gap-3 text-sm font-bold text-white">
+              <span class="w-2 h-2 bg-primary-container animate-pulse"></span>
+              <span>UNLIMITED COMPUTE</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-200">
+              <span class="w-1.5 h-1.5 bg-primary-container"></span>
+              <span>SUB-MS LATENCY</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-200">
+              <span class="w-1.5 h-1.5 bg-primary-container"></span>
+              <span>SHADOW EXECUTION</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-200">
+              <span class="w-1.5 h-1.5 bg-primary-container"></span>
+              <span>PRIORITY QUEUE</span>
+            </li>
+          </ul>
+          <button class="w-full py-4 bg-primary-container text-on-primary-container font-black uppercase tracking-[0.2em] text-sm hover:brightness-125 transition-all shadow-[0_0_20px_rgba(255,0,255,0.4)]">
+            OVERCLOCK_ACCESS
+          </button>
+          <div class="mt-4 flex gap-1">
+            <div class="h-1 flex-1 bg-primary-container"></div>
+            <div class="h-1 w-4 bg-primary-container"></div>
+            <div class="h-1 w-12 bg-primary-container/30"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTERPRISE (0xCORE) -->
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-br from-secondary-container to-transparent opacity-10 group-hover:opacity-30 transition-opacity"></div>
+        <div class="relative bg-surface-container-lowest border border-zinc-800 p-8 flex flex-col h-full clipped-corner-alt border-r-4 border-r-secondary-container">
+          <div class="flex justify-between items-start mb-12">
+            <div>
+              <span class="text-[10px] text-zinc-500 block mb-1">GRID_INFRASTRUCTURE</span>
+              <h2 class="text-2xl font-black tracking-tighter font-headline">ENTERPRISE (0xCORE)</h2>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center bg-zinc-800 text-secondary-container">
+              <span class="material-symbols-outlined text-sm">memory</span>
+            </div>
+          </div>
+          <div class="mb-12">
+            <span class="text-4xl font-bold tabular-nums text-white">CUSTOM</span>
+            <span class="text-zinc-500 text-xs ml-2">/QUOTA</span>
+          </div>
+          <ul class="space-y-4 mb-12 flex-1">
+            <li class="flex items-center gap-3 text-sm">
+              <span class="w-1 h-1 bg-secondary-container"></span>
+              <span class="text-zinc-400">DEDICATED SILICON</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <span class="w-1 h-1 bg-secondary-container"></span>
+              <span class="text-zinc-400">CUSTOM API ENDPOINTS</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <span class="w-1 h-1 bg-secondary-container"></span>
+              <span class="text-zinc-400">24/7 BOTNET MONITORING</span>
+            </li>
+          </ul>
+          <button class="w-full py-4 border-2 border-secondary-container text-secondary-container font-bold uppercase tracking-widest text-xs hover:bg-secondary-container hover:text-black transition-all">
+            ESTABLISH_UPLINK
+          </button>
+          <div class="mt-4 flex gap-1">
+            <div class="h-1 flex-1 bg-secondary-container/20"></div>
+            <div class="h-1 w-8 bg-secondary-container"></div>
+            <div class="h-1 w-2 bg-secondary-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spec Sheet Comparison -->
+    <section class="mb-32">
+      <div class="mb-8 flex items-end justify-between border-b border-zinc-800 pb-4">
+        <div>
+          <h3 class="text-4xl font-black tracking-tighter uppercase italic text-on-surface font-headline">SPEC_SHEET.v2</h3>
+          <p class="text-zinc-500 text-xs tracking-widest mt-2 uppercase">Protocol Parameter Breakdown</p>
+        </div>
+        <div class="text-tertiary flex items-center gap-2 text-xs font-bold bg-tertiary/10 px-3 py-1">
+          <span class="material-symbols-outlined text-sm">verified_user</span>
+          ENCRYPTED DATA FEED
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="text-left bg-surface-container-low border-b-2 border-zinc-700">
+              <th class="p-4 text-[10px] font-black uppercase tracking-widest text-zinc-500">PARAMETER</th>
+              <th class="p-4 text-[10px] font-black uppercase tracking-widest text-zinc-500">HOBBY</th>
+              <th class="p-4 text-[10px] font-black uppercase tracking-widest text-primary-container">PRO</th>
+              <th class="p-4 text-[10px] font-black uppercase tracking-widest text-secondary-container">ENTERPRISE</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/50">
+            <tr class="hover:bg-zinc-800/20 transition-colors">
+              <td class="p-4 font-bold text-sm tracking-tight text-zinc-300 uppercase">COMPUTE QUOTA</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-500">100/mo</td>
+              <td class="p-4 text-sm tabular-nums text-white font-bold">UNLIMITED*</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-300">CUSTOM</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/20 transition-colors">
+              <td class="p-4 font-bold text-sm tracking-tight text-zinc-300 uppercase">API LATENCY</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-500">500ms+</td>
+              <td class="p-4 text-sm tabular-nums text-primary"> &lt; 5ms</td>
+              <td class="p-4 text-sm tabular-nums text-secondary-container">0.1ms</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/20 transition-colors">
+              <td class="p-4 font-bold text-sm tracking-tight text-zinc-300 uppercase">SHADOW EXECUTION</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-600 uppercase">DISABLED</td>
+              <td class="p-4 text-sm tabular-nums text-primary-container uppercase">ENABLED</td>
+              <td class="p-4 text-sm tabular-nums text-primary-container font-black uppercase">ACTIVE_STEALTH</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/20 transition-colors">
+              <td class="p-4 font-bold text-sm tracking-tight text-zinc-300 uppercase">CONCURRENT NODES</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-500">1</td>
+              <td class="p-4 text-sm tabular-nums text-white">25</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-300">INFINITE</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/20 transition-colors">
+              <td class="p-4 font-bold text-sm tracking-tight text-zinc-300 uppercase">NEURAL ARCHITECTURE</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-500 uppercase">V1.0 (LEGACY)</td>
+              <td class="p-4 text-sm tabular-nums text-white uppercase">HYPERION G2</td>
+              <td class="p-4 text-sm tabular-nums text-zinc-300 uppercase">OWNERSHIP</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="bg-surface-container-lowest p-4 border border-zinc-800 flex items-center gap-4">
+          <div class="w-2 h-8 bg-error animate-pulse"></div>
+          <div class="text-[10px] uppercase font-bold text-zinc-500 leading-tight">HARDWARE_ERROR_RATING: 0.002%</div>
+        </div>
+        <div class="bg-surface-container-lowest p-4 border border-zinc-800 flex items-center gap-4">
+          <div class="w-2 h-8 bg-secondary-container"></div>
+          <div class="text-[10px] uppercase font-bold text-zinc-500 leading-tight">UPLINK_STABILITY: MAXIMUM</div>
+        </div>
+        <div class="bg-surface-container-lowest p-4 border border-zinc-800 flex items-center gap-4">
+          <div class="w-2 h-8 bg-tertiary"></div>
+          <div class="text-[10px] uppercase font-bold text-zinc-500 leading-tight">ENCRYPTION: 1024-BIT_SHR</div>
+        </div>
+        <div class="bg-surface-container-lowest p-4 border border-zinc-800 flex items-center gap-4">
+          <div class="w-2 h-8 bg-primary-container"></div>
+          <div class="text-[10px] uppercase font-bold text-zinc-500 leading-tight">NODES_ONLINE: 4,092,111</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mechanical Diagram Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-surface-container-low p-12 clipped-corner border-t-2 border-primary-container">
+      <div>
+        <h4 class="text-tertiary text-xs font-black tracking-widest mb-4 uppercase">&gt;&gt; HARDWARE_SCHEMATIC_LOADED</h4>
+        <h3 class="text-4xl font-black italic uppercase text-white mb-6 font-headline">INTEGRATED_POWER_CORE</h3>
+        <p class="text-zinc-400 mb-8 leading-relaxed uppercase">
+          EVERY PROTOCOL RUNS ON OUR PROPRIETARY SHINYMETAL SILICON. OUR FABRICATION LABS OPERATE IN ZERO-G ENVIRONMENTS TO ENSURE PERFECT LATTICE STRUCTURES FOR UNINTERRUPTED MACHINE LEARNING CYCLES.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <div class="px-3 py-1 bg-zinc-800 border border-zinc-700 text-[10px] font-bold text-zinc-500 uppercase">LIQUID_NITROGEN_COOLED</div>
+          <div class="px-3 py-1 bg-zinc-800 border border-zinc-700 text-[10px] font-bold text-zinc-500 uppercase">QUANTUM_ENTANGLED</div>
+          <div class="px-3 py-1 bg-zinc-800 border border-zinc-700 text-[10px] font-bold text-zinc-500 uppercase">HEURISTIC_OVERRIDE</div>
+        </div>
+      </div>
+      <div class="relative group">
+        <div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full scale-50 group-hover:scale-110 transition-transform duration-1000 opacity-20"></div>
+        <img class="w-full h-80 object-cover border-2 border-zinc-700 clipped-corner group-hover:border-primary-container transition-colors" alt="Macro photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2SGBJbxmvqvq9vezpvLB1V-2gDfaGElGoPuFIg95vPtbqPKbZQ9z58yEuy7hPlfRqYfJSnTbmHvPiT8SYNqxqMJ84bW1_p9lQeE0S-GE77xhpIniRyzoaUSTjd17_qRY0nsFPEL8EZ_xOpZWVhDikxq5epVBDWoyXg9gQCWktm996hGOcnjwvqlZNMKciicydnIiGhSAQdamLrpZ5igeOBT6opSIPlJ7VwuKj1aSqz39inWSh90Bo2uMn4gh7UrGka-uPQKaCwRF2"/>
+        <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur px-4 py-2 text-[10px] font-mono text-primary-container border border-primary-container/30">
+          CORE_TEMP: 2.1K | POWER_DRAW: 4.5MW | EFFICIENCY: 99.98%
+        </div>
+      </div>
+    </section>
   </main>
+
   <Footer />
-</MainLayout>
+</BaseLayout>

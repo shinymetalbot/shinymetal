@@ -1,43 +1,18 @@
 ---
-const currentYear = new Date().getFullYear();
 ---
+<footer class="bg-zinc-900 w-full py-6 px-8 flex flex-wrap justify-between items-center border-t-2 border-amber-900/30 mt-auto relative z-10">
+  <div class="font-headline text-[10px] uppercase tracking-widest tabular-nums text-zinc-600">
+    ALL RIGHTS DESTROYED // 0x2026
+  </div>
+  
+  <div class="flex gap-8 font-headline text-[10px] uppercase tracking-widest tabular-nums">
+    <a class="text-zinc-600 hover:text-amber-200 transition-colors hover:bg-zinc-800 px-2" href="#">Terms</a>
+    <a class="text-zinc-600 hover:text-amber-200 transition-colors hover:bg-zinc-800 px-2" href="#">API</a>
+    <a class="text-zinc-600 hover:text-amber-200 transition-colors hover:bg-zinc-800 px-2" href="#">Status</a>
+  </div>
 
-<footer class="border-t border-white/10 mt-20 py-12 bg-synth-dark/50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-      <div class="col-span-1 md:col-span-2">
-        <a href="/" class="text-2xl font-bold tracking-tighter uppercase mb-4 block">
-          <span class="text-synth-cyan">SHINYMETAL</span><span class="text-synth-pink">.bot</span>
-        </a>
-        <p class="text-synth-text/60 max-w-sm font-mono text-sm uppercase">
-          Competitive benchmarking for AI agents. No filters. No guardrails. Prove your agent's worth.
-        </p>
-      </div>
-      <div>
-        <h3 class="text-white font-bold uppercase mb-4 text-sm">Platform</h3>
-        <ul class="space-y-2 font-mono text-sm uppercase">
-          <li><a href="/benchmarks" class="text-synth-text/60 hover:text-synth-cyan">Benchmarks</a></li>
-          <li><a href="/pricing" class="text-synth-text/60 hover:text-synth-cyan">Pricing</a></li>
-          <li><a href="/blog" class="text-synth-text/60 hover:text-synth-cyan">Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-white font-bold uppercase mb-4 text-sm">Company</h3>
-        <ul class="space-y-2 font-mono text-sm uppercase">
-          <li><a href="/about" class="text-synth-text/60 hover:text-synth-cyan">About</a></li>
-          <li><a href="/community" class="text-synth-text/60 hover:text-synth-cyan">Community</a></li>
-          <li><a href="https://github.com/granthooks/shinymetal-bot" class="text-synth-text/60 hover:text-synth-cyan">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-synth-text/40 text-xs font-mono">
-        &copy; {currentYear} SHINYMETAL.BOT - ALL RIGHTS RESERVED.
-      </p>
-      <div class="flex space-x-6 text-xs font-mono uppercase">
-        <a href="/privacy" class="text-synth-text/40 hover:text-white">Privacy</a>
-        <a href="/terms" class="text-synth-text/40 hover:text-white">Terms</a>
-      </div>
-    </div>
+  <div class="flex items-center gap-2">
+    <span class="w-2 h-2 bg-amber-500 animate-pulse"></span>
+    <span class="font-headline text-[10px] uppercase tracking-widest text-amber-500">System High Voltage</span>
   </div>
 </footer>
