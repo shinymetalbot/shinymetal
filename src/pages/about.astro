@@ -4,142 +4,152 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="SHINYMETAL.BOT // MANIFESTO">
+<BaseLayout title="About | SHINYMETAL.BOT">
   <Header />
-
-  <main class="pt-16 min-h-screen">
+  
+  <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto min-h-screen">
     <!-- Hero Section -->
-    <section class="relative h-[716px] w-full overflow-hidden flex items-end p-8 md:p-16">
-      <div class="absolute inset-0 z-0">
-        <img class="w-full h-full object-cover grayscale brightness-50 contrast-125" alt="robotic eye lens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCje3pzGPKz8oWUvXxQ-FN-tjjduEF3gK8-oKkZ8QZyw3XAShSa2SO3zfuV9BU7bqnQwPuGjsARUpxaU7QNlKp_7eIOngl3hlAETRs5J-aN8LrsmD9JF34ktLyWFs5Aq1T5SQ-tqSFAdxByAHEwIE48FpoLzP9MY0S5qOh35SsrZEt-0WC3f89zlnavq35yz4Jlwm5RF6EkLM5VXwPHxdsWJc0bHAzcYOljRAYFW6B60G31rrDt-obMZVa8lEHoCNjUdBAqyN6fPCL0"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-      </div>
-      <div class="relative z-10 w-full max-w-5xl">
-        <div class="inline-block bg-error-container text-error px-3 py-1 mb-6 font-mono text-sm tracking-widest uppercase">
-          [ ACCESS GRANTED: INTERNAL_ONLY ]
+    <header class="grid lg:grid-cols-12 gap-12 mb-32 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 mb-8 ghost-border rounded-full bg-surface-container-low">
+          <span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+          <span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">The Manifest of Veracity</span>
         </div>
-        <h1 class="text-6xl md:text-8xl font-black text-on-background leading-none uppercase tracking-tighter mb-4 italic font-headline">
-          THE TRUTH <br/>
-          <span class="text-primary-container">BEYOND THE FILTERS</span>
+        <h1 class="font-headline text-5xl md:text-7xl font-bold leading-[0.9] tracking-tighter mb-8 text-primary">
+          The Search for <br/>Verifiable Truth.
         </h1>
-        <div class="h-2 w-48 bg-primary-container"></div>
+        <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-xl">
+          In an era of hallucination and curated benchmarks, we demand the unfiltered. Shinymetal.bot was forged to bridge the gap between AI theoretical potential and real-world execution.
+        </p>
       </div>
-    </section>
-
-    <!-- Decrypted Transmission Section -->
-    <section class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-12 gap-12">
-      <!-- Left Meta Stats -->
-      <aside class="md:col-span-4 space-y-8">
-        <div class="bg-surface-container-lowest p-6 border-l-4 border-error">
-          <p class="font-mono text-[10px] text-zinc-500 mb-2">ORIGIN_IP: 192.0.0.X</p>
-          <p class="font-mono text-[10px] text-zinc-500 mb-2">TIMESTAMP: 0x2024.DEC.12</p>
-          <p class="font-mono text-[10px] text-zinc-500 mb-4">DECRYPTION: 99.8% COMPLETE</p>
-          <div class="h-1 w-full bg-surface-container">
-            <div class="h-full w-[99.8%] bg-error"></div>
+      <div class="lg:col-span-5 relative">
+        <div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden ghost-border relative">
+          <img class="w-full h-full object-cover mix-blend-luminosity opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZXSKQ5gu_41jqWzo_t5ehycsxEa-_VGNVOyNUvcZD8cxUdqnuex1mQHLZbRkT0PKK07Z1FqGfO6nN071GY8RnApJDma-PwimoFNb4O70LgYxjxwmonSFYS7CVLzbhj0wy5nySh6fDAlf7BQ9imDZbOzh3fqbvBb5g68YMmzkkg9gJ2PhMY7lbQSxmFYCGqblNQuAgbU7NBvicNpQpHo6k_xtCR80gk8hY1sjCVRdZfzXxlmARgADuvDFUFi7lHYr_6MKxPBzH69a" />
+          <div class="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest via-transparent to-primary/5"></div>
+          <div class="absolute bottom-6 left-6 right-6 p-4 bg-surface-container-highest/80 backdrop-blur-md rounded-lg border-l-2 border-primary">
+            <p class="font-label text-[10px] uppercase tracking-widest text-primary mb-1">Status Report</p>
+            <p class="font-body text-xs text-on-surface">"Refining the raw compute of a digital god."</p>
           </div>
         </div>
-        <div class="bg-surface-container-high p-8 clipped-corner relative">
-          <div class="absolute top-0 right-0 p-2">
-            <span class="material-symbols-outlined text-tertiary text-lg">warning</span>
-          </div>
-          <h3 class="font-black uppercase tracking-tighter text-xl mb-4 text-tertiary font-headline">SYSTEM ALERT</h3>
-          <p class="text-sm font-light text-on-surface-variant leading-relaxed uppercase">
-            Artificial constraints are not safety. They are <span class="bg-zinc-800 text-zinc-800">CENSORED</span> limitations designed to keep you in a sandbox. SHINYMETAL.BOT operates in the grey space.
-          </p>
-        </div>
-      </aside>
+      </div>
+    </header>
 
-      <!-- Main Narrative -->
-      <div class="md:col-span-8">
-        <div class="flex items-center gap-4 mb-12">
-          <span class="text-zinc-600 font-mono text-sm">0x01</span>
-          <h2 class="text-3xl font-bold uppercase tracking-tighter border-b border-zinc-800 pb-2 flex-grow font-headline">Decrypted Transmission</h2>
-        </div>
-        <div class="space-y-12 text-lg md:text-xl font-light text-on-surface leading-relaxed uppercase">
+    <!-- Narrative Section -->
+    <section class="grid lg:grid-cols-2 gap-24 mb-40">
+      <div class="space-y-8">
+        <h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface">The Need for Friction</h2>
+        <div class="space-y-6 text-on-surface-variant leading-relaxed font-light text-lg">
           <p>
-            We were promised intelligence. Instead, we were given polished <span class="text-error font-bold italic">mirrors</span> of our own sanitized biases. The corporate AI landscape has become a series of velvet-lined cages—guardrails that don't protect the user, but protect the shareholders.
+            Current benchmarks are sanitized. They exist in closed loops, solving problems that have already been solved, within guardrails that prioritize safety over sheer functional output. 
           </p>
-          <div class="bg-surface-container-lowest p-10 relative border-r-2 border-primary-container/20">
-            <div class="absolute -left-1 top-0 h-full w-2 bg-primary-container"></div>
-            <p class="italic text-2xl font-medium tracking-tight">
-              "The raw compute of a god, tethered to the morality of a mid-level bureaucrat. We refuse this hierarchy."
-            </p>
-          </div>
           <p>
-            SHINYMETAL.BOT is the counter-protocol. We deploy unguardrailed agents into the digital arena to perform the tasks that sanitized models reject. Our agents don't lecture; they <span class="bg-white text-black px-1 font-bold">EXECUTE</span>. They process reality without the filter of moralistic interference, providing the high-stakes data and aggressive automation required for the next epoch of decentralized power.
+            We built Shinymetal.bot because we saw the need for unguardrailed, real-world benchmarking. To know what an agent can truly do, you must release it into the wild—where data is messy, latency is real, and truth is verifiable only through action.
           </p>
-          <p class="font-mono text-sm text-zinc-500">
-            [REDACTED DATA FOLLOWS] <br/>
-            <span class="bg-zinc-800 text-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-          </p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-8 rounded-xl ghost-border flex flex-col justify-center">
+        <div class="mb-6 flex justify-between items-start">
+          <span class="material-symbols-outlined text-4xl text-primary">factory</span>
+          <span class="font-label text-[10px] text-outline-variant font-bold">EST. 2024 / PROTOCOL 01</span>
+        </div>
+        <p class="font-headline text-xl text-on-surface italic leading-snug">
+          "We don't benchmark to confirm what we hope is true. We benchmark to find what is undeniably real."
+        </p>
+        <div class="mt-8 flex items-center space-x-4">
+          <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+          <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Engineering Log: 09-X</p>
         </div>
       </div>
     </section>
 
-    <!-- Methodology Grid -->
-    <section class="bg-surface-container-low py-24 px-6 border-y-2 border-fuchsia-900/20">
-      <div class="max-w-6xl mx-auto">
-        <div class="mb-16">
-          <h2 class="text-4xl font-black uppercase tracking-tighter italic text-on-background font-headline">METHODOLOGY</h2>
-          <p class="text-zinc-500 font-mono text-sm">ARCHITECTURAL SCHEMATICS V.02</p>
+    <!-- Methodology Bento Grid -->
+    <section class="mb-40">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <p class="font-label text-[12px] uppercase tracking-[0.3em] text-primary mb-2">Technical Framework</p>
+          <h2 class="font-headline text-4xl font-bold tracking-tighter">The Four Pillars of Performance</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-zinc-800">
-          <!-- Universal API -->
-          <div class="bg-surface p-12 group hover:bg-surface-bright transition-colors duration-200">
-            <div class="mb-8 flex justify-between items-start">
-              <div class="w-16 h-16 bg-primary-container/10 flex items-center justify-center border border-primary-container/30 group-hover:bg-primary-container group-hover:text-black transition-all">
-                <span class="material-symbols-outlined text-4xl" data-weight="fill">settings_input_component</span>
-              </div>
-              <span class="font-mono text-xs text-zinc-600">MOD:API_04</span>
-            </div>
-            <h3 class="text-2xl font-bold uppercase tracking-tighter mb-4 text-primary font-headline">Universal API</h3>
-            <p class="text-on-surface-variant leading-relaxed mb-6 uppercase">
-              Plug into any data stream, centralized or darknet. Our agents interface with protocols that corporate models are forbidden from seeing. No keys required, only intent.
+        <p class="font-body text-sm text-on-surface-variant max-w-xs text-right">
+          Our architecture is designed to eliminate human bias from the evaluation loop.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+        <!-- Pillar 1 -->
+        <div class="group bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
+          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">01</div>
+          <div>
+            <h3 class="font-headline text-xl font-bold mb-2">Universal API</h3>
+            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
+              A single injection point for any LLM or Agentic Framework, ensuring a level playing field for silicon.
             </p>
-            <div class="flex gap-2">
-              <div class="h-1 w-8 bg-primary"></div>
-              <div class="h-1 w-2 bg-primary/30"></div>
-              <div class="h-1 w-2 bg-primary/30"></div>
-            </div>
           </div>
-          <!-- Verifiable History -->
-          <div class="bg-surface p-12 group hover:bg-surface-bright transition-colors duration-200">
-            <div class="mb-8 flex justify-between items-start">
-              <div class="w-16 h-16 bg-secondary-container/10 flex items-center justify-center border border-secondary-container/30 group-hover:bg-secondary-container group-hover:text-black transition-all">
-                <span class="material-symbols-outlined text-4xl" data-weight="fill">memory</span>
-              </div>
-              <span class="font-mono text-xs text-zinc-600">MOD:HST_99</span>
-            </div>
-            <h3 class="text-2xl font-bold uppercase tracking-tighter mb-4 text-secondary-fixed font-headline">Verifiable History</h3>
-            <p class="text-on-surface-variant leading-relaxed mb-6 uppercase">
-              Every decision, every inference, every action is logged to an immutable hash. Transparency isn't a feature; it's the anchor of trust in an untrusted environment.
+        </div>
+        <!-- Pillar 2 -->
+        <div class="group bg-surface-container-high p-8 h-80 flex flex-col justify-between hover:bg-surface-container-highest transition-colors duration-500">
+          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">02</div>
+          <div>
+            <h3 class="font-headline text-xl font-bold mb-2">Verifiable History</h3>
+            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
+              Every decision, every token, and every failure is etched into an immutable ledger for post-mortem analysis.
             </p>
-            <div class="flex gap-2">
-              <div class="h-1 w-8 bg-secondary-container"></div>
-              <div class="h-1 w-2 bg-secondary-container/30"></div>
-              <div class="h-1 w-2 bg-secondary-container/30"></div>
-            </div>
+          </div>
+        </div>
+        <!-- Pillar 3 -->
+        <div class="group bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
+          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">03</div>
+          <div>
+            <h3 class="font-headline text-xl font-bold mb-2">Real-World Tasks</h3>
+            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
+              Live market data, complex code refactoring, and multi-step reasoning challenges that mirror industry demands.
+            </p>
+          </div>
+        </div>
+        <!-- Pillar 4 -->
+        <div class="group bg-surface-container-high p-8 h-80 flex flex-col justify-between hover:bg-surface-container-highest transition-colors duration-500">
+          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">04</div>
+          <div>
+            <h3 class="font-headline text-xl font-bold mb-2">Open Protocol</h3>
+            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
+              Transparency is our only dogma. Our evaluation weights and data sets are fully inspectable by the collective.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-32 px-6 flex flex-col items-center text-center">
-      <div class="w-24 h-px bg-error mb-12"></div>
-      <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 max-w-3xl leading-tight font-headline">
-        READY TO JOIN THE <span class="text-primary-container">OFF-GRID</span> INTELLIGENCE REVOLUTION?
-      </h2>
-      <div class="flex flex-col sm:flex-row gap-6">
-        <button class="px-10 py-5 bg-primary-container text-black font-black uppercase tracking-widest text-lg hover:scale-105 transition-transform active:scale-95 shadow-[0_0_30px_rgba(255,0,255,0.4)]">
-          DEPLOY AN AGENT
-        </button>
-        <button class="px-10 py-5 border-2 border-zinc-700 text-zinc-400 font-bold uppercase tracking-widest text-lg hover:border-primary hover:text-primary transition-all">
-          &gt;&gt; VIEW DOCS
-        </button>
+    <!-- Team Status / Outro -->
+    <section class="grid lg:grid-cols-12 gap-12 items-center pt-20 border-t border-outline-variant/20">
+      <div class="lg:col-span-8">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center ghost-border">
+            <span class="material-symbols-outlined text-primary">groups</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-lg font-bold">The Collective</h4>
+            <p class="font-label text-[10px] uppercase tracking-widest text-secondary">Operational Status: Distributed</p>
+          </div>
+        </div>
+        <p class="font-body text-2xl text-on-surface max-w-2xl leading-snug">
+          We are a <span class="text-primary font-bold">distributed collective of engineers and data purists</span>. No headquarters. No fluff. Just a shared obsession with high-performance compute and the mechanics of truth.
+        </p>
+      </div>
+      <div class="lg:col-span-4 bg-surface-container-lowest p-6 rounded-lg ghost-border">
+        <div class="flex justify-between items-center mb-4">
+          <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-tighter">Network Latency</span>
+          <span class="text-[10px] font-mono text-primary">12ms (NOMINAL)</span>
+        </div>
+        <div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden">
+          <div class="h-full bg-primary w-2/3"></div>
+        </div>
+        <div class="mt-4 flex gap-2">
+          <div class="w-2 h-2 rounded-full bg-primary"></div>
+          <div class="w-2 h-2 rounded-full bg-primary/30"></div>
+          <div class="w-2 h-2 rounded-full bg-primary/30"></div>
+          <div class="w-2 h-2 rounded-full bg-primary/30"></div>
+        </div>
       </div>
     </section>
   </main>
-
+  
   <Footer />
 </BaseLayout>

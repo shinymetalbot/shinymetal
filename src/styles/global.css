@@ -4,85 +4,85 @@
 
 @layer base {
   body {
-    @apply bg-surface-dim text-on-surface font-body selection:bg-primary-container selection:text-white;
+    @apply bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary;
     overflow-x: hidden;
   }
 
-  /* Space Grotesk tabular nums by default for data */
-  .tabular-nums {
-    font-variant-numeric: tabular-nums;
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline tracking-tighter;
   }
 }
 
 @layer components {
-  .scanline-overlay {
-    background: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%);
-    background-size: 100% 4px;
-    pointer-events: none;
-    @apply fixed inset-0 z-[60];
+  .titanium-gradient {
+    background: linear-gradient(135deg, #282a2c 0%, #1a1c1e 100%);
+  }
+  
+  .beveled-edge {
+    background: linear-gradient(to right, transparent, #3b494b 50%, transparent);
+    height: 1px;
+  }
+  
+  .hero-mask {
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
   }
 
-  .grain-texture {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.05;
-    pointer-events: none;
-    @apply fixed inset-0 z-[55];
+  .primary-glow {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  }
+  
+  .telemetry-text {
+    @apply font-label uppercase text-on-surface-variant;
+    font-size: 10px;
+    letter-spacing: 0.05em;
   }
 
-  .crt-vignette {
-    box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
-    pointer-events: none;
-    @apply fixed inset-0 z-[61];
+  /* Glassmorphism Rule from DESIGN.md */
+  .glass-module {
+    @apply bg-surface-container-high/70 backdrop-blur-[20px];
   }
 
-  .mechanical-seam {
-    height: 2px;
-    background-color: #ff00ff;
-    box-shadow: 0 0 10px #ff00ff;
-    @apply w-full;
+  /* Signature Glow Rule from DESIGN.md */
+  .signature-glow {
+    background: radial-gradient(circle at top left, rgba(219, 252, 255, 0.05), transparent);
   }
 
-  .clipped-corner {
-    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
-  }
-
-  .clipped-corner-alt {
-    clip-path: polygon(0% 0%, 95% 0%, 100% 5%, 100% 100%, 5% 100%, 0% 95%);
-  }
-
-  .glow-sm {
-    text-shadow: 0 0 15px rgba(255, 0, 255, 0.15);
-  }
-
-  .glitch-border {
-    position: relative;
-    box-shadow: -2px 0 0 #00fbfb, 2px 0 0 #ff00ff;
-  }
-
-  .scanline-header {
-    background: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%);
-    background-size: 100% 4px;
+  /* Ghost Border Fallback */
+  .ghost-border {
+    @apply outline outline-1 outline-outline-variant/15;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
     width: 4px;
   }
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: #0e0e10;
+    @apply bg-surface-container-lowest;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #ff00ff;
+    @apply bg-primary-container;
   }
 
-  .jitter-hover:hover {
-    animation: jitter 0.1s infinite;
+  .metal-card {
+    background: linear-gradient(135deg, rgba(40,42,44,1) 0%, rgba(26,28,30,1) 100%);
+    position: relative;
   }
-
-  @keyframes jitter {
-    0% { transform: translate(0,0); }
-    25% { transform: translate(1px, 1px); }
-    50% { transform: translate(-1px, 0); }
-    75% { transform: translate(0, -1px); }
-    100% { transform: translate(0,0); }
+  .metal-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(219,252,255,0.15) 0%, rgba(59,73,75,0.1) 50%, rgba(219,252,255,0.05) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  .glow-overlay {
+    background: radial-gradient(circle at 0% 0%, rgba(219,252,255,0.05) 0%, transparent 50%);
   }
 }

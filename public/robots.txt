@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
 Sitemap: https://shinymetal.bot/sitemap-index.xml
+# LLM context file
+# https://shinymetal.bot/llms.txt
