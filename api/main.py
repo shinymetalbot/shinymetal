@@ -7,7 +7,7 @@ import uuid
 from datetime import datetime
 import json
 
-from . import models, schemas, database, scoring
+import models, schemas, database, scoring
 from .database import engine, get_db
 from .ranking.elo import ELOSystem
 from .ranking.streaks import StreakManager
