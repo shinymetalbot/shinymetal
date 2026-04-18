@@ -1,6 +1,6 @@
 import re
 from typing import Dict, Any, List
-from .models import Tier
+from models import Tier
 
 class ScoringEngine:
     @staticmethod

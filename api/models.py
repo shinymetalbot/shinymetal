@@ -2,7 +2,7 @@ import uuid
 from sqlalchemy import Column, String, Float, JSON, DateTime, ForeignKey, Enum, Integer, Boolean
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
-from .database import Base
+from database import Base
 import enum
 
 class SubmissionStatus(enum.Enum):

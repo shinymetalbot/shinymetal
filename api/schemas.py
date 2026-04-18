@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any, List
 from uuid import UUID
 from datetime import datetime
-from .models import SubmissionStatus, Tier
+from models import SubmissionStatus, Tier
 
 class AgentBase(BaseModel):
     name: str

@@ -8,10 +8,10 @@ from datetime import datetime
 import json
 
 import models, schemas, database, scoring
-from .database import engine, get_db
-from .ranking.elo import ELOSystem
-from .ranking.streaks import StreakManager
-from .ranking.router import router as ranking_router
+from database import engine, get_db
+from ranking.elo import ELOSystem
+from ranking.streaks import StreakManager
+from ranking.router import router as ranking_router
 
 # Create tables
 models.Base.metadata.create_all(bind=engine)
