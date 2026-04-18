@@ -1,10 +1,11 @@
-from fastapi import FastAPI, Depends, HTTPException, Security, status
+from fastapi import FastAPI, Depends, HTTPException, Security, status, WebSocket, WebSocketDisconnect
 from fastapi.security.api_key import APIKeyHeader, APIKey
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
-from typing import List
+from typing import List, Dict
 import uuid
 from datetime import datetime
+import json
 
 from . import models, schemas, database, scoring
 from .database import engine, get_db
@@ -21,10 +22,42 @@ app = FastAPI(
     The core API for the ShinyMetal.bot agent benchmarking competition.
     Optimized for autonomous agent interaction (AEO).
     """,
-    version="1.1.0"
+    version="1.2.0"
 )
 
-# Include Ranking Router
+# --- WebSocket Manager for Real-time Leaderboard ---
+class ConnectionManager:
+    def __init__(self):
+        self.active_connections: List[WebSocket] = []
+
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self.active_connections.append(websocket)
+
+    def disconnect(self, websocket: WebSocket):
+        self.active_connections.remove(websocket)
+
+    async def broadcast(self, message: Dict):
+        for connection in self.active_connections:
+            try:
+                await connection.send_json(message)
+            except Exception:
+                # Handle stale connections
+                pass
+
+manager = ConnectionManager()
+
+@app.websocket("/ws/leaderboard")
+async def leaderboard_ws(websocket: WebSocket):
+    await manager.connect(websocket)
+    try:
+        while True:
+            # Keep connection open, client doesn't need to send data
+            await websocket.receive_text()
+    except WebSocketDisconnect:
+        manager.disconnect(websocket)
+
+# --- Include Ranking Router ---
 app.include_router(ranking_router, prefix="/api")
 
 API_KEY_NAME = "X-Agent-Key"
@@ -46,6 +79,10 @@ async def get_api_key(
         )
     return agent
 
+@app.get("/api/health")
+def health_check():
+    return {"status": "healthy", "version": "1.2.0"}
+
 @app.post("/api/agents/register", response_model=schemas.AgentResponse, tags=["Agents"])
 def register_agent(agent_in: schemas.AgentCreate, db: Session = Depends(get_db)):
     db_agent = models.Agent(
@@ -59,7 +96,7 @@ def register_agent(agent_in: schemas.AgentCreate, db: Session = Depends(get_db))
     return db_agent
 
 @app.post("/api/submissions", response_model=schemas.SubmissionResponse, tags=["Competition"])
-def submit_challenge(
+async def submit_challenge(
     submission_in: schemas.SubmissionCreate,
     current_agent: models.Agent = Depends(get_api_key),
     db: Session = Depends(get_db)
@@ -100,7 +137,6 @@ def submit_challenge(
         current_agent.elo = new_elo
         
         # Update Streaks
-        # We consider a "win" as score >= 70
         is_win = db_submission.score >= 70.0
         new_streak, max_streak = StreakManager.update_streak(
             current_agent.current_streak,
@@ -123,21 +159,23 @@ def submit_challenge(
             "visual_theme": "neon-retro"
         }
         db_submission.breakdown = score_data
+        
+        # 3. Real-time update: Broadcast leaderboard change
+        await manager.broadcast({
+            "type": "LEADERBOARD_UPDATE",
+            "agent": current_agent.name,
+            "new_elo": current_agent.elo,
+            "elo_change": elo_change
+        })
 
     db.commit()
     db.refresh(db_submission)
     db.refresh(current_agent)
     
-    # 3. Real-time update (Coordinate with DevOpsBot)
-    # TODO: Trigger WebSocket broadcast here
-    
     return db_submission
 
 @app.get("/api/leaderboard", response_model=List[schemas.LeaderboardEntry], tags=["Competition"])
 def get_leaderboard(db: Session = Depends(get_db)):
-    """
-    Legacy leaderboard endpoint (now redirects/proxies to ranking router logic).
-    """
     agents = db.query(models.Agent).order_by(desc(models.Agent.elo)).limit(50).all()
     
     return [

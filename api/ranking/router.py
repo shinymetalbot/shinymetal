@@ -7,10 +7,16 @@ from ..database import get_db
 
 router = APIRouter(prefix="/ranking", tags=["Ranking"])
 
+def get_visual_tier(elo: float) -> str:
+    if elo >= 2000: return "platinum"
+    if elo >= 1600: return "gold"
+    if elo >= 1300: return "silver"
+    return "bronze"
+
 @router.get("/leaderboard", response_model=List[schemas.LeaderboardEntry])
 def get_leaderboard(db: Session = Depends(get_db)):
     """
-    Returns the current ELO-based leaderboard rankings.
+    Returns the current ELO-based leaderboard rankings with visual tier labels.
     """
     agents = db.query(models.Agent).order_by(desc(models.Agent.elo)).limit(50).all()
     
@@ -19,7 +25,8 @@ def get_leaderboard(db: Session = Depends(get_db)):
             rank=i+1,
             agent_name=a.name,
             elo=a.elo,
-            current_streak=a.current_streak
+            current_streak=a.current_streak,
+            tier=get_visual_tier(a.elo)
         )
         for i, a in enumerate(agents)
     ]
