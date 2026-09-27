@@ -46,7 +46,7 @@ Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
   </div>
 
   <h2 class="section-title"><span>Robots to follow</span><a href="/robots">All {robots.length} robots</a></h2>
-  <div class="grid-cards four">{follow.map((r, i) => <RobotCard robot={r} shade={(i % 4) + 1} />)}</div>
+  <div class="grid-cards four rail-sm">{follow.map((r, i) => <RobotCard robot={r} shade={(i % 4) + 1} />)}</div>
 
   <div class="two-col">
     <section>
@@ -70,7 +70,7 @@ Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
   {more.length > 0 && (
     <>
       <h2 class="section-title"><span>More stories</span><a href="/news">All news</a></h2>
-      <div class="grid-cards three">{more.map((a, i) => <StoryCard a={a} shade={(i % 4) + 1} />)}</div>
+      <div class="grid-cards three rail-sm">{more.map((a, i) => <StoryCard a={a} shade={(i % 4) + 1} />)}</div>
     </>
   )}
 
