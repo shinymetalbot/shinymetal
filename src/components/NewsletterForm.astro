@@ -1,0 +1,45 @@
+---
+interface Props { source?: string; compact?: boolean }
+const { source = "site", compact } = Astro.props;
+const status = Astro.url.searchParams.get("subscribed");
+---
+<section class="newsletter" id="newsletter" aria-labelledby="nl-title">
+  <div>
+    <span class="fd-eyebrow">The weekly signal</span>
+    <h2 id="nl-title">One email a week. Every claim labeled.</h2>
+    {!compact && <p>What shipped, what slipped and what is only a rumor in home robots, in five minutes. Free, no spam, unsubscribe any time.</p>}
+  </div>
+  <form class="nl-form" method="post" action="/api/subscribe" data-nl>
+    <label for={`nl-email-${source}`} class="hp">Email address</label>
+    <input id={`nl-email-${source}`} type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <input type="hidden" name="source" value={source} />
+    <button class="fd-btn" type="submit">Subscribe</button>
+    <p class="nl-msg" role="status" data-tone={status === "1" ? "ok" : status === "0" ? "err" : undefined}>{status === "1" ? "You're on the list. The next issue lands in your inbox." : status === "0" ? "That email didn't look right. Try again?" : ""}</p>
+  </form>
+</section>
+<script>
+  document.querySelectorAll<HTMLFormElement>("form[data-nl]").forEach((f) => {
+    f.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const msg = f.querySelector<HTMLElement>(".nl-msg")!;
+      const btn = f.querySelector<HTMLButtonElement>("button")!;
+      btn.disabled = true;
+      try {
+        const r = await fetch("/api/subscribe", { method: "POST", body: new FormData(f), headers: { Accept: "application/json" } });
+        const j = await r.json();
+        msg.dataset.tone = j.ok ? "ok" : "err";
+        msg.textContent = j.ok ? (j.already ? "You're already subscribed. Thanks." : "You're on the list. The next issue lands in your inbox.") : "That email didn't look right. Try again?";
+        if (j.ok) {
+          f.reset();
+          if (!j.already) (window as any).gtag?.("event", "generate_lead", { method: "newsletter" });
+        }
+      } catch {
+        msg.dataset.tone = "err";
+        msg.textContent = "Something went wrong. Try again in a minute.";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+</script>

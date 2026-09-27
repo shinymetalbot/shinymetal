@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import PromiseTimeline from "../components/PromiseTimeline.astro";
+import { q, api } from "../lib/convex";
+
+const promises = await q(api.promises.list, {});
+const byCo = Object.entries(
+  promises.reduce<Record<string, typeof promises>>((acc, p) => ((acc[p.company] ??= []).push(p), acc), {}),
+).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+const total = (o: string) => promises.filter((p) => p.outcome === o).length;
+const decided = promises.filter((p) => p.outcome !== "pending").length;
+const keptRate = decided ? Math.round((total("kept") / decided) * 100) : 0;
+const anchor = (c: string) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
+---
+<Base title="Promise ledger" description="Every public promise robot makers have made about dates, prices and production, logged with the source and marked kept, slipped, broken or open.">
+  <div class="page-head">
+    <span class="fd-eyebrow">Promise ledger</span>
+    <h1>Did they do what they said?</h1>
+    <p>Each claim a robot company made in public, with the date, the source and what happened next. Kept means on time. Slipped means late or re-dated. Broken means the date passed with nothing delivered.</p>
+  </div>
+  <div class="fd-row" style="gap:var(--space-6);margin-bottom:var(--space-5)">
+    <div><div class="fd-eyebrow">Logged</div><div class="fd-num" style="font-size:32px;line-height:36px">{promises.length}</div></div>
+    <div><div class="fd-eyebrow">Kept</div><div class="fd-num" style="font-size:32px;line-height:36px;color:var(--signal-ok)">{total("kept")}</div></div>
+    <div><div class="fd-eyebrow">Slipped</div><div class="fd-num" style="font-size:32px;line-height:36px;color:var(--signal-warn)">{total("slipped")}</div></div>
+    <div><div class="fd-eyebrow">Broken</div><div class="fd-num" style="font-size:32px;line-height:36px;color:var(--signal-danger)">{total("broken")}</div></div>
+    <div><div class="fd-eyebrow">Open</div><div class="fd-num" style="font-size:32px;line-height:36px">{total("pending")}</div></div>
+    <div><div class="fd-eyebrow">Kept rate</div><div class="fd-num" style="font-size:32px;line-height:36px">{keptRate}%</div></div>
+  </div>
+  <nav class="chips" aria-label="Jump to company">
+    {byCo.map(([c, list]) => <a class="chip" href={`#${anchor(c)}`}>{c} <span class="fd-num" style="margin-left:6px;opacity:.7">{list.length}</span></a>)}
+  </nav>
+  <div class="two-col">
+    {byCo.map(([c, list]) => (
+      <section id={anchor(c)} style="scroll-margin-top:80px">
+        <PromiseTimeline company={c} items={list} />
+      </section>
+    ))}
+  </div>
+  <p class="label-note">Know of a promise we missed? <a class="sm-link" href="mailto:tips@shinymetal.bot?subject=Promise%20ledger">Send it with a source</a>.</p>
+</Base>

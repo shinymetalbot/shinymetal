@@ -1,0 +1,6 @@
+---
+import { STATUS, type RobotStatus } from "../lib/format";
+interface Props { status: RobotStatus }
+const s = STATUS[Astro.props.status] ?? STATUS.internal;
+---
+<span class={`fd-rstatus fd-tone-${s.tone}`} title={s.help}><i class="fd-dot" aria-hidden="true"></i>{s.word}</span>

@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import CompareTable from "../components/CompareTable.astro";
+import { q, api } from "../lib/convex";
+
+const all = await q(api.robots.list, {});
+const requested = (Astro.url.searchParams.get("r") ?? "")
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
+// also accept the picker's r1..r4 selects
+for (const k of ["r1", "r2", "r3", "r4"]) {
+  const v = Astro.url.searchParams.get(k);
+  if (v) requested.push(v);
+}
+const DEFAULT = ["1x-neo", "tesla-optimus", "unitree-g1"];
+const slugs = [...new Set(requested.length ? requested : DEFAULT)].slice(0, 4);
+const robots = slugs.map((s) => all.find((r) => r.slug === s)).filter((r): r is (typeof all)[number] => !!r);
+const title = robots.length ? robots.map((r) => r.name).join(" vs ") : "Compare robots";
+const groups = Object.entries(
+  all.reduce<Record<string, typeof all>>((acc, r) => ((acc[r.category] ??= []).push(r), acc), {}),
+);
+const LABEL: Record<string, string> = { humanoid: "Humanoids", quadruped: "Robot dogs", home: "Home robots", arm: "Arms", kit: "Kits" };
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
+---
+<Base title={robots.length > 1 ? `${title}: specs compared` : "Compare robots"} description={`Side-by-side specs, price, status and legal notes${robots.length > 1 ? ` for ${robots.map((r) => `${r.maker} ${r.name}`).join(", ")}` : ""}. Every non-measured value carries a claim label.`}>
+  <div class="page-head">
+    <span class="fd-eyebrow">Compare</span>
+    <h1>{robots.length > 1 ? title : "Compare robots"}</h1>
+    <p>Pick up to four robots. The underlined cell is the best value in its row. A label next to a value means it is a claim, not a measurement.</p>
+  </div>
+  <form class="picker" method="get" action="/compare">
+    {[0, 1, 2, 3].map((i) => (
+      <label>Robot {i + 1}
+        <select name={`r${i + 1}`}>
+          <option value="">—</option>
+          {groups.map(([cat, list]) => (
+            <optgroup label={LABEL[cat] ?? cat}>
+              {list.map((r) => <option value={r.slug} selected={robots[i]?.slug === r.slug}>{r.maker} {r.name}</option>)}
+            </optgroup>
+          ))}
+        </select>
+      </label>
+    ))}
+    <button class="fd-btn" type="submit">Compare</button>
+  </form>
+  {robots.length ? <CompareTable robots={robots} /> : <div class="empty">Choose at least one robot.</div>}
+</Base>

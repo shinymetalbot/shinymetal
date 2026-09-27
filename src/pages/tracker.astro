@@ -1,0 +1,39 @@
+---
+import Base from "../layouts/Base.astro";
+import StatusBadge from "../components/StatusBadge.astro";
+import ClaimLabel from "../components/ClaimLabel.astro";
+import { q, api } from "../lib/convex";
+import { fmtDate, fmtPrice, STATUS, FCC_WORD, TELEOP_WORD, CATEGORY_WORD } from "../lib/format";
+
+const rows = await q(api.robots.tracker, {});
+const counts = Object.keys(STATUS).map((k) => [k, rows.filter((r) => r.status === k).length] as const);
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
+---
+<Base title="Reality tracker" description="Where every home and humanoid robot really stands: internal only, announced, preorder, shipping or in homes, with the dated source for each status.">
+  <div class="page-head">
+    <span class="fd-eyebrow">Reality tracker</span>
+    <h1>Who can actually get one?</h1>
+    <p>Every robot's status, the date it last changed and the source that proves it. "In homes" means verified in consumer homes, not a demo apartment.</p>
+  </div>
+  <div class="fd-row" style="margin-bottom:var(--space-5)">
+    {counts.map(([k, n]) => <span class="fd-row" style="gap:6px"><StatusBadge status={k as any} /><span class="fd-num">{n}</span></span>)}
+  </div>
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>Robot</th><th>Status</th><th>Latest change</th><th style="text-align:right">Price</th><th>Remote operators</th><th>US FCC</th></tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <td><div class="rname"><a href={`/robots/${r.slug}`}>{r.name}</a></div><div class="muted">{r.maker} · {CATEGORY_WORD[r.category]}</div></td>
+            <td><div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start"><StatusBadge status={r.status} />{r.status !== "discontinued" && <ClaimLabel kind={r.statusClaim} size="sm" />}</div></td>
+            <td>{r.latest ? <><span class="fd-num" style="font-size:13px">{fmtDate(r.latest.date)}</span><div style="font-size:14px;line-height:20px">{r.latest.note} <a class="sm-link" href={r.latest.sourceUrl} rel="noopener" target="_blank">Source</a></div></> : <span class="muted">No dated event</span>}</td>
+            <td class="num">{r.priceUsd != null ? fmtPrice(r.priceUsd) : "—"}</td>
+            <td>{TELEOP_WORD[r.teleop]}</td>
+            <td>{FCC_WORD[r.fcc]}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="label-note">On 2026-07-28 the US FCC stopped authorizing new foreign-made mobile robots over 2 kg. Models approved before then can still be sold. <a class="sm-link" href="/about#legal">More on the legal layer</a>.</p>
+</Base>

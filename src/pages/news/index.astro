@@ -1,0 +1,30 @@
+---
+import Base from "../../layouts/Base.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import ArticleItem from "../../components/ArticleItem.astro";
+import { q, api } from "../../lib/convex";
+import { TYPE_WORD } from "../../lib/format";
+const type = Astro.url.searchParams.get("type") ?? undefined;
+const valid = type && TYPE_WORD[type] ? type : undefined;
+const articles = await q(api.articles.listPublished, { limit: 100, type: valid });
+const top = articles.slice(0, 3);
+const rest = articles.slice(3);
+const FILTERS: [string, string | undefined][] = [["All", undefined], ["Decoded", "decoded"], ["Rumors", "rumor"], ["Research", "research"], ["Case studies", "case"]];
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
+---
+<Base title={valid ? `${TYPE_WORD[valid]}s` : "News"} description="Humanoid and home-robot news: press releases decoded, rumors with a confidence rating, research explained, and case studies grounded in real demos.">
+  <div class="page-head">
+    <span class="fd-eyebrow">Signal</span>
+    <h1>{valid ? TYPE_WORD[valid] + "s" : "News and analysis"}</h1>
+    <p>Press releases decoded, rumors with a confidence rating, research in plain words and case studies grounded in what robots have actually done.</p>
+  </div>
+  <nav class="chips" aria-label="Filter by type">
+    {FILTERS.map(([label, t]) => <a class="chip" href={t ? `/news?type=${t}` : "/news"} aria-current={t === valid ? "page" : undefined}>{label}</a>)}
+  </nav>
+  {articles.length === 0 ? <div class="empty">Nothing here yet.</div> : (
+    <>
+      <div class="grid-cards three">{top.map((a, i) => <StoryCard a={a} shade={(i % 4) + 1} />)}</div>
+      {rest.length > 0 && <ul class="fd-list" style="margin:var(--space-6) 0 0">{rest.map((a) => <ArticleItem a={a} showDek />)}</ul>}
+    </>
+  )}
+</Base>

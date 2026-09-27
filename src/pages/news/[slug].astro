@@ -1,0 +1,63 @@
+---
+import Base from "../../layouts/Base.astro";
+import ArticleHeader from "../../components/ArticleHeader.astro";
+import Figure from "../../components/Figure.astro";
+import RobotCard from "../../components/RobotCard.astro";
+import ArticleItem from "../../components/ArticleItem.astro";
+import ClaimLabel from "../../components/ClaimLabel.astro";
+import NewsletterForm from "../../components/NewsletterForm.astro";
+import { q, api } from "../../lib/convex";
+import { renderMarkdown } from "../../lib/markdown";
+import { fmtDate, CLAIMS, TYPE_WORD, absUrl } from "../../lib/format";
+
+const { slug } = Astro.params;
+const data = slug ? await q(api.articles.get, { slug }) : null;
+if (!data) return Astro.rewrite("/404");
+const { article: a, robots, more } = data;
+const html = renderMarkdown(a.body);
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: a.title,
+  description: a.dek,
+  datePublished: a.publishedAt,
+  dateModified: new Date(a.updatedAt).toISOString(),
+  author: { "@type": "Organization", name: a.author, url: "https://shinymetal.bot/about" },
+  publisher: { "@type": "Organization", name: "ShinyMetal", logo: { "@type": "ImageObject", url: "https://shinymetal.bot/favicon.svg" } },
+  mainEntityOfPage: absUrl(`/news/${a.slug}`),
+  image: a.heroUrl ? [a.heroUrl] : undefined,
+  articleSection: TYPE_WORD[a.type],
+  citation: a.sources.map((s) => s.url),
+};
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
+---
+<Base title={a.title} description={a.dek} image={a.heroUrl} type="article" jsonLd={ld}>
+  <article class="article-shell">
+    <div style="padding-top:var(--space-4)"><a class="fd-eyebrow" style="text-decoration:none;color:var(--link)" href={`/news?type=${a.type}`}>← {TYPE_WORD[a.type]}s</a></div>
+    <ArticleHeader a={a} />
+    {(a.heroUrl || a.heroVideoUrl) && (
+      <div class="article-hero"><Figure src={a.heroUrl} video={a.heroVideoUrl} alt="" caption={a.heroCaption} ratio="wide" eager /></div>
+    )}
+    <div class="fd-prose" set:html={html} />
+    <p class="label-note">
+      We labeled this story <ClaimLabel kind={a.claim} size="sm" /> — {CLAIMS[a.claim].help} <a class="sm-link" href="/about#labels">How we label claims</a>
+    </p>
+    <section class="sources" aria-labelledby="src-h">
+      <h2 id="src-h" class="fd-eyebrow" style="margin:0">Sources</h2>
+      <ol>{a.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.title}</a>{s.date && <span class="date">{fmtDate(s.date)}</span>}</li>)}</ol>
+    </section>
+    {robots.length > 0 && (
+      <section>
+        <h2 class="section-title"><span>Robots in this story</span></h2>
+        <div class="grid-cards">{robots.map((r, i) => <RobotCard robot={r} shade={(i % 4) + 1} />)}</div>
+      </section>
+    )}
+    {more.length > 0 && (
+      <section>
+        <h2 class="section-title"><span>Read next</span><a href="/news">All news</a></h2>
+        <ul class="fd-list" style="margin:0">{more.map((m) => <ArticleItem a={m} />)}</ul>
+      </section>
+    )}
+    <div style="margin-top:var(--space-7)"><NewsletterForm source={`article:${a.slug}`} compact /></div>
+  </article>
+</Base>

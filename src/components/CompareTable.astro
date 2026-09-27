@@ -1,0 +1,52 @@
+---
+import { CLAIMS, STATUS, FCC_WORD, TELEOP_WORD, CATEGORY_WORD, fmtNum, fmtPrice } from "../lib/format";
+interface Props { robots: any[] }
+const { robots } = Astro.props;
+type Row = { label: string; unit?: string; values: string[]; claims?: (string | null)[]; best?: number; group?: boolean };
+function best(vals: (number | null | undefined)[], dir: "max" | "min"): number | undefined {
+  const nums = vals.map((v) => (v == null ? null : v));
+  const present = nums.filter((v) => v != null) as number[];
+  if (present.length < 2) return undefined;
+  const target = dir === "max" ? Math.max(...present) : Math.min(...present);
+  return nums.filter((v) => v === target).length === 1 ? nums.indexOf(target) : undefined;
+}
+const pick = (f: (r: any) => number | null | undefined) => robots.map(f);
+const num = (label: string, unit: string, f: (r: any) => any, dir?: "max" | "min", d = 2): Row => ({
+  label, unit, values: pick(f).map((v) => fmtNum(v, "", d)), best: dir ? best(pick(f), dir) : undefined,
+});
+const rows: Row[] = [
+  { label: "Overview", values: robots.map(() => ""), group: true },
+  { label: "Type", values: robots.map((r) => CATEGORY_WORD[r.category] ?? r.category) },
+  { label: "Status", values: robots.map((r) => STATUS[r.status as keyof typeof STATUS]?.word ?? r.status), claims: robots.map((r) => (r.status === "discontinued" ? null : r.statusClaim)) },
+  { label: "Price", values: robots.map((r) => (r.priceUsd != null ? fmtPrice(r.priceUsd) : "—")), claims: robots.map((r) => (r.priceUsd != null ? r.priceClaim : null)), best: best(pick((r) => r.priceUsd), "min") },
+  { label: "Body", values: robots.map(() => ""), group: true },
+  num("Height", "m", (r) => r.heightM),
+  num("Weight", "kg", (r) => r.weightKg, "min", 1),
+  num("Payload", "kg", (r) => r.payloadKg, "max", 1),
+  num("Runtime", "h", (r) => r.runtimeH, "max", 1),
+  num("Top speed", "m/s", (r) => r.speedMps, "max"),
+  num("Degrees of freedom", "", (r) => r.dof, "max"),
+  num("Hand DoF", "per hand", (r) => r.handsDof, "max"),
+  { label: "Compute", values: robots.map((r) => r.compute ?? "—") },
+  { label: "Trust", values: robots.map(() => ""), group: true },
+  { label: "Remote operators", values: robots.map((r) => TELEOP_WORD[r.autonomy?.teleop] ?? "—") },
+  { label: "US FCC", values: robots.map((r) => FCC_WORD[r.legal?.fcc] ?? "—") },
+  { label: "Made in", values: robots.map((r) => r.country ?? "—") },
+];
+---
+<div class="fd-compare-wrap">
+  <table class="fd-compare">
+    <thead><tr><th scope="col" class="fd-compare-spec">Spec</th>{robots.map((r) => <th scope="col"><a href={`/robots/${r.slug}`} style="text-decoration:none"><span class="fd-compare-name">{r.name}</span><span class="fd-compare-maker">{r.maker}</span></a></th>)}</tr></thead>
+    <tbody>
+      {rows.map((r) => (
+        <tr class={r.group ? "fd-compare-group" : undefined}>
+          <th scope="row">{r.label}{r.unit && <span class="fd-unit"> {r.unit}</span>}</th>
+          {r.values.map((v, i) => {
+            const c = r.claims?.[i] as keyof typeof CLAIMS | null | undefined;
+            return <td class:list={["fd-num", r.best === i && "fd-best"]}>{v}{c && <span class={`fd-claim-mini fd-claim-${c}`} title={CLAIMS[c]?.help}>{CLAIMS[c]?.word}</span>}</td>;
+          })}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

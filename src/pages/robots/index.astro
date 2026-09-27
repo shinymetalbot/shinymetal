@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import RobotCard from "../../components/RobotCard.astro";
+import { q, api } from "../../lib/convex";
+import { CATEGORY_WORD, STATUS } from "../../lib/format";
+const cat = Astro.url.searchParams.get("type") ?? "";
+const status = Astro.url.searchParams.get("status") ?? "";
+const all = await q(api.robots.list, {});
+const robots = all.filter((r) => (!cat || r.category === cat) && (!status || r.status === status));
+const cats = [...new Set(all.map((r) => r.category))];
+const link = (k: string, v: string) => {
+  const p = new URLSearchParams();
+  const next: Record<string, string> = { type: cat, status, [k]: v };
+  for (const [key, val] of Object.entries(next)) if (val) p.set(key, val);
+  const s = p.toString();
+  return s ? `/robots?${s}` : "/robots";
+};
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "ShinyMetal robot database",
+  itemListElement: all.map((r, i) => ({ "@type": "ListItem", position: i + 1, url: `https://shinymetal.bot/robots/${r.slug}`, name: `${r.maker} ${r.name}` })),
+};
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
+---
+<Base title="Robot database" description={`Specs, prices, status and legal notes for ${all.length} humanoid, home and hobby robots, each with dated sources.`} jsonLd={ld}>
+  <div class="page-head">
+    <span class="fd-eyebrow">Atlas</span>
+    <h1>Robot database</h1>
+    <p>{all.length} robots with specs, price, who can actually buy one, whether a remote human drives it and where it stands with US regulators. Every status has a dated source.</p>
+  </div>
+  <nav class="chips" aria-label="Filter by type">
+    <a class="chip" href={link("type", "")} aria-current={!cat ? "page" : undefined}>All types</a>
+    {cats.map((c) => <a class="chip" href={link("type", c)} aria-current={cat === c ? "page" : undefined}>{CATEGORY_WORD[c] ?? c}</a>)}
+  </nav>
+  <nav class="chips" aria-label="Filter by status" style="margin-top:-12px">
+    <a class="chip" href={link("status", "")} aria-current={!status ? "page" : undefined}>Any status</a>
+    {Object.entries(STATUS).map(([k, s]) => <a class="chip" href={link("status", k)} aria-current={status === k ? "page" : undefined}>{s.word}</a>)}
+  </nav>
+  {robots.length === 0 ? <div class="empty">No robots match these filters.</div> : (
+    <div class="grid-cards four">{robots.map((r, i) => <RobotCard robot={r} shade={(i % 4) + 1} />)}</div>
+  )}
+  <p class="label-note" style="margin-top:var(--space-6)">Missing a robot? Tell us at <a class="sm-link" href="mailto:tips@shinymetal.bot">tips@shinymetal.bot</a>.</p>
+</Base>

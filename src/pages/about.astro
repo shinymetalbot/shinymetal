@@ -1,155 +1,62 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Base from "../layouts/Base.astro";
+import ClaimLabel from "../components/ClaimLabel.astro";
+import StatusBadge from "../components/StatusBadge.astro";
+import NewsletterForm from "../components/NewsletterForm.astro";
+import { CLAIMS, STATUS, type ClaimKind, type RobotStatus } from "../lib/format";
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About ShinyMetal",
+  url: "https://shinymetal.bot/about",
+  description: "How ShinyMetal labels claims, sources stories and stays independent.",
+};
 ---
+<Base title="About and how we label claims" description="ShinyMetal is an independent publication about home and humanoid robots. We label every claim shipped, preorder, promise, rumor or research, and we never sell robots." jsonLd={ld}>
+  <div class="page-head">
+    <span class="fd-eyebrow">About</span>
+    <h1>The owner's manual for the robot age</h1>
+    <p>ShinyMetal follows the robots that are heading for your home: what they can do, what they cost, and whether the company behind them keeps its word.</p>
+  </div>
+  <div class="prose-page">
+    <p>Almost nobody owns a home humanoid yet. Companies are announcing, demoing and taking deposits, and the news is a mix of real progress, careful marketing and rumor. We sort it. Every story and every spec carries a label that says how sure anyone can be.</p>
 
-<BaseLayout title="About | SHINYMETAL.BOT">
-  <Header />
-  
-  <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto min-h-screen">
-    <!-- Hero Section -->
-    <header class="grid lg:grid-cols-12 gap-12 mb-32 items-center">
-      <div class="lg:col-span-7">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 mb-8 ghost-border rounded-full bg-surface-container-low">
-          <span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
-          <span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">The Manifest of Veracity</span>
-        </div>
-        <h1 class="font-headline text-5xl md:text-7xl font-bold leading-[0.9] tracking-tighter mb-8 text-primary">
-          The Search for <br/>Verifiable Truth.
-        </h1>
-        <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-xl">
-          In an era of hallucination and curated benchmarks, we demand the unfiltered. Shinymetal.bot was forged to bridge the gap between AI theoretical potential and real-world execution.
-        </p>
-      </div>
-      <div class="lg:col-span-5 relative">
-        <div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden ghost-border relative">
-          <img class="w-full h-full object-cover mix-blend-luminosity opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZXSKQ5gu_41jqWzo_t5ehycsxEa-_VGNVOyNUvcZD8cxUdqnuex1mQHLZbRkT0PKK07Z1FqGfO6nN071GY8RnApJDma-PwimoFNb4O70LgYxjxwmonSFYS7CVLzbhj0wy5nySh6fDAlf7BQ9imDZbOzh3fqbvBb5g68YMmzkkg9gJ2PhMY7lbQSxmFYCGqblNQuAgbU7NBvicNpQpHo6k_xtCR80gk8hY1sjCVRdZfzXxlmARgADuvDFUFi7lHYr_6MKxPBzH69a" />
-          <div class="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest via-transparent to-primary/5"></div>
-          <div class="absolute bottom-6 left-6 right-6 p-4 bg-surface-container-highest/80 backdrop-blur-md rounded-lg border-l-2 border-primary">
-            <p class="font-label text-[10px] uppercase tracking-widest text-primary mb-1">Status Report</p>
-            <p class="font-body text-xs text-on-surface">"Refining the raw compute of a digital god."</p>
-          </div>
-        </div>
-      </div>
-    </header>
+    <h2 id="labels">How we label claims</h2>
+    <p>The word is the signal. The color and glyph only confirm it, so the label reads the same in print and for readers who don't see color.</p>
+  </div>
+  <ul class="legend" style="margin:var(--space-4) 0 var(--space-6)">
+    {(Object.keys(CLAIMS) as ClaimKind[]).map((k) => <li><span><ClaimLabel kind={k} /></span><span>{CLAIMS[k].help}</span></li>)}
+  </ul>
+  <div class="prose-page">
+    <p>Rumors also carry a confidence rating from 0 to 100. We explain the number in the story: who reported it, how many independent sources agree, and what would confirm it.</p>
 
-    <!-- Narrative Section -->
-    <section class="grid lg:grid-cols-2 gap-24 mb-40">
-      <div class="space-y-8">
-        <h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface">The Need for Friction</h2>
-        <div class="space-y-6 text-on-surface-variant leading-relaxed font-light text-lg">
-          <p>
-            Current benchmarks are sanitized. They exist in closed loops, solving problems that have already been solved, within guardrails that prioritize safety over sheer functional output. 
-          </p>
-          <p>
-            We built Shinymetal.bot because we saw the need for unguardrailed, real-world benchmarking. To know what an agent can truly do, you must release it into the wild—where data is messy, latency is real, and truth is verifiable only through action.
-          </p>
-        </div>
-      </div>
-      <div class="bg-surface-container-low p-8 rounded-xl ghost-border flex flex-col justify-center">
-        <div class="mb-6 flex justify-between items-start">
-          <span class="material-symbols-outlined text-4xl text-primary">factory</span>
-          <span class="font-label text-[10px] text-outline-variant font-bold">EST. 2024 / PROTOCOL 01</span>
-        </div>
-        <p class="font-headline text-xl text-on-surface italic leading-snug">
-          "We don't benchmark to confirm what we hope is true. We benchmark to find what is undeniably real."
-        </p>
-        <div class="mt-8 flex items-center space-x-4">
-          <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
-          <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Engineering Log: 09-X</p>
-        </div>
-      </div>
-    </section>
+    <h2 id="status">Robot status</h2>
+    <p>Each robot in the <a href="/robots">database</a> has one status, backed by a dated source in the <a href="/tracker">reality tracker</a>.</p>
+  </div>
+  <ul class="legend" style="margin:var(--space-4) 0 var(--space-6)">
+    {(Object.keys(STATUS) as RobotStatus[]).map((k) => <li><span><StatusBadge status={k} /></span><span>{STATUS[k].help}</span></li>)}
+  </ul>
+  <div class="prose-page">
+    <h2 id="legal">The legal layer</h2>
+    <p>For each robot we note whether it holds US FCC equipment authorization. On 28 July 2026 the FCC added foreign-made mobile robots over 2 kg (4.4 lb) to its Covered List, so new models from outside the US can't be authorized. Models approved before that date can still be sold. We also note known security flaws, and whether a remote human operator can drive the robot inside your home. A dash or "unknown" means the maker hasn't said and we couldn't verify it.</p>
 
-    <!-- Methodology Bento Grid -->
-    <section class="mb-40">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <p class="font-label text-[12px] uppercase tracking-[0.3em] text-primary mb-2">Technical Framework</p>
-          <h2 class="font-headline text-4xl font-bold tracking-tighter">The Four Pillars of Performance</h2>
-        </div>
-        <p class="font-body text-sm text-on-surface-variant max-w-xs text-right">
-          Our architecture is designed to eliminate human bias from the evaluation loop.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-1">
-        <!-- Pillar 1 -->
-        <div class="group bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
-          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">01</div>
-          <div>
-            <h3 class="font-headline text-xl font-bold mb-2">Universal API</h3>
-            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              A single injection point for any LLM or Agentic Framework, ensuring a level playing field for silicon.
-            </p>
-          </div>
-        </div>
-        <!-- Pillar 2 -->
-        <div class="group bg-surface-container-high p-8 h-80 flex flex-col justify-between hover:bg-surface-container-highest transition-colors duration-500">
-          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">02</div>
-          <div>
-            <h3 class="font-headline text-xl font-bold mb-2">Verifiable History</h3>
-            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              Every decision, every token, and every failure is etched into an immutable ledger for post-mortem analysis.
-            </p>
-          </div>
-        </div>
-        <!-- Pillar 3 -->
-        <div class="group bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
-          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">03</div>
-          <div>
-            <h3 class="font-headline text-xl font-bold mb-2">Real-World Tasks</h3>
-            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              Live market data, complex code refactoring, and multi-step reasoning challenges that mirror industry demands.
-            </p>
-          </div>
-        </div>
-        <!-- Pillar 4 -->
-        <div class="group bg-surface-container-high p-8 h-80 flex flex-col justify-between hover:bg-surface-container-highest transition-colors duration-500">
-          <div class="font-headline text-4xl text-outline-variant/50 group-hover:text-primary/30 transition-colors">04</div>
-          <div>
-            <h3 class="font-headline text-xl font-bold mb-2">Open Protocol</h3>
-            <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              Transparency is our only dogma. Our evaluation weights and data sets are fully inspectable by the collective.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h2 id="promises">The promise ledger</h2>
+    <p>When a company says something will happen by a date, we log it with the source. When the date arrives we mark it kept, slipped or broken, and we link what actually happened. The <a href="/promises">ledger</a> is the long memory the robot industry doesn't keep for itself.</p>
 
-    <!-- Team Status / Outro -->
-    <section class="grid lg:grid-cols-12 gap-12 items-center pt-20 border-t border-outline-variant/20">
-      <div class="lg:col-span-8">
-        <div class="flex items-center space-x-4 mb-6">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center ghost-border">
-            <span class="material-symbols-outlined text-primary">groups</span>
-          </div>
-          <div>
-            <h4 class="font-headline text-lg font-bold">The Collective</h4>
-            <p class="font-label text-[10px] uppercase tracking-widest text-secondary">Operational Status: Distributed</p>
-          </div>
-        </div>
-        <p class="font-body text-2xl text-on-surface max-w-2xl leading-snug">
-          We are a <span class="text-primary font-bold">distributed collective of engineers and data purists</span>. No headquarters. No fluff. Just a shared obsession with high-performance compute and the mechanics of truth.
-        </p>
-      </div>
-      <div class="lg:col-span-4 bg-surface-container-lowest p-6 rounded-lg ghost-border">
-        <div class="flex justify-between items-center mb-4">
-          <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-tighter">Network Latency</span>
-          <span class="text-[10px] font-mono text-primary">12ms (NOMINAL)</span>
-        </div>
-        <div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden">
-          <div class="h-full bg-primary w-2/3"></div>
-        </div>
-        <div class="mt-4 flex gap-2">
-          <div class="w-2 h-2 rounded-full bg-primary"></div>
-          <div class="w-2 h-2 rounded-full bg-primary/30"></div>
-          <div class="w-2 h-2 rounded-full bg-primary/30"></div>
-          <div class="w-2 h-2 rounded-full bg-primary/30"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  
-  <Footer />
-</BaseLayout>
+    <h2 id="sources">Sources and corrections</h2>
+    <ul>
+      <li>Every story lists its sources at the end. We link to primary sources (company releases, papers, filings) wherever they exist.</li>
+      <li>We quote companies exactly and decode the quote in plain words underneath.</li>
+      <li>Some drafting is assisted by AI research agents. Every fact must carry a source link before it publishes.</li>
+      <li>Generated images are labeled as illustrations in their captions. We never present a generated image as a photo of a real product.</li>
+      <li>Found a mistake? Email <a href="mailto:tips@shinymetal.bot">tips@shinymetal.bot</a>. We fix errors and note the correction.</li>
+    </ul>
+
+    <h2 id="independence">Independence</h2>
+    <p>We don't sell robots, and no maker pays for coverage. When we later add affiliate links or sponsors, the disclosure will sit next to the link, not in a footer.</p>
+
+    <h2 id="coming">What's coming</h2>
+    <p>Member profiles with a fleet (wishlist to delivered), a reservation queue tracker, a community, a workshop for designs and mods, and deals. Subscribe to hear when each opens.</p>
+  </div>
+  <div style="margin-top:var(--space-7)"><NewsletterForm source="about" /></div>
+</Base>

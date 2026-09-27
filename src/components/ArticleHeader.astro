@@ -1,0 +1,18 @@
+---
+import ClaimLabel from "./ClaimLabel.astro";
+import ConfidenceMeter from "./ConfidenceMeter.astro";
+import { TYPE_WORD, fmtDate } from "../lib/format";
+interface Props { a: any; level?: "h1" | "h2"; lead?: boolean; href?: string }
+const { a, level = "h1", lead, href } = Astro.props;
+const Tag = level;
+---
+<header class={`fd-article fd-article-${a.type}`}>
+  <div class="fd-article-kicker"><span class="fd-eyebrow">{TYPE_WORD[a.type] ?? "Article"}</span><ClaimLabel kind={a.claim} size="lg" /></div>
+  <Tag class="fd-article-title story-title">{href ? <a href={href} style="text-decoration:none;color:inherit">{a.title}</a> : a.title}</Tag>
+  {a.dek && <p class="fd-article-dek">{a.dek}</p>}
+  <div class="fd-byline"><span class="fd-avatar" aria-hidden="true">S</span><span><span class="fd-author">{a.author}</span> · <time class="fd-num" datetime={a.publishedAt}>{fmtDate(a.publishedAt)}</time> · {a.readMinutes} min read</span></div>
+  {!lead && a.type === "rumor" && a.confidence != null && <ConfidenceMeter value={a.confidence} />}
+  {!lead && (a.type === "decoded" || a.type === "research") && a.sourceQuote && (
+    <div class="fd-source"><span class="fd-eyebrow">{a.type === "decoded" ? "What they said" : "What the paper says"}</span><q>{a.sourceQuote}</q>{a.sourceAttribution && <span class="fd-caption" style="color:var(--ink-3)">{a.sourceAttribution}</span>}</div>
+  )}
+</header>

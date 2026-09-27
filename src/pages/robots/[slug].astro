@@ -1,0 +1,123 @@
+---
+import Base from "../../layouts/Base.astro";
+import Figure from "../../components/Figure.astro";
+import StatusBadge from "../../components/StatusBadge.astro";
+import ClaimLabel from "../../components/ClaimLabel.astro";
+import PromiseTimeline from "../../components/PromiseTimeline.astro";
+import ArticleItem from "../../components/ArticleItem.astro";
+import { q, api } from "../../lib/convex";
+import { robotImage, fmtDate, fmtNum, fmtPrice, CATEGORY_WORD, FCC_WORD, TELEOP_WORD, STATUS, absUrl } from "../../lib/format";
+
+const { slug } = Astro.params;
+const data = slug ? await q(api.robots.get, { slug }) : null;
+if (!data) return Astro.rewrite("/404");
+const { robot: r, events, promises, articles } = data;
+const all = await q(api.robots.list, {});
+const peers = all.filter((x) => x.slug !== r.slug && x.category === r.category).slice(0, 2);
+const compareHref = `/compare?r=${[r.slug, ...peers.map((p) => p.slug)].join(",")}`;
+const facts: Array<{ k: string; v: string; claim?: any; sub?: string | null }> = [
+  { k: "Price", v: r.priceUsd != null ? fmtPrice(r.priceUsd) : "Not announced", claim: r.priceUsd != null ? r.priceClaim : null, sub: r.priceNote },
+  { k: "Status", v: STATUS[r.status as keyof typeof STATUS]?.word ?? r.status, claim: r.status === "discontinued" ? null : r.statusClaim, sub: r.releaseNote },
+  { k: "Height", v: fmtNum(r.heightM, "m") },
+  { k: "Weight", v: fmtNum(r.weightKg, "kg", 1) },
+  { k: "Payload", v: fmtNum(r.payloadKg, "kg", 1) },
+  { k: "Runtime", v: fmtNum(r.runtimeH, "h", 1) },
+  { k: "Top speed", v: fmtNum(r.speedMps, "m/s") },
+  { k: "Degrees of freedom", v: fmtNum(r.dof, "") },
+  { k: "Hand DoF", v: r.handsDof != null ? `${r.handsDof} per hand` : "—" },
+  { k: "Compute", v: r.compute ?? "—" },
+  { k: "Made in", v: r.country ?? "—" },
+].filter((f) => r.category === "humanoid" || f.k !== "Hand DoF");
+const fullName = `${r.maker} ${r.name}`;
+const img = robotImage(r);
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: fullName,
+  brand: { "@type": "Brand", name: r.maker },
+  category: CATEGORY_WORD[r.category],
+  description: r.summary,
+  url: absUrl(`/robots/${r.slug}`),
+  image: r.imageUrl ?? undefined,
+  ...(r.priceUsd != null && r.status !== "discontinued"
+    ? { offers: { "@type": "Offer", priceCurrency: "USD", price: r.priceUsd, availability: r.status === "preorder" ? "https://schema.org/PreOrder" : r.status === "shipping" || r.status === "homes" ? "https://schema.org/InStock" : "https://schema.org/PreSale", url: r.website ?? undefined } }
+    : {}),
+};
+const eventsDesc = [...events].sort((a, b) => b.date.localeCompare(a.date));
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
+---
+<Base title={`${fullName}: specs, price and status`} description={`${fullName} — ${r.summary}`.slice(0, 300)} image={r.imageUrl} jsonLd={ld}>
+  <div style="padding-top:var(--space-4)"><a class="fd-eyebrow" style="text-decoration:none;color:var(--link)" href="/robots">← Robot database</a></div>
+  <div class="robot-hero">
+    <div>
+      <div class="fd-row"><span class="fd-eyebrow">{r.maker} · {CATEGORY_WORD[r.category]}</span></div>
+      <h1>{r.name}</h1>
+      <div class="fd-row" style="margin:12px 0 16px"><StatusBadge status={r.status} />{r.status !== "discontinued" && <ClaimLabel kind={r.statusClaim} />}</div>
+      <p style="margin:0 0 20px;font-size:19px;line-height:30px;max-width:60ch">{r.summary}</p>
+      <Figure src={img.src} drawing={img.drawing} alt={img.drawing ? "" : fullName} caption={img.caption} ratio="wide" eager />
+      <div class="fd-row" style="margin-top:16px">
+        <a class="fd-btn" href={compareHref}>Compare</a>
+        {r.website && <a class="fd-btn fd-btn-secondary" href={r.website} rel="noopener" target="_blank">Maker's site</a>}
+      </div>
+    </div>
+    <div>
+      <dl class="facts">
+        {facts.map((f) => (
+          <div class="fact">
+            <dt>{f.k}</dt>
+            <dd>{f.v}{f.claim && <ClaimLabel kind={f.claim} size="sm" />}</dd>
+            {f.sub && <span class="sub">{f.sub}</span>}
+          </div>
+        ))}
+      </dl>
+      <p class="label-note">A dash means the maker has not published it. Values with a label are claims, not measurements.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title"><span>Trust and legal</span><a href="/about#legal">What these mean</a></h2>
+  <div class="legal-grid">
+    <div class="legal-card">
+      <h3>Does a remote human drive it?</h3>
+      <p><strong>{TELEOP_WORD[r.autonomy.teleop]}</strong></p>
+      {r.autonomy.note && <p style="color:var(--ink-2)">{r.autonomy.note}</p>}
+    </div>
+    <div class="legal-card">
+      <h3>US FCC</h3>
+      <p><strong>{FCC_WORD[r.legal.fcc]}</strong></p>
+      {r.legal.fccNote && <p style="color:var(--ink-2)">{r.legal.fccNote}</p>}
+    </div>
+    {r.legal.eu && <div class="legal-card"><h3>Europe</h3><p style="color:var(--ink-2)">{r.legal.eu}</p></div>}
+    {r.legal.security && <div class="legal-card" style="border-color:var(--signal-danger)"><h3 style="color:var(--signal-danger)">Known security issues</h3><p style="color:var(--ink-2)">{r.legal.security}</p></div>}
+  </div>
+
+  <div class="two-col">
+    <section>
+      <h2 class="section-title"><span>Status history</span><span>{events.length} dated events</span></h2>
+      <ul class="fd-list" style="margin:0">
+        {eventsDesc.map((e) => (
+          <li class="fd-list-item">
+            <div class="fd-list-top"><StatusBadge status={e.status} /><span class="fd-list-meta">{fmtDate(e.date)}</span></div>
+            <p style="margin:8px 0 0;font-size:16px;line-height:24px">{e.note} <a class="sm-link" href={e.sourceUrl} rel="noopener" target="_blank">{e.sourceTitle ?? "Source"}</a></p>
+          </li>
+        ))}
+      </ul>
+    </section>
+    <section>
+      <h2 class="section-title"><span>Promises</span><a href="/promises">Ledger</a></h2>
+      {promises.length ? <PromiseTimeline company={r.maker} items={promises} /> : <div class="empty">No promises logged for this robot yet.</div>}
+    </section>
+  </div>
+
+  {articles.length > 0 && (
+    <section>
+      <h2 class="section-title"><span>Coverage</span><a href="/news">All news</a></h2>
+      <ul class="fd-list" style="margin:0">{articles.map((a) => <ArticleItem a={a} showDek />)}</ul>
+    </section>
+  )}
+
+  <section class="sources" aria-labelledby="rsrc">
+    <h2 id="rsrc" class="fd-eyebrow" style="margin:0">Sources for specs and status</h2>
+    <ol>{r.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.title}</a>{s.date && <span class="date">{fmtDate(s.date)}</span>}</li>)}</ol>
+    <p class="label-note">Last updated {fmtDate(new Date(r.updatedAt).toISOString().slice(0, 10))}. Spotted an error? <a class="sm-link" href={`mailto:tips@shinymetal.bot?subject=${encodeURIComponent("Correction: " + fullName)}`}>Send a correction</a>.</p>
+  </section>
+</Base>

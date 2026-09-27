@@ -1,0 +1,17 @@
+---
+interface Props { src?: string | null; video?: string | null; alt?: string; caption?: string | null; ratio?: "wide" | "square"; shade?: number; eager?: boolean; drawing?: boolean }
+const { src, video, alt = "", caption, ratio, shade = 1, eager, drawing } = Astro.props;
+---
+<figure class:list={["fd-fig", ratio === "square" && "fd-fig-square", ratio === "wide" && "fd-fig-wide"]}>
+  {video ? (
+    <div class="fd-fig-img"><video src={video} poster={src ?? undefined} autoplay muted loop playsinline preload="metadata" aria-label={alt}></video></div>
+  ) : src ? (
+    <div class:list={["fd-fig-img", drawing && "is-drawing"]}><img src={src} alt={alt} loading={eager ? "eager" : "lazy"} decoding="async" /></div>
+  ) : (
+    <div class={`fd-fig-ph fd-shade-${shade}`}>
+      <svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30H100M50 0V60" stroke="currentColor" stroke-width=".4" opacity=".5"/><circle cx="50" cy="30" r="14" fill="none" stroke="currentColor" stroke-width=".5" vector-effect="non-scaling-stroke"/></svg>
+      <span class="fd-eyebrow">Photo</span>
+    </div>
+  )}
+  {caption && <figcaption class="fd-fig-cap">{caption}</figcaption>}
+</figure>

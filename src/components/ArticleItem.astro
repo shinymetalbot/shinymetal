@@ -1,0 +1,16 @@
+---
+import ClaimLabel from "./ClaimLabel.astro";
+import ConfidenceMeter from "./ConfidenceMeter.astro";
+import { TYPE_WORD, fmtDate } from "../lib/format";
+interface Props { a: any; showDek?: boolean }
+const { a, showDek } = Astro.props;
+---
+<li class="fd-list-item">
+  <a class="card-link" href={`/news/${a.slug}`}>
+    <div class="fd-list-top"><ClaimLabel kind={a.claim} size="sm" /><span class="fd-list-meta">{TYPE_WORD[a.type]}</span></div>
+    <h3 class="fd-list-title">{a.title}</h3>
+    {showDek && <p style="margin:0 0 4px;font-size:15px;line-height:22px;color:var(--ink-2)">{a.dek}</p>}
+    <div class="fd-list-meta">{fmtDate(a.publishedAt)} · {a.readMinutes} min</div>
+    {a.type === "rumor" && a.confidence != null && <ConfidenceMeter value={a.confidence} compact />}
+  </a>
+</li>

@@ -1,0 +1,3035 @@
+[
+  {
+    "slug": "tesla-optimus",
+    "name": "Optimus",
+    "maker": "Tesla",
+    "category": "humanoid",
+    "country": "United States",
+    "status": "internal",
+    "statusClaim": "shipped",
+    "priceUsd": null,
+    "priceNote": "No list price. Musk said in Oct 2024 that at scale it could cost $20,000-$30,000; that is a long-term target, not a quote.",
+    "priceClaim": "promise",
+    "heightM": null,
+    "weightKg": null,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Optimus (Gen 2.5; V3 not yet unveiled). Internal use only; Fremont Optimus line being installed, first builds go to Tesla's own Optimus Academy",
+    "summary": "Tesla's humanoid is still used only inside Tesla. Tesla has converted the Fremont Model S/X line for Optimus, but its July 2026 update only says production is 'anticipated later this year'. The first units go to its own training program, not to customers. The Gen 3 (V3) design was promised for Q1 2026 and has slipped several times; as of late September 2026 it has not been formally unveiled. There is no price and no way to order one.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Optimus units at Tesla's Oct 2024 'We, Robot' event were partly remote-controlled by humans. Tesla has not published how much current internal work is autonomous."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found. Tesla builds it in the US, so the July 2026 FCC rule on foreign-made robots does not apply.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.tesla.com/AI",
+    "statusEvents": [
+      {
+        "date": "2024-10-10",
+        "status": "internal",
+        "note": "Optimus robots served drinks at the 'We, Robot' event; later reports said they were partly remote-controlled",
+        "sourceUrl": "https://www.entrepreneur.com/business-news/elon-musk-reveals-tesla-optimus-robots-remotely-controlled/481252",
+        "sourceTitle": "Entrepreneur: Tesla's Optimus robots stole the show, but were they controlled by humans?"
+      },
+      {
+        "date": "2026-01-28",
+        "status": "internal",
+        "note": "Q4 2025 update: Gen 3 unveil planned for Q1 2026, production start planned before end of 2026, eventual capacity 1 million robots/year",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003837/exhibit991.htm",
+        "sourceTitle": "Tesla Q4 and FY2025 Update (Form 8-K exhibit 99.1)"
+      },
+      {
+        "date": "2026-04-22",
+        "status": "internal",
+        "note": "Musk pushed the V3 reveal to 'probably middle of this year' and said Fremont production would start late July or August",
+        "sourceUrl": "https://electrek.co/2026/04/22/tesla-optimus-production-fremont-model-sx-line/",
+        "sourceTitle": "Electrek: Tesla pushes Optimus V3 reveal later this year, again"
+      },
+      {
+        "date": "2026-07-22",
+        "status": "internal",
+        "note": "Q2 2026 update: first-gen Optimus lines still being installed at Fremont, production 'anticipated later this year', first builds for the internal Optimus Academy",
+        "sourceUrl": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+        "sourceTitle": "Tesla Q2 2026 Update"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Tesla Q4 and FY2025 Update",
+        "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003837/exhibit991.htm",
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Electrek: Tesla pushes Optimus V3 reveal later this year, again",
+        "url": "https://electrek.co/2026/04/22/tesla-optimus-production-fremont-model-sx-line/",
+        "date": "2026-04-22"
+      },
+      {
+        "title": "Tesla Q2 2026 Update",
+        "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+        "date": "2026-07-22"
+      },
+      {
+        "title": "Not a Tesla App: Tesla app leaks new Optimus Gen 3 robot design",
+        "url": "https://www.notateslaapp.com/news/4725/tesla-app-leaks-new-optimus-gen-3-robot-design",
+        "date": "2026-09"
+      }
+    ]
+  },
+  {
+    "slug": "1x-neo",
+    "name": "NEO",
+    "maker": "1X Technologies",
+    "category": "humanoid",
+    "country": "United States",
+    "status": "preorder",
+    "statusClaim": "preorder",
+    "priceUsd": 20000,
+    "priceNote": "$20,000 Early Access purchase (priority 2026 delivery) or $499/month subscription (ships later); $200 refundable deposit",
+    "priceClaim": "preorder",
+    "heightM": 1.68,
+    "weightKg": 30,
+    "dof": null,
+    "payloadKg": 25,
+    "runtimeH": 4,
+    "speedMps": 1.4,
+    "handsDof": 22,
+    "compute": "1X NEO Cortex (NVIDIA Jetson Thor)",
+    "releaseNote": "Taking $200 deposits; factory opened April 2026; no verified home deliveries yet",
+    "summary": "NEO is a soft-bodied home humanoid you can reserve today for $20,000 or $499 a month. 1X opened its Hayward, California factory in April 2026 and says first customer shipments are planned for 2026, with the first year of capacity (over 10,000 units) sold out. We have not seen a verified delivery to a home yet. For chores it can't do alone, NEO relies on remote 1X operators.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Owners can book a 1X 'Expert' who remotely guides NEO through chores it doesn't know yet; 1X says this also trains it."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found in public sources. NEO is built in Hayward, California, so the July 2026 FCC rule on foreign-made robots should not apply.",
+      "eu": "1X says other markets open from 2027; no CE marking reported yet",
+      "security": null
+    },
+    "website": "https://www.1x.tech/neo",
+    "statusEvents": [
+      {
+        "date": "2025-10-28",
+        "status": "preorder",
+        "note": "NEO opened for preorder at $20,000 or $499/month with a $200 deposit; deliveries promised in 2026",
+        "sourceUrl": "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/",
+        "sourceTitle": "The Robot Report: NEO humanoid designed for household use, available for preorder"
+      },
+      {
+        "date": "2026-04-30",
+        "status": "preorder",
+        "note": "1X opened its Hayward, CA factory (10,000 units/year); says first-year capacity sold out in five days; consumer shipments planned for 2026",
+        "sourceUrl": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+        "sourceTitle": "1X opens NEO factory in Hayward, CA (press release)"
+      },
+      {
+        "date": "2026-07-09",
+        "status": "preorder",
+        "note": "1X announced upgraded 25-DoF hands (22 in fingers/palm plus 3 at the wrist) for NEO",
+        "sourceUrl": "https://www.1x.tech/discover/neos-hands",
+        "sourceTitle": "1X: NEO's 25 degree of freedom hands"
+      }
+    ],
+    "sources": [
+      {
+        "title": "1X NEO product page (specs)",
+        "url": "https://www.1x.tech/neo",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "1X NEO home robot order page",
+        "url": "https://www.1x.tech/discover/neo-home-robot",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "The Robot Report: NEO available for preorder",
+        "url": "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/",
+        "date": "2025-10-30"
+      },
+      {
+        "title": "The Next Web: 1X starts shipping NEO humanoid robots to US homes",
+        "url": "https://thenextweb.com/news/1x-neo-humanoid-factory-hayward-10000-home-robots",
+        "date": "2026-05-01"
+      }
+    ]
+  },
+  {
+    "slug": "figure-03",
+    "name": "Figure 03",
+    "maker": "Figure AI",
+    "category": "humanoid",
+    "country": "United States",
+    "status": "internal",
+    "statusClaim": "shipped",
+    "priceUsd": null,
+    "priceNote": "No published price and no public ordering; commercial customers only",
+    "priceClaim": null,
+    "heightM": 1.73,
+    "weightKg": 61,
+    "dof": null,
+    "payloadKg": 20,
+    "runtimeH": 5,
+    "speedMps": 1.2,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Built in volume at BotQ (350+ by April 2026); used internally and in a BMW pilot; not for sale to the public",
+    "summary": "Figure 03 is Figure's third humanoid, pitched for both factories and homes. Figure says its BotQ plant had built more than 350 by April 2026, and those went to internal R&D, data collection, housework trials and commercial pilots. The first customer site is BMW's Spartanburg plant, where it started logistics sequencing work in June 2026. There is no consumer price, no ordering and no public date for homes.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Figure says Figure 03 runs on its Helix 02 vision-language-action model. No one outside Figure has checked how much remote help it gets."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found. Built in the US at BotQ, so the July 2026 foreign-made rule does not apply.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.figure.ai/figure",
+    "statusEvents": [
+      {
+        "date": "2025-10-09",
+        "status": "announced",
+        "note": "Figure 03 revealed, designed for Helix, the home and mass production at BotQ",
+        "sourceUrl": "https://www.figure.ai/news/introducing-figure-03",
+        "sourceTitle": "Figure: Introducing Figure 03"
+      },
+      {
+        "date": "2026-04-29",
+        "status": "internal",
+        "note": "Figure says BotQ has produced 350+ Figure 03 units, now at one robot per hour, for internal R&D, data collection, housework and commercial pilots",
+        "sourceUrl": "https://www.figure.ai/news/ramping-figure-03-production",
+        "sourceTitle": "Figure: Ramping Figure 03 production"
+      },
+      {
+        "date": "2026-06-25",
+        "status": "internal",
+        "note": "BMW starts a Figure 03 project for logistics sequencing at Plant Spartanburg, after an 11-month Figure 02 pilot",
+        "sourceUrl": "https://www.press.bmwgroup.com/global/article/detail/T0458778EN/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg?language=en",
+        "sourceTitle": "BMW Group: advancing physical AI with Figure 03 project in Spartanburg"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Figure 03 product page (specs)",
+        "url": "https://www.figure.ai/figure",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Figure: Introducing Figure 03",
+        "url": "https://www.figure.ai/news/introducing-figure-03",
+        "date": "2025-10-09"
+      },
+      {
+        "title": "Figure: Ramping Figure 03 production",
+        "url": "https://www.figure.ai/news/ramping-figure-03-production",
+        "date": "2026-04-29"
+      },
+      {
+        "title": "Figure: F.03 arrives at BMW",
+        "url": "https://www.figure.ai/news/f-03-at-bmw",
+        "date": "2026-06-30"
+      }
+    ]
+  },
+  {
+    "slug": "agility-digit",
+    "name": "Digit",
+    "maker": "Agility",
+    "category": "humanoid",
+    "country": "United States",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": null,
+    "priceNote": "Offered to businesses under robots-as-a-service contracts; no public price",
+    "priceClaim": null,
+    "heightM": null,
+    "weightKg": null,
+    "dof": null,
+    "payloadKg": 15.8,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Digit (current model; Digit 5 announced). Working in paid warehouse deployments since June 2024; Digit 5 early access planned for H1 2027",
+    "summary": "Digit is a warehouse humanoid that moves totes, and it has the longest paid work record of any humanoid: GXO, Schaeffler, Mercado Libre and Toyota Motor Manufacturing Canada, with more than 65,000 hours logged. Agility (renamed from Agility Robotics in March 2026) plans to go public through a SPAC. On Sept 15, 2026 it announced Digit 5, a larger 'cooperatively safe' model rated at 22.7 kg payload, due in early access in the first half of 2027. It is a business robot, not a home robot.",
+    "autonomy": {
+      "teleop": "no",
+      "note": "Agility says deployed Digits work autonomously, coordinated by its Agility Arc fleet software. How often a remote person steps in has not been published."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found. US-built, so the July 2026 foreign-made rule does not apply.",
+      "eu": "Agility says Digit 5 is expected to carry a CE mark for EU and UK sales from 2027",
+      "security": null
+    },
+    "website": "https://www.agilityrobotics.com/",
+    "statusEvents": [
+      {
+        "date": "2024-06-05",
+        "status": "shipping",
+        "note": "Digit deployed at a GXO facility near Atlanta under a multi-year robots-as-a-service deal, the first formal commercial humanoid deployment",
+        "sourceUrl": "https://www.agilityrobotics.com/content/digit-deployed-at-gxo-in-historic-humanoid-raas-agreement",
+        "sourceTitle": "Agility: Digit deployed at GXO in historic humanoid RaaS agreement"
+      },
+      {
+        "date": "2026-03-05",
+        "status": "shipping",
+        "note": "Agility Robotics renamed itself Agility",
+        "sourceUrl": "https://www.businesswire.com/news/home/20260305947515/en/Agility-Robotics-Becomes-Agility-Expanding-Its-Reach-Across-Emerging-Use-Cases",
+        "sourceTitle": "Business Wire: Agility Robotics becomes Agility"
+      },
+      {
+        "date": "2026-06-24",
+        "status": "shipping",
+        "note": "SPAC merger with Churchill Capital Corp XI at a $2.5B valuation announced; filings cite 65,000+ operating hours and $300M+ in committed Digit 5 orders",
+        "sourceUrl": "https://www.geekwire.com/2026/digit-maker-agility-robotics-to-go-public-in-2-5b-deal-heres-what-the-filings-say-about-its-finances/",
+        "sourceTitle": "GeekWire: Digit maker Agility Robotics to go public in $2.5B deal"
+      },
+      {
+        "date": "2026-09-15",
+        "status": "shipping",
+        "note": "Digit 5 unveiled (1.81 m, 129 kg, 22.7 kg payload); early access H1 2027, general availability end of 2027",
+        "sourceUrl": "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
+        "sourceTitle": "Agility unveils Digit 5 humanoid robot"
+      }
+    ],
+    "sources": [
+      {
+        "title": "The Robot Report: Agility Robotics' Digit humanoids land first official job",
+        "url": "https://www.therobotreport.com/agility-robotics-digit-humanoid-lands-first-official-job/",
+        "date": "2024-06-27"
+      },
+      {
+        "title": "Agility unveils Digit 5",
+        "url": "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
+        "date": "2026-09-15"
+      },
+      {
+        "title": "GeekWire: Agility to go public in $2.5B deal",
+        "url": "https://www.geekwire.com/2026/digit-maker-agility-robotics-to-go-public-in-2-5b-deal-heres-what-the-filings-say-about-its-finances/",
+        "date": "2026-06-24"
+      },
+      {
+        "title": "The Robot Report: Digit humanoid joins Mercado Libre warehouse",
+        "url": "https://www.therobotreport.com/agility-mercado-libre-embargoed/",
+        "date": "2025-12"
+      }
+    ]
+  },
+  {
+    "slug": "apptronik-apollo",
+    "name": "Apollo 2",
+    "maker": "Apptronik",
+    "category": "humanoid",
+    "country": "United States",
+    "status": "internal",
+    "statusClaim": "shipped",
+    "priceUsd": null,
+    "priceNote": "No published price. In 2023 the CEO said about 'the price of a new car'.",
+    "priceClaim": null,
+    "heightM": null,
+    "weightKg": null,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Pilots and data collection only; Apptronik says Apollo 3 will be its first real commercial product",
+    "summary": "Apollo is Apptronik's general-purpose industrial humanoid. The original 2023 model was 1.72 m and 72.5 kg, could lift 25 kg and ran about 4 hours on a swappable battery. Apollo 2, revealed in June 2026 with legs or a wheeled base, is mainly a platform for pilots at Mercedes-Benz and GXO and for gathering training data with Google DeepMind. Apptronik raised $520M in February 2026 to ramp production, but has not published Apollo 2 specs, a price or a commercial date for Apollo 3.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Apollo 2 is used for large-scale data collection at Apptronik's Robot Park; how much of that work is teleoperated has not been published."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found. US-designed, with manufacturing partner Jabil; where it is built matters under the July 2026 FCC rule but has not been disclosed.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://apptronik.com/",
+    "statusEvents": [
+      {
+        "date": "2023-08-23",
+        "status": "announced",
+        "note": "Apollo unveiled: 1.72 m, 72.5 kg, 25 kg lift, about 4 hours per swappable battery",
+        "sourceUrl": "https://www.therobotreport.com/apptronik-unveils-apollo-humanoid-robot/",
+        "sourceTitle": "The Robot Report: Apptronik unveils Apollo humanoid robot"
+      },
+      {
+        "date": "2024-03-15",
+        "status": "internal",
+        "note": "Mercedes-Benz agreement to pilot Apollo in its factories",
+        "sourceUrl": "https://www.designboom.com/technology/apptronik-robot-apollo-work-mercedes-benz-facility-manufacture-cars-humanoid-nvidia-ai-03-19-2024/",
+        "sourceTitle": "designboom: Apptronik's robot Apollo to work in Mercedes-Benz facility"
+      },
+      {
+        "date": "2026-02-11",
+        "status": "internal",
+        "note": "$520M Series A-X extension (Series A over $935M) to ramp Apollo production and deployments",
+        "sourceUrl": "https://www.therobotreport.com/apptronik-brings-in-another-520m-to-ramp-up-apollo-production/",
+        "sourceTitle": "The Robot Report: Apptronik brings in another $520M"
+      },
+      {
+        "date": "2026-06-30",
+        "status": "internal",
+        "note": "Apollo 2 (legged or wheeled) unveiled with the expanded Robot Park data facility in Austin; Apollo 3 named as the commercial product",
+        "sourceUrl": "https://www.therobotreport.com/apptronik-unveils-apollo-2-flagship-data-collection-training-facility/",
+        "sourceTitle": "The Robot Report: Apptronik unveils Apollo 2"
+      }
+    ],
+    "sources": [
+      {
+        "title": "The Robot Report: Apptronik unveils Apollo 2",
+        "url": "https://www.therobotreport.com/apptronik-unveils-apollo-2-flagship-data-collection-training-facility/",
+        "date": "2026-07-01"
+      },
+      {
+        "title": "Humanoids Daily: Apptronik quietly unveils Apollo 2",
+        "url": "https://www.humanoidsdaily.com/news/substance-over-hype-apptronik-quietly-unveils-apollo-2-humanoid-via-website-update",
+        "date": "2026-06-28"
+      },
+      {
+        "title": "The Robot Report: Apptronik unveils Apollo humanoid robot",
+        "url": "https://www.therobotreport.com/apptronik-unveils-apollo-humanoid-robot/",
+        "date": "2023-08-23"
+      },
+      {
+        "title": "SiliconANGLE: Apptronik raises $520M",
+        "url": "https://siliconangle.com/2026/02/11/apptronik-raises-520m-ramp-humanoid-apollo-robot-commercial-deployments/",
+        "date": "2026-02-11"
+      }
+    ]
+  },
+  {
+    "slug": "boston-dynamics-atlas",
+    "name": "Atlas",
+    "maker": "Boston Dynamics",
+    "category": "humanoid",
+    "country": "United States",
+    "status": "internal",
+    "statusClaim": "shipped",
+    "priceUsd": null,
+    "priceNote": "No published price; all 2026 production committed to Hyundai and Google DeepMind",
+    "priceClaim": null,
+    "heightM": null,
+    "weightKg": null,
+    "dof": 56,
+    "payloadKg": 50,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Atlas (electric, production version). In production since January 2026; all 2026 units go to parent Hyundai and Google DeepMind; more customers from early 2027",
+    "summary": "The production electric Atlas has 56 degrees of freedom, lifts up to 50 kg and swaps its own batteries. Boston Dynamics started building it in January 2026, but the whole 2026 run goes to its parent Hyundai and to Google DeepMind. At Hyundai's Georgia Metaplant, Atlas is learning parts sequencing in a training center that moved into full operation in September 2026. Assembly-line work is not expected before 2028-2030.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Boston Dynamics says Atlas can work autonomously, be teleoperated in VR, or be steered from a tablet."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found. Built in Boston, so the July 2026 foreign-made rule does not apply.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://bostondynamics.com/atlas/",
+    "statusEvents": [
+      {
+        "date": "2024-04-17",
+        "status": "announced",
+        "note": "Hydraulic Atlas retired; all-electric Atlas revealed with Hyundai as first test partner",
+        "sourceUrl": "https://bostondynamics.com/blog/electric-new-era-for-atlas/",
+        "sourceTitle": "Boston Dynamics: An electric new era for Atlas"
+      },
+      {
+        "date": "2026-01-06",
+        "status": "internal",
+        "note": "At CES 2026 the production Atlas was shown and production began; the 2026 run is committed to Hyundai and Google DeepMind",
+        "sourceUrl": "https://www.theregister.com/2026/01/06/boston_dynamics_atlas_production/",
+        "sourceTitle": "The Register: Boston Dynamics' humanoid robot is already in mass production"
+      },
+      {
+        "date": "2026-09-22",
+        "status": "internal",
+        "note": "Robotics Metaplant Application Center at Hyundai's Georgia plant in full operation, training Atlas on parts sequencing",
+        "sourceUrl": "https://theaiinsider.tech/2026/09/22/boston-dynamics-opens-atlas-training-center-at-hyundais-georgia-metaplant/",
+        "sourceTitle": "The AI Insider: Boston Dynamics opens Atlas training center at Hyundai's Georgia Metaplant"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Boston Dynamics unveils new Atlas robot",
+        "url": "https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/",
+        "date": "2026-01-05"
+      },
+      {
+        "title": "The Register: Atlas already in mass production",
+        "url": "https://www.theregister.com/2026/01/06/boston_dynamics_atlas_production/",
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Forbes: Atlas production fully committed for 2026",
+        "url": "https://www.forbes.com/sites/johnkoetsier/2026/01/06/atlas-humanoid-robots-production-fully-committed-for-2026-factory-will-build-30000-per-year/",
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Axios Boston: Boston Dynamics opens Hyundai testing ground for humanoid robots",
+        "url": "https://www.axios.com/local/boston/2026/09/21/boston-dynamics-humanoid-robots-hyundai-metaplant",
+        "date": "2026-09-21"
+      }
+    ]
+  },
+  {
+    "slug": "sanctuary-phoenix",
+    "name": "Phoenix",
+    "maker": "Sanctuary AI",
+    "category": "humanoid",
+    "country": "Canada",
+    "status": "internal",
+    "statusClaim": "research",
+    "priceUsd": null,
+    "priceNote": "Never offered for sale",
+    "priceClaim": null,
+    "heightM": 1.7,
+    "weightKg": 70,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Phoenix (Gen 8). Research and data-capture platform; in June 2026 Sanctuary shifted to selling its AI software for other companies' industrial robots",
+    "summary": "Phoenix is Sanctuary AI's general-purpose humanoid. The current eighth generation puts a torso, arms and hydraulic hands on a wheeled base. It was never sold, and it was mostly used to capture training data and for pilots such as Magna. In June 2026 Sanctuary changed strategy: it now puts its 'Physical AI' on existing industrial robot arms, keeps its hydraulic hand as a separate product in development, and appointed a new CEO. Phoenix is not a product you can get.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Sanctuary has long used human pilots to teleoperate Phoenix for data capture; its Carbon AI is meant to take over tasks once learned."
+    },
+    "legal": {
+      "fcc": "n/a",
+      "fccNote": "Not sold in the US. A new Canadian-built model would fall under the July 2026 FCC rule on foreign-made robots.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://sanctuary.ai/",
+    "statusEvents": [
+      {
+        "date": "2023-05-16",
+        "status": "announced",
+        "note": "Phoenix unveiled: 5'7\", 155 lb, 55 lb payload, 3 mph, 20-DoF hands",
+        "sourceUrl": "https://sanctuary.ai/news/sanctuary-ai-unveils-phoenix-a-humanoid-general-purpose-robot-designed-for-work/",
+        "sourceTitle": "Sanctuary AI unveils Phoenix"
+      },
+      {
+        "date": "2024-04-25",
+        "status": "internal",
+        "note": "Gen 7 Phoenix; Magna partnership to deploy and build robots in auto parts plants",
+        "sourceUrl": "https://www.therobotreport.com/sanctuary-ai-latest-phoenix-humanoid-can-learn-tasks-in-24-hours/",
+        "sourceTitle": "The Robot Report: Sanctuary AI's latest Phoenix can learn tasks in 24 hours"
+      },
+      {
+        "date": "2025-01-07",
+        "status": "internal",
+        "note": "Gen 8 Phoenix moves to a wheeled base, built for high-quality data capture",
+        "sourceUrl": "https://sanctuary.ai/news/sanctuary-ai-releases-new-generation-of-ai-robots-for-high-quality-data-capture/",
+        "sourceTitle": "Sanctuary AI releases new generation of AI robots for high quality data capture"
+      },
+      {
+        "date": "2026-06-17",
+        "status": "internal",
+        "note": "Strategy shift: Sanctuary deploys its Physical AI on existing industrial robots (99.5%+ success on an auto-supplier wire-plugging task)",
+        "sourceUrl": "https://www.businesswire.com/news/home/20260617330329/en/Sanctuary-AI-Expands-Physical-AI-Strategy-to-Industrial-Robotics-Demonstrating-Production-Ready-AI-Performance",
+        "sourceTitle": "Business Wire: Sanctuary AI expands Physical AI strategy to industrial robotics"
+      },
+      {
+        "date": "2026-06-26",
+        "status": "internal",
+        "note": "Board chair Daniel Friedmann named CEO, replacing James Wells, under the new strategy",
+        "sourceUrl": "https://betakit.com/robotics-startup-sanctuary-ai-appoints-former-mda-exec-as-ceo/",
+        "sourceTitle": "BetaKit: Sanctuary AI appoints former MDA exec as CEO"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Sanctuary AI: Gen 8 Phoenix announcement",
+        "url": "https://sanctuary.ai/news/sanctuary-ai-releases-new-generation-of-ai-robots-for-high-quality-data-capture/",
+        "date": "2025-01-07"
+      },
+      {
+        "title": "Sanctuary AI: expands Physical AI strategy to industrial robotics",
+        "url": "https://sanctuary.ai/news/sanctuary-ai-expands-physical-ai-strategy-to-industrial-robotics-demonstrating-production-ready-ai-performance/",
+        "date": "2026-06-17"
+      },
+      {
+        "title": "Forbes: Sanctuary AI built a robot body, now it's also selling a robot brain",
+        "url": "https://www.forbes.com/sites/johnkoetsier/2026/08/29/sanctuary-ai-built-a-robot-body-now-its-also-selling-a-robot-brain/",
+        "date": "2026-08-29"
+      },
+      {
+        "title": "RoboZaps: Sanctuary AI Phoenix 2026 (Gen 8 height/weight)",
+        "url": "https://blog.robozaps.com/b/sanctuary-ai-phoenix-review",
+        "date": "2026"
+      }
+    ]
+  },
+  {
+    "slug": "kscale-kbot",
+    "name": "K-Bot",
+    "maker": "K-Scale Labs",
+    "category": "kit",
+    "country": "United States",
+    "status": "discontinued",
+    "statusClaim": "shipped",
+    "priceUsd": 8999,
+    "priceNote": "Was $8,999 for the first 100 Founder's Edition units; all orders cancelled and deposits refunded in Nov 2025",
+    "priceClaim": "preorder",
+    "heightM": 1.4,
+    "weightKg": 34,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": 4,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "K-Bot (discontinued). Cancelled: K-Scale Labs shut down in November 2025 and open-sourced the design",
+    "summary": "K-Bot was a 1.4 m, 34 kg open-source humanoid for developers, offered at $8,999. K-Scale began shipping a few Founder's Edition units in autumn 2025, then shut down in November 2025 after failing to raise a Series A. It cancelled and refunded the remaining preorders and released its hardware (CERN-OHL-S-2.0) and software (MIT) designs. You cannot buy one now; the published files are what remains.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "At launch K-Bot could stand, walk, balance and take voice commands; K-Scale promised autonomy through later software updates, which never shipped."
+    },
+    "legal": {
+      "fcc": "n/a",
+      "fccNote": "Product discontinued; no FCC ID found.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.kscale.dev/",
+    "statusEvents": [
+      {
+        "date": "2025-07-18",
+        "status": "preorder",
+        "note": "K-Bot preorders at $8,999 for the first 100 units, shipping late 2025",
+        "sourceUrl": "https://www.rs-online.com/designspark/k-scale-labs-launches-k-bot-americas-first-open-source-humanoid-robot",
+        "sourceTitle": "DesignSpark: K-Scale Labs launches K-Bot, America's first open-source humanoid"
+      },
+      {
+        "date": "2025-11-04",
+        "status": "discontinued",
+        "note": "K-Scale shut down after its funding failed, soon after shipping the first Founder's Edition units; preorders cancelled and refunded, IP open-sourced",
+        "sourceUrl": "https://www.humanoidsdaily.com/news/k-scale-labs-cancels-k-bot-orders-open-sources-all-ip-after-funding-fails",
+        "sourceTitle": "Humanoids Daily: K-Scale Labs cancels K-Bot orders, open-sources all IP"
+      }
+    ],
+    "sources": [
+      {
+        "title": "DesignSpark: K-Scale Labs launches K-Bot",
+        "url": "https://www.rs-online.com/designspark/k-scale-labs-launches-k-bot-americas-first-open-source-humanoid-robot",
+        "date": "2025-07-18"
+      },
+      {
+        "title": "Humanoids Daily: K-Scale Labs cancels K-Bot orders",
+        "url": "https://www.humanoidsdaily.com/news/k-scale-labs-cancels-k-bot-orders-open-sources-all-ip-after-funding-fails",
+        "date": "2025-11-04"
+      },
+      {
+        "title": "The Information: K-Scale to shut down after exploring sale to 1X, Bot Co.",
+        "url": "https://www.theinformation.com/briefings/exclusive-humanoid-robotics-startup-k-scale-shut-exploring-sale-1x-bot-co",
+        "date": "2025-11"
+      }
+    ]
+  },
+  {
+    "slug": "clone-alpha",
+    "name": "Clone Alpha",
+    "maker": "Clone Robotics",
+    "category": "humanoid",
+    "country": "United States / Poland",
+    "status": "announced",
+    "statusClaim": "promise",
+    "priceUsd": null,
+    "priceNote": "No published price or deposit; the 'pre-order' page is a free reservation form",
+    "priceClaim": null,
+    "heightM": null,
+    "weightKg": null,
+    "dof": 200,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Clone Alpha (Protoclone prototype). Announced as a 279-unit limited edition; the reservation page still says 'Pre-orders available in 2025'",
+    "summary": "Clone Alpha is a planned 279-unit run of Clone Robotics' musculoskeletal android, which moves with water-powered artificial muscles instead of motors. The Protoclone prototype (200+ degrees of freedom, 1,000+ Myofibers) is real hardware, but public videos show it hanging from a gantry, not standing or walking. There is no price, no deposit and no delivery date. The 'pre-order' page is a reservation form that still promises 2025.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Clone says owners will teach it new skills through its 'Telekinesis' training platform; no autonomous home tasks have been shown."
+    },
+    "legal": {
+      "fcc": "not-filed",
+      "fccNote": "No FCC ID found. If units are built outside the US (Clone has R&D in Poland), a new model would fall under the July 2026 FCC rule unless it gets Conditional Approval.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://clonerobotics.com/",
+    "statusEvents": [
+      {
+        "date": "2024-12-01",
+        "status": "announced",
+        "note": "Clone Alpha announced as a limited edition of 279 home androids, with preorders 'available in 2025'",
+        "sourceUrl": "https://clonerobotics.com/pre-order/",
+        "sourceTitle": "Clone: Pre-order page"
+      },
+      {
+        "date": "2025-02-20",
+        "status": "announced",
+        "note": "Protoclone video: faceless musculoskeletal android with 200+ DoF and 1,000 Myofibers, shown suspended; preorders said to start later that year",
+        "sourceUrl": "https://newatlas.com/robotics/clone-robotics-video-humanoid-robot/",
+        "sourceTitle": "New Atlas: Clone Robotics releases eerie video of twitching, kicking humanoid robot"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Clone: Pre-order page",
+        "url": "https://clonerobotics.com/pre-order/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "New Atlas: Clone Robotics Protoclone video",
+        "url": "https://newatlas.com/robotics/clone-robotics-video-humanoid-robot/",
+        "date": "2025-02-20"
+      },
+      {
+        "title": "RoboZaps: Clone Alpha price 2026, can you buy it?",
+        "url": "https://blog.robozaps.com/b/clone-protoclone-review",
+        "date": "2026-07-23"
+      }
+    ]
+  },
+  {
+    "slug": "weave-isaac",
+    "name": "Isaac 1",
+    "maker": "Weave Robotics",
+    "category": "home",
+    "country": "United States",
+    "status": "preorder",
+    "statusClaim": "preorder",
+    "priceUsd": 7999,
+    "priceNote": "$7,999 purchase or $449/month; $250 refundable deposit",
+    "priceClaim": "preorder",
+    "heightM": 1.75,
+    "weightKg": null,
+    "dof": 21,
+    "payloadKg": null,
+    "runtimeH": 8,
+    "speedMps": null,
+    "handsDof": 1,
+    "compute": null,
+    "releaseNote": "Taking $250 deposits; first deliveries promised for fall 2026 in California, rest of US through 2027",
+    "summary": "Isaac 1 is a wheeled, fabric-covered home robot with two arms and simple two-finger grippers. Its torso adjusts from 0.9 m to 1.75 m, and it is built to fold laundry, make beds and tidy up. It costs $7,999 or $449 a month, and Weave says first deliveries start in California this fall. Its predecessor, Isaac 0, a stationary laundry folder, has been in Bay Area homes since February 2026. Like most home robots, Isaac uses remote human help when it gets stuck.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Weave says Isaac runs autonomously by default, with remote teleoperation help when needed. On Isaac 0, a specialist steps in for 5-10 second corrections."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found yet. Weave is US-based; where it is manufactured has not been disclosed.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.weaverobotics.com/isaac-1",
+    "statusEvents": [
+      {
+        "date": "2026-02-11",
+        "status": "homes",
+        "note": "Isaac 0, a stationary laundry-folding robot, begins shipping to San Francisco Bay Area homes",
+        "sourceUrl": "https://www.weaverobotics.com/discover/isaac-0-announcement",
+        "sourceTitle": "Weave Robotics: When can I get a home robot? (Isaac 0 announcement)"
+      },
+      {
+        "date": "2026-07-09",
+        "status": "preorder",
+        "note": "Isaac 1 launched at $7,999 or $449/month with fall 2026 deliveries, California first",
+        "sourceUrl": "https://theaiinsider.tech/2026/07/09/weave-robotics-launches-8k-home-robot-isaac-1/",
+        "sourceTitle": "The AI Insider: Weave Robotics launches $8K home robot Isaac 1"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Weave Robotics: Isaac 1 (specs, price)",
+        "url": "https://www.weaverobotics.com/isaac-1",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "The Robot Report: Weave Robotics launches Isaac",
+        "url": "https://www.therobotreport.com/weave-robotics-launches-isaac-first-mobile-humanoid-robot/",
+        "date": "2026-07-17"
+      },
+      {
+        "title": "New Atlas: Weave Robotics' Isaac 1 folds clothes and tidies rooms",
+        "url": "https://newatlas.com/robotics/weave-robot-isaac1-laundry-bed/",
+        "date": "2026-07"
+      }
+    ]
+  },
+  {
+    "slug": "unitree-g1",
+    "name": "G1",
+    "maker": "Unitree",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 13500,
+    "priceNote": "From $13,500 on Unitree's own store (base model, no SDK). US dealers quote about $16,000 and up; the EDU version with SDK and hands is quote-only.",
+    "priceClaim": "shipped",
+    "heightM": 1.32,
+    "weightKg": 35,
+    "dof": 23,
+    "payloadKg": 2,
+    "runtimeH": 2,
+    "speedMps": null,
+    "handsDof": 7,
+    "compute": "8-core CPU; optional NVIDIA Jetson Orin module on EDU",
+    "releaseNote": "Announced May 2024; shipping to research and business buyers since late 2024",
+    "summary": "A 1.32 m, 35 kg research humanoid and the most widely sold humanoid in the world. It is the robot most labs buy to try humanoid control. Base units have no dexterous hands (the 7-DOF Dex3-1 hand is an EDU option), and it is not a household helper. Known Bluetooth and telemetry security problems are documented.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Ships with factory locomotion controllers and a remote. Useful task behavior comes from the buyer's own code or teleoperation; Unitree does not sell autonomous chores."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "FCC ID 2A5PE-YUSHU008 (grantee Hangzhou Yushu Technology), reported granted 2025-03-03. Authorized before the 2026-07-28 Covered List action, so sales and use can continue.",
+      "eu": null,
+      "security": "UniPwn (Sept 2025): the BLE Wi-Fi setup accepts injected commands and every unit shares one hardcoded AES key, so anyone in Bluetooth range can get root. It can spread robot to robot (CVE-2025-35027, also affects Go2, H1 and B2). Alias Robotics researchers also reported the G1 sending telemetry to servers in China about every 5 minutes. The FCC's national-security determination cites UniPwn."
+    },
+    "website": "https://www.unitree.com/g1/",
+    "statusEvents": [
+      {
+        "date": "2024-05-13",
+        "status": "announced",
+        "note": "Unitree unveils the G1 at 99,000 yuan (about $16,000).",
+        "sourceUrl": "https://www.therobotreport.com/unitree-robotics-unveils-g1-humanoid-for-16k/",
+        "sourceTitle": "Unitree Robotics unveils G1 humanoid for $16K"
+      },
+      {
+        "date": "2024-08-20",
+        "status": "shipping",
+        "note": "Mass-production version of the G1 launched.",
+        "sourceUrl": "https://www.maginative.com/article/unitree-launches-production-version-of-g1-humanoid-robot/",
+        "sourceTitle": "Unitree Launches Production Version of G1 Humanoid Robot"
+      },
+      {
+        "date": "2025-09-20",
+        "status": "shipping",
+        "note": "Researchers publish UniPwn, a wormable BLE root exploit across Unitree robots including the G1.",
+        "sourceUrl": "https://github.com/Bin4ry/UniPwn",
+        "sourceTitle": "UniPwn (GitHub)"
+      },
+      {
+        "date": "2026-07-28",
+        "status": "shipping",
+        "note": "FCC adds foreign-made humanoids to the Covered List. The G1 was already authorized, so it can still be sold.",
+        "sourceUrl": "https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/august/FCC-Bans-Humanoid-Quadruped-Robots/",
+        "sourceTitle": "In the Doghouse: FCC Bans New Foreign-Made Humanoid, Quadruped Robots (ASIS)"
+      },
+      {
+        "date": "2026-08-19",
+        "status": "shipping",
+        "note": "Unitree lists on Shanghai's STAR Market. Shares close more than 460% up on the first day.",
+        "sourceUrl": "https://www.cnbc.com/2026/08/19/china-backflipping-robot-maker-unitree-jumps-shanghai-ipo.html",
+        "sourceTitle": "China's backflipping robot maker Unitree closes 460% higher in Shanghai debut (CNBC)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Unitree G1 product page",
+        "url": "https://www.unitree.com/g1/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Humanoid robot found vulnerable to Bluetooth hack, data leaks to China (Help Net Security)",
+        "url": "https://www.helpnetsecurity.com/2025/10/16/unitree-g1-humanoid-robot-vulnerability/",
+        "date": "2025-10-16"
+      },
+      {
+        "title": "CVE-2025-35027",
+        "url": "https://www.cvedetails.com/cve/CVE-2025-35027/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "G1 User Manual filed with FCC ID 2A5PE-YUSHU008",
+        "url": "https://fcc.report/FCC-ID/2A5PE-YUSHU008/8087916.pdf",
+        "date": "2025-03-03"
+      },
+      {
+        "title": "Humanoid Robots Legal in the US: What You Can Still Buy (RoboZaps)",
+        "url": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "unitree-h2",
+    "name": "H2",
+    "maker": "Unitree",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 29900,
+    "priceNote": "$29,900 on Unitree's global store (duties extra). North American partner Toborlife lists $40,900 (H2) and $68,900 (H2 EDU). EDU is quote-only from Unitree.",
+    "priceClaim": "shipped",
+    "heightM": 1.82,
+    "weightKg": 70,
+    "dof": 31,
+    "payloadKg": 7,
+    "runtimeH": 3,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": "Intel Core i5 (base) / i7 (EDU); optional 2070 TOPS AI module",
+    "releaseNote": "Unveiled Oct 2025; North American partner deliveries from April 2026",
+    "summary": "Unitree's full-size 1.82 m humanoid, which replaces the H1 and has a bionic face. It is on sale through Unitree's store and dealers. Only the EDU version can be programmed by the buyer. Delivery reports so far come from distributors, not independent audits.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Base H2 runs Unitree's motion controllers updated over the air. Tasks need EDU development or teleoperation."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "FCC ID 2A5PE-YUSHU012, reported granted 2026-06-30, four weeks before the Covered List cutoff (per RoboZaps' tracker; not independently checked in the FCC database).",
+      "eu": null,
+      "security": "No H2-specific CVE found. It runs Unitree's shared software stack; earlier Unitree firmware had the UniPwn BLE flaw (CVE-2025-35027)."
+    },
+    "website": "https://www.unitree.com/H2/",
+    "statusEvents": [
+      {
+        "date": "2025-10-20",
+        "status": "announced",
+        "note": "Unitree unveils the 180 cm H2 in its 'Destiny Awakening' video.",
+        "sourceUrl": "https://technode.com/2025/10/20/unitree-unveils-h2-humanoid-robot-with-lifelike-design/",
+        "sourceTitle": "Unitree unveils H2 humanoid robot with lifelike design (TechNode)"
+      },
+      {
+        "date": "2026-02-13",
+        "status": "preorder",
+        "note": "Toborlife AI opens North American pre-orders with a $2,500 deposit and targets deliveries from April 2026.",
+        "sourceUrl": "https://natlawreview.com/press-releases/toborlife-ai-launches-unitree-h2-humanoid-robot-pre-order",
+        "sourceTitle": "Toborlife AI Launches Unitree H2 Humanoid Robot Pre-Order"
+      },
+      {
+        "date": "2026-06-30",
+        "status": "shipping",
+        "note": "FCC authorization reported granted (2A5PE-YUSHU012), before the July 28 cutoff.",
+        "sourceUrl": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "sourceTitle": "Humanoid Robots Legal in the US (RoboZaps)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Unitree H2 product page",
+        "url": "https://www.unitree.com/H2/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Unitree H2 - Unitree store",
+        "url": "https://shop.unitree.com/products/unitree-h2",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Unitree H2 review (RoboZaps)",
+        "url": "https://blog.robozaps.com/b/unitree-h2-review",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "unitree-r1",
+    "name": "R1",
+    "maker": "Unitree",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 4900,
+    "priceNote": "R1 AIR $4,900; R1 $5,900; R1 EDU quote-only. Shipping ($300-$1,200) and import duties extra. Launched in China at 39,900 yuan.",
+    "priceClaim": "shipped",
+    "heightM": 1.23,
+    "weightKg": 27,
+    "dof": 26,
+    "payloadKg": 2,
+    "runtimeH": 1,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": "8-core CPU; optional NVIDIA Jetson Orin (40-100 TOPS) on EDU",
+    "releaseNote": "Announced July 2025; sold globally via Unitree store and AliExpress since April 2026",
+    "summary": "The cheapest full-body humanoid from a major maker: 1.23 m, 27-29 kg, and under $6,000. It can run, cartwheel and chat through a built-in multimodal model, but runtime is about an hour and arm payload is small. Treat it as a developer toy and demo platform, not a helper.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Ships with preset motions and voice or vision chat. Useful behaviors need EDU programming."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "FCC ID 2A5PE-YUSHU010, reported granted 2026-06-22, before the July 28 cutoff (per RoboZaps' tracker; not independently checked in the FCC database).",
+      "eu": null,
+      "security": "No R1-specific CVE found. It shares Unitree's software stack, which had the 2025 UniPwn BLE flaw."
+    },
+    "website": "https://www.unitree.com/R1/",
+    "statusEvents": [
+      {
+        "date": "2025-07-25",
+        "status": "announced",
+        "note": "Unitree debuts the R1 at 39,900 yuan (about $5,900).",
+        "sourceUrl": "https://www.scmp.com/tech/tech-trends/article/3319637/chinas-unitree-debuts-us5900-humanoid-robot-race-make-cheaper-products",
+        "sourceTitle": "China's Unitree debuts US$5,900 humanoid robot (SCMP)"
+      },
+      {
+        "date": "2026-04-11",
+        "status": "shipping",
+        "note": "R1 goes on sale globally on AliExpress (North America, Europe, Japan) from $4,900.",
+        "sourceUrl": "https://robohorizon.com/en-us/news/2026/04/unitree-r1-humanoid-hits-aliexpress-with-a-shocking-4900-price-tag/",
+        "sourceTitle": "Unitree R1 Humanoid Hits AliExpress With a $4,900 Price Tag"
+      },
+      {
+        "date": "2026-06-22",
+        "status": "shipping",
+        "note": "FCC authorization reported granted (2A5PE-YUSHU010).",
+        "sourceUrl": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "sourceTitle": "Humanoid Robots Legal in the US (RoboZaps)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Unitree R1 product page",
+        "url": "https://www.unitree.com/R1/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Unitree R1 - Unitree store",
+        "url": "https://shop.unitree.com/products/unitree-r1",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "China's Unitree Offers a Humanoid Robot for Under $6,000 (Bloomberg)",
+        "url": "https://www.bloomberg.com/news/articles/2025-07-25/china-s-unitree-r1-is-a-humanoid-robot-costing-less-than-6-000",
+        "date": "2025-07-25"
+      }
+    ]
+  },
+  {
+    "slug": "ubtech-walker-s2",
+    "name": "Walker S2",
+    "maker": "UBTech",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": null,
+    "priceNote": "No public price. Sold through enterprise contracts and tenders, mostly in China.",
+    "priceClaim": null,
+    "heightM": null,
+    "weightKg": null,
+    "dof": 52,
+    "payloadKg": 15,
+    "runtimeH": 2,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Mass production and delivery since Nov 2025; 1,079 full-size humanoids delivered in 2025 (UBTech figure)",
+    "summary": "An industrial humanoid that swaps its own battery in about 3 minutes, so it can work around the clock. It is deployed in Chinese car, electronics and logistics plants (BYD, Foxconn, Geely and others). It is enterprise-only, with no consumer version or public price. Published height and weight figures conflict between sources.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "UBTech says its Co-Agent system handles task planning and anomaly detection. How much is autonomous in customer plants has not been independently audited."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found before 2026-07-28. New authorization for foreign-made humanoids is now blocked unless the Department of War grants Conditional Approval.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.ubtrobot.com/en/humanoid/products/walker-s2",
+    "statusEvents": [
+      {
+        "date": "2025-07-17",
+        "status": "announced",
+        "note": "UBTech shows Walker S2 swapping its own battery in 3 minutes.",
+        "sourceUrl": "https://cnevpost.com/2025/07/17/ubtech-humanoid-robot-autonomous-battery-swap/",
+        "sourceTitle": "UBTech shows how its humanoid robot can work 24/7 with autonomous battery swap (CnEVPost)"
+      },
+      {
+        "date": "2025-11-17",
+        "status": "shipping",
+        "note": "Mass production and delivery begin; Walker orders exceed 800 million yuan.",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/ubtech-humanoid-robot-walker-s2-begins-mass-production-and-delivery-with-orders-exceeding-800-million-yuan-302616924.html",
+        "sourceTitle": "UBTECH Walker S2 Begins Mass Production and Delivery (PR Newswire)"
+      },
+      {
+        "date": "2026-04-04",
+        "status": "shipping",
+        "note": "2025 results: 1,079 full-size humanoids delivered, 821 million yuan in humanoid revenue.",
+        "sourceUrl": "https://humanoid.guide/ubtech-humanoid-revenue-surges-in-2025-results/",
+        "sourceTitle": "UBTECH Humanoid Revenue Surges in 2025 Results (Humanoid.guide)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "UBTECH Walker S2 product page",
+        "url": "https://www.ubtrobot.com/en/humanoid/products/walker-s2",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "This Humanoid Robot Can Swap Its Own Battery (Forbes)",
+        "url": "https://www.forbes.com/sites/lesliekatz/2025/07/21/this-humanoid-robot-can-swap-its-own-battery-and-work-round-the-clock/",
+        "date": "2025-07-21"
+      },
+      {
+        "title": "Humanoid Robots Legal in the US (RoboZaps)",
+        "url": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "fourier-gr3",
+    "name": "GR-3",
+    "maker": "Fourier",
+    "category": "humanoid",
+    "country": "China",
+    "status": "announced",
+    "statusClaim": "promise",
+    "priceUsd": null,
+    "priceNote": "No price published. Trackers report 'above 200,000 yuan' B2B, which is unconfirmed.",
+    "priceClaim": null,
+    "heightM": 1.65,
+    "weightKg": 71,
+    "dof": 55,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Unveiled Aug 2025, US debut at CES 2026; no public pricing or delivery date",
+    "summary": "Fourier's soft-shelled 'Care-bot', built for eldercare, rehabilitation and companionship, with touch sensors and an expressive face. It was demonstrated at CES 2026 playing chess and chatting. Fourier has not published a price, delivery date or named commercial deployment.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Demos show conversation and touch response. Fourier has not said how much care work is autonomous."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found for GR-3 before 2026-07-28 (Fourier's older GR-1 is reported authorized). New authorization is blocked absent Department of War Conditional Approval.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.fftai.com/",
+    "statusEvents": [
+      {
+        "date": "2025-08-06",
+        "status": "announced",
+        "note": "Fourier unveils GR-3, its first full-size care humanoid.",
+        "sourceUrl": "https://technode.com/2025/08/07/fourier-intelligence-unveils-the-care-bot-gr-3-its-first-full-sized-companion-humanoid-robot/",
+        "sourceTitle": "Fourier Intelligence unveils the Care-bot GR-3 (TechNode)"
+      },
+      {
+        "date": "2026-01-07",
+        "status": "announced",
+        "note": "GR-3 makes its US debut at CES 2026. No pricing or availability announced.",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/fourier-makes-ces-debut-with-gr-3-a-next-generation-care-focused-humanoid-robot-302654565.html",
+        "sourceTitle": "Fourier Makes CES Debut With GR-3 (PR Newswire)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "GR-3 humanoid robot debuts with empathy, emotion, and lifelike walk (Interesting Engineering)",
+        "url": "https://interestingengineering.com/innovation/fourier-gr3-carebot-robot-emotion",
+        "date": "2025-08-07"
+      },
+      {
+        "title": "Humanoid Robots Legal in the US (RoboZaps)",
+        "url": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "agibot-a2",
+    "name": "A2",
+    "maker": "AgiBot",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 44560,
+    "priceNote": "A2 Lite is $44,560 on AgiBot's global store (shipping $500-$3,000 and duties extra). The flagship A2 and A2 Ultra are quote-only.",
+    "priceClaim": "shipped",
+    "heightM": 1.69,
+    "weightKg": 69,
+    "dof": 40,
+    "payloadKg": null,
+    "runtimeH": 2,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Unveiled Aug 2024; sold in China and globally via AgiBot's store; US debut at CES 2026",
+    "summary": "AgiBot's full-size service humanoid for reception, guided tours and showrooms, with lidar, six cameras and swappable batteries. In November 2025 an A2 walked 106 km from Suzhou to Shanghai for a Guinness record. The flagship is quote-only, and the cheaper A2 Lite is a stripped-down performance model.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Autonomous navigation and scripted interaction for front-desk work. Manipulation tasks are not shown to be generally autonomous."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "AgiBot (grantee code 2BTPT) said in May 2025 that A2 holds FCC certification, so it was authorized before the 2026-07-28 cutoff. We could not confirm the exact FCC ID.",
+      "eu": "CE-MD and CE-RED marked (announced May 2025), alongside China CR certification.",
+      "security": "No independent security assessment published as of mid-2026."
+    },
+    "website": "https://www.agibot.com/products/A2",
+    "statusEvents": [
+      {
+        "date": "2024-08-18",
+        "status": "announced",
+        "note": "AgiBot unveils its Expedition A2 lineup (A2, A2-Max, A2-W).",
+        "sourceUrl": "https://kr-asia.com/agibot-unveils-five-humanoid-robots-commercialization-on-the-horizon",
+        "sourceTitle": "Agibot unveils five humanoid robots (KrASIA)"
+      },
+      {
+        "date": "2025-05-30",
+        "status": "shipping",
+        "note": "A2 announced as the first humanoid certified in China, the US (FCC) and the EU (CE).",
+        "sourceUrl": "https://www.ecns.cn/cns-wire/2025-05-30/detail-iherwsih6789577.shtml",
+        "sourceTitle": "Shanghai firm unveils world's first humanoid robot certified in China, U.S., and EU (ECNS)"
+      },
+      {
+        "date": "2025-11-13",
+        "status": "shipping",
+        "note": "A2 finishes a 106.286 km walk from Suzhou to Shanghai for a Guinness record.",
+        "sourceUrl": "https://www.heise.de/en/news/Guinness-World-Record-Humanoid-Robot-Agibot-A2-Walks-Over-100-km-in-One-Go-11097977.html",
+        "sourceTitle": "Guinness World Record: Humanoid Robot Agibot A2 Walks Over 100 km (heise)"
+      },
+      {
+        "date": "2026-01-06",
+        "status": "shipping",
+        "note": "AgiBot makes its US market debut at CES 2026 with the A2, X2 and G2 series.",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/agibot-makes-its-us-market-debut-at-ces-2026-with-its-full-humanoid-robot-portfolio-302652403.html",
+        "sourceTitle": "AGIBOT Makes Its U.S. Market Debut at CES 2026 (PR Newswire)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "AGIBOT A2 product page",
+        "url": "https://www.agibot.com/products/A2",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "AGIBOT A2 Lite - AGIBOT store",
+        "url": "https://store.agibot.com/products/a2-lite",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "AgiBot A2 Price 2026 (RoboZaps)",
+        "url": "https://blog.robozaps.com/b/agibot-a2-review",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "agibot-x2",
+    "name": "X2 Neo",
+    "maker": "AgiBot",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 25600,
+    "priceNote": "X2 Neo is $25,600 on AgiBot's global store (shipping $500-$3,000 and duties extra). X2 Ultra is quote-only. The domestic China edition is cheaper.",
+    "priceClaim": "shipped",
+    "heightM": 1.31,
+    "weightKg": 35,
+    "dof": 30,
+    "payloadKg": null,
+    "runtimeH": 2,
+    "speedMps": 2,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "X2 Neo (Lingxi X2). Unveiled March 2025 as Lingxi X2; sold globally via AgiBot's store, currently as X2 Neo",
+    "summary": "A 1.31 m, 35 kg compact humanoid built for entertainment, research and education. It walks, dances and rides a scooter, and AgiBot has open-sourced much of its stack. AgiBot pitches it for commercial performances, not household work.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Multimodal chat and autonomous navigation are claimed. Most showcased routines are pre-choreographed."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "FCC ID 2BTPT-LX2501, reported granted 2026-04-17, before the July 28 cutoff (per RoboZaps' tracker; not independently checked in the FCC database).",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.agibot.com/products/X2",
+    "statusEvents": [
+      {
+        "date": "2025-03-11",
+        "status": "announced",
+        "note": "AgiBot unveils the Lingxi X2 with 28 DOF and the GO-1 model.",
+        "sourceUrl": "https://technode.com/2025/03/11/agibot-unveils-lingxi-x2-an-advanced-humanoid-robot-with-multimodal-intelligence/",
+        "sourceTitle": "AgiBot unveils Lingxi X2 (TechNode)"
+      },
+      {
+        "date": "2026-01-06",
+        "status": "shipping",
+        "note": "X2 series shown at AgiBot's CES 2026 US market debut.",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/agibot-makes-its-us-market-debut-at-ces-2026-with-its-full-humanoid-robot-portfolio-302652403.html",
+        "sourceTitle": "AGIBOT Makes Its U.S. Market Debut at CES 2026 (PR Newswire)"
+      },
+      {
+        "date": "2026-04-17",
+        "status": "shipping",
+        "note": "FCC authorization reported granted (2BTPT-LX2501).",
+        "sourceUrl": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "sourceTitle": "Humanoid Robots Legal in the US (RoboZaps)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "AGIBOT X2 - AGIBOT store",
+        "url": "https://store.agibot.com/products/x2",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "AgiBot Lingxi X2 Price 2026 (RoboZaps)",
+        "url": "https://blog.robozaps.com/b/agibot-lingxi-x2-review-a-leap-forward-in-humanoid-robotics",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "xpeng-iron",
+    "name": "IRON",
+    "maker": "XPeng",
+    "category": "humanoid",
+    "country": "China",
+    "status": "internal",
+    "statusClaim": "promise",
+    "priceUsd": null,
+    "priceNote": null,
+    "priceClaim": null,
+    "heightM": 1.78,
+    "weightKg": 70,
+    "dof": 76,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": 21,
+    "compute": "3x XPeng Turing AI chips (2,250 TOPS)",
+    "releaseNote": "IRON (next-gen). Production line started Sept 2026; mass production targeted end-2026, market launch 2027",
+    "summary": "XPeng's very humanlike humanoid, with a spine, soft skin and 21-DOF hands. The first units came off a production line in September 2026. Deployments start in XPeng's own stores and campuses, with sales in China and abroad promised for 2027. There is no price, and nobody outside XPeng has one.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Runs XPeng's VLA 2.0 model per the company. No independent data on autonomy in real deployments."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC filing found before 2026-07-28. As a new foreign-made humanoid it cannot get US authorization unless the Department of War grants Conditional Approval.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.xpeng.com/",
+    "statusEvents": [
+      {
+        "date": "2025-11-05",
+        "status": "announced",
+        "note": "Next-gen IRON unveiled at XPeng AI Day (then quoted as 82 DOF with 22-DOF hands). XPeng cut one open on stage to prove it was not a person in a suit.",
+        "sourceUrl": "https://cnevpost.com/2025/11/05/xpeng-unveils-next-gen-iron-humanoid-robot/",
+        "sourceTitle": "Xpeng unveils next-gen Iron humanoid robot at 2025 AI Day (CnEVPost)"
+      },
+      {
+        "date": "2026-09-08",
+        "status": "internal",
+        "note": "Production lines commissioned and IRON walks off the line. Mass production targeted by end-2026, deliveries in 2027.",
+        "sourceUrl": "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b",
+        "sourceTitle": "XPENG IRON Humanoid Robot Now Walks Off the Production Line"
+      }
+    ],
+    "sources": [
+      {
+        "title": "XPENG VLA 2.0, Robotaxi, Next-Gen IRON and Flying Car",
+        "url": "https://www.xpeng.com/news/019a56f54fe99a2a0a8d8a0282e402b7",
+        "date": "2025-11-05"
+      },
+      {
+        "title": "XPeng starts IRON humanoid robot production (Electrek)",
+        "url": "https://electrek.co/2026/09/07/xpeng-iron-humanoid-robot-production-line/",
+        "date": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "slug": "galbot-g1",
+    "name": "G1",
+    "maker": "Galbot",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": null,
+    "priceNote": "No list price. Units sold on JD.com during the 2026 Spring Festival Gala were reported at about 630,000 yuan (about $94,000, converted). Enterprise deals are quoted per deployment.",
+    "priceClaim": null,
+    "heightM": 1.73,
+    "weightKg": 92.5,
+    "dof": 21,
+    "payloadKg": 10,
+    "runtimeH": 8,
+    "speedMps": 1.5,
+    "handsDof": null,
+    "compute": "NVIDIA Jetson AGX Orin 64GB (275 TOPS)",
+    "releaseNote": "Released June 2024; working in Chinese pharmacies, retail stores and factories",
+    "summary": "A wheeled two-arm humanoid: a human-like upper body on folding legs and an omnidirectional base. It stocks shelves and packs orders in Beijing pharmacies and Galbot's automated shops, with partners including CATL, Bosch and Toyota. It is sold only as an enterprise product and has no legs for stairs.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Galbot claims autonomous picking in pharmacies. Remote-assist rates are not disclosed."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found before 2026-07-28. New authorization is blocked absent Department of War Conditional Approval.",
+      "eu": "Shown at IFA Berlin 2026. No CE status published.",
+      "security": "No independent security audit published."
+    },
+    "website": "https://www.galbot.com/g1/",
+    "statusEvents": [
+      {
+        "date": "2025-12-23",
+        "status": "shipping",
+        "note": "Galbot raises $300M+ at a $3B valuation, citing 24/7 warehouse and 30-city retail deployments.",
+        "sourceUrl": "https://www.therobotreport.com/galbot-brings-in-300m-to-scale-mobile-manipulator-deployments/",
+        "sourceTitle": "Galbot brings in $300M to scale mobile manipulator deployments (The Robot Report)"
+      },
+      {
+        "date": "2026-09-04",
+        "status": "shipping",
+        "note": "G1 shown at IFA Berlin 2026, pitched to European buyers on the back of its pharmacy work.",
+        "sourceUrl": "https://www.techtimes.com/articles/326666/20260904/galbot-g1-ifa-2026-robot-working-real-pharmacy-shifts-brings-china-spy-law-europe.htm",
+        "sourceTitle": "Galbot G1 at IFA 2026 (Tech Times)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Galbot G1 product page",
+        "url": "https://www.galbot.com/g1/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Galbot G1 (Baidu Baike)",
+        "url": "https://baike.baidu.com/en/item/Galbot%20G1/1752544",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Humanoid Robots Legal in the US (RoboZaps)",
+        "url": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "booster-t1",
+    "name": "T1",
+    "maker": "Booster Robotics",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 33949,
+    "priceNote": "Booster does not publish prices. US dealers quoted about $33,949 for the Standard model in Aug 2026, and about $50,925 with grippers. In the EU, Generation Robots lists a demo unit at EUR 26,000 excluding VAT.",
+    "priceClaim": "shipped",
+    "heightM": 1.18,
+    "weightKg": 30,
+    "dof": 23,
+    "payloadKg": null,
+    "runtimeH": 2,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": "NVIDIA Jetson AGX Orin (200 TOPS) + Intel i7-1370P",
+    "releaseNote": "Sold to universities and RoboCup teams through dealers; won RoboCup 2025 AdultSize",
+    "summary": "A 1.18 m developer humanoid from a Tsinghua spin-off, best known as a soccer robot: Tsinghua's team won RoboCup 2025 AdultSize on it. It comes with ROS2, Isaac Sim and MuJoCo support. Arm payload is tiny, so it is a research platform, not a worker.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Autonomy depends on the buyer's code. RoboCup play is fully autonomous by rule."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found before 2026-07-28. New US authorization is blocked absent Department of War Conditional Approval. Units already in the US are unaffected.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.booster.tech/booster-t1/",
+    "statusEvents": [
+      {
+        "date": "2025-07-21",
+        "status": "shipping",
+        "note": "Tsinghua's Hephaestus team wins RoboCup 2025 AdultSize on the T1, the first Chinese team to take the title. (exact final date not verified; July 2025, Salvador, Brazil)",
+        "sourceUrl": "https://humanoza.com/robots/booster-t1",
+        "sourceTitle": "Booster T1 Robot 2026: Price, Specs & RoboCup Champion (Humanoza)"
+      },
+      {
+        "date": "2026-07-28",
+        "status": "shipping",
+        "note": "FCC Covered List action. No prior T1 authorization found, so new US certification is blocked.",
+        "sourceUrl": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "sourceTitle": "Humanoid Robots Legal in the US (RoboZaps)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Booster T1 product page",
+        "url": "https://www.booster.tech/booster-t1/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Booster T1 humanoid robot (Generation Robots)",
+        "url": "https://www.generationrobots.com/en/404278-booster-t1-humanoid-robot.html",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Buy Booster T1 Robot (botinfo)",
+        "url": "https://botinfo.ai/articles/booster-t1-robot",
+        "date": "2026-08-30"
+      }
+    ]
+  },
+  {
+    "slug": "engineai-pm01",
+    "name": "PM01",
+    "maker": "EngineAI",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 12000,
+    "priceNote": "Launched at 88,000 yuan (about $12,000, converted) as a promotional price through Mar 31, 2025. US distributor Robotix Market lists $26,000.",
+    "priceClaim": "shipped",
+    "heightM": 1.38,
+    "weightKg": 40,
+    "dof": 24,
+    "payloadKg": null,
+    "runtimeH": 2,
+    "speedMps": 2,
+    "handsDof": null,
+    "compute": "Intel N97 + NVIDIA Jetson Orin",
+    "releaseNote": "Global sales opened Dec 2024 for commercial and education buyers",
+    "summary": "A 1.38 m, 40 kg open-source research humanoid with a 320-degree waist and a swappable battery. EngineAI publishes training and deployment code for ROS, MuJoCo and Isaac. It sells mainly to labs and schools, and the US price through distributors is about double the launch price.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Supports motion-capture imitation and buyer-trained policies. No turnkey tasks."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found before 2026-07-28. New authorization is blocked absent Department of War Conditional Approval.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.engineai.com.cn/",
+    "statusEvents": [
+      {
+        "date": "2024-12-24",
+        "status": "shipping",
+        "note": "EngineAI opens global sales of the PM01 at 88,000 yuan.",
+        "sourceUrl": "https://www.therobotreport.com/engineai-releases-pm01-humanoid-robot-for-commercial-educational-use/",
+        "sourceTitle": "EngineAI releases PM01 humanoid robot (The Robot Report)"
+      },
+      {
+        "date": "2026-07-28",
+        "status": "shipping",
+        "note": "FCC Covered List action. No prior PM01 authorization found.",
+        "sourceUrl": "https://blog.robozaps.com/b/humanoid-robots-legal-in-us",
+        "sourceTitle": "Humanoid Robots Legal in the US (RoboZaps)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "EngineAI PM01 Humanoid Robot (Robotix Market)",
+        "url": "https://robotixmarket.com/products/engineai-pm01-humanoid-robot",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "EngineAI PM01 Specs & Price (Humanoid.guide)",
+        "url": "https://humanoid.guide/product/pm01/",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "noetix-n2",
+    "name": "N2",
+    "maker": "Noetix Robotics",
+    "category": "humanoid",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 5500,
+    "priceNote": "Reported mass-production price of 39,900 yuan (about $5,500, converted), March 2025. One TMTPost report gives 59,900 yuan for N2 and 39,900 for the E1, so the figure is disputed. No published USD retail price.",
+    "priceClaim": "promise",
+    "heightM": 1.18,
+    "weightKg": 30,
+    "dof": 18,
+    "payloadKg": null,
+    "runtimeH": 2,
+    "speedMps": 3.5,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "On sale in China since 2025; first 1,000-unit overseas batch targeted for Q2 2026",
+    "summary": "A 1.18 m, 30 kg acrobatic humanoid that can do back-to-back backflips. It placed second in the April 2025 Beijing humanoid half-marathon. Noetix reported more than 2,500 orders by mid-2025, mostly for performances and retail displays. It has no hands for real work, and the company's overseas delivery timeline is unverified.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Motion routines are trained with reinforcement learning. In the half-marathon, robots were escorted by human handlers."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found before 2026-07-28. New authorization is blocked absent Department of War Conditional Approval.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://noetixrobotics.com/en",
+    "statusEvents": [
+      {
+        "date": "2025-03-17",
+        "status": "preorder",
+        "note": "Noetix announces mass-production pricing. N2 and E1 pre-orders pass 500 units.",
+        "sourceUrl": "https://en.tmtpost.com/post/7497178",
+        "sourceTitle": "Startup NOETIX Robotics Launches Affordable Humanoid Robot Capable of Backflips (TMTPost)"
+      },
+      {
+        "date": "2025-04-19",
+        "status": "shipping",
+        "note": "N2 finishes second in the world's first humanoid half-marathon in Beijing (3 h 37 min).",
+        "sourceUrl": "https://asiatimes.com/2025/04/chinese-humanoid-robots-get-reality-check-in-half-marathon-debut/",
+        "sourceTitle": "Chinese humanoid robots get reality check in half-marathon debut (Asia Times)"
+      },
+      {
+        "date": "2025-06-19",
+        "status": "shipping",
+        "note": "Founder says orders exceed 2,500 units.",
+        "sourceUrl": "https://global.chinadaily.com.cn/a/202506/19/WS685366f5a310a04af22c72b5.html",
+        "sourceTitle": "Riding AI uptrend, humanoid robotics taking a leap in Beijing (China Daily)"
+      },
+      {
+        "date": "2026-01-06",
+        "status": "shipping",
+        "note": "At CES 2026, Noetix says its first 1,000-unit overseas order will ship in Q2 2026.",
+        "sourceUrl": "https://autonews.gasgoo.com/articles/news/ces-2026-noetix-robotics-announces-timetable-for-the-first-batch-of-1000-overseas-deliveries-2009287583098310656",
+        "sourceTitle": "CES 2026: Noetix Robotics announces timetable for first 1,000 overseas deliveries (Gasgoo)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Humanoid Robot Noetix N2 (RBTX)",
+        "url": "https://rbtx.com/en-US/components/humanoid/noetix-robotics-n2",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "NOETIX Robotics Unveils Humanoid That Can Do Continuous Backflips (Mike Kalil)",
+        "url": "https://mikekalil.com/blog/noetix-robotics-n2/",
+        "date": "2025-11-02"
+      }
+    ]
+  },
+  {
+    "slug": "neura-4ne1",
+    "name": "4NE1 Gen 3.5",
+    "maker": "NEURA Robotics",
+    "category": "humanoid",
+    "country": "Germany",
+    "status": "preorder",
+    "statusClaim": "preorder",
+    "priceUsd": null,
+    "priceNote": "€98,000 per unit for 1-19 units, €60,000 for 20+ (ex. tax and shipping), with a refundable €100 reservation. No USD price published. The smaller 4NE1 Mini lists at €19,999.",
+    "priceClaim": "preorder",
+    "heightM": 1.8,
+    "weightKg": 80,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": 1.39,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Taking €100 reservations; NEURA expects Gen 3.5 to be available at the end of 2026",
+    "summary": "NEURA's full-size humanoid, redesigned with Studio F.A. Porsche and shown at CES 2026. It can be reserved for €100, but NEURA has named no delivery customers and the first units are due only at the end of 2026. The company quotes a payload of '10-100 kg', a range too wide to be a useful spec until someone tests it.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "NEURA lists teleoperation and digital-twin access as interfaces. It has not said how much of the work would be autonomous."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "We found no FCC authorization. It is a new foreign-made humanoid, so the 2026-07-28 Covered List listing bars it from US equipment authorization unless it gets a Department of War exemption.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://neura-robotics.com/products/4ne1/",
+    "statusEvents": [
+      {
+        "date": "2026-01-06",
+        "status": "announced",
+        "note": "4NE1 Gen 3.5 (designed with Studio F.A. Porsche) and the 52-inch 4NE1 Mini shown at CES 2026",
+        "sourceUrl": "https://neura-robotics.com/neura-robotics-at-ces-2026/",
+        "sourceTitle": "NEURA Robotics at CES 2026"
+      },
+      {
+        "date": "2026-06-10",
+        "status": "announced",
+        "note": "Series C of up to $1.4B led by Tether, reported at a ~$7B valuation, to fund serial production",
+        "sourceUrl": "https://www.cnbc.com/2026/06/10/neura-robotics-funding-ai-humanoid-robots.html",
+        "sourceTitle": "CNBC: Humanoid robotics company Neura Robotics backed by Amazon, Nvidia"
+      },
+      {
+        "date": "2026-09-27",
+        "status": "preorder",
+        "note": "Reservation page lists €98,000 per unit and a €100 refundable deposit, with availability expected at the end of 2026",
+        "sourceUrl": "https://neura-robotics.com/product/4ne1-reservation/",
+        "sourceTitle": "Reserve 4NE1 | NEURA Robotics"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Humanoid Robot 4NE1 | NEURA Robotics",
+        "url": "https://neura-robotics.com/products/4ne1/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Reserve 4NE1 | NEURA Robotics",
+        "url": "https://neura-robotics.com/product/4ne1-reservation/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Reserve 4NE1 Mini | NEURA Robotics",
+        "url": "https://neura-robotics.com/product/4ne1-mini-reservation/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "NEURA Robotics Announces Record Series C of up to $1.4B",
+        "url": "https://neura-robotics.com/record-series-c/",
+        "date": "2026-06-10"
+      },
+      {
+        "title": "Neura Robotics: The Honest 2026 Funding and Delivery Record",
+        "url": "https://theresarobotforthat.com/blog/neura-robotics/",
+        "date": "2026-08-15"
+      }
+    ]
+  },
+  {
+    "slug": "pollen-reachy-2",
+    "name": "Reachy 2",
+    "maker": "Pollen Robotics (Hugging Face)",
+    "category": "humanoid",
+    "country": "France",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 70000,
+    "priceNote": "About $70,000 as quoted in 2025. Price depends on configuration (one or two arms, fixed or mobile base), so ask for a current quote.",
+    "priceClaim": "shipped",
+    "heightM": null,
+    "weightKg": 50,
+    "dof": null,
+    "payloadKg": 3,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Sold to research labs since late 2024; Hugging Face has owned Pollen since April 2025",
+    "summary": "An open-source upper-body humanoid on an omnidirectional wheeled base. It has two 7-DoF arms that each lift about 3 kg, and its height adjusts from 136 to 166 cm. Labs such as Cornell and Carnegie Mellon buy it for embodied-AI research, often teleoperated in VR. It is a research tool and is not meant for homes.",
+    "autonomy": {
+      "teleop": "yes",
+      "note": "VR teleoperation is a core feature and is used for data collection. Autonomous behavior depends on the policies each lab runs."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "Sold to US universities, but we could not confirm an FCC ID. It is a French-made mobile robot over 4.4 lb, so any new model would fall under the 2026-07-28 Covered List listing.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://pollen-robotics.com/reachy-2/",
+    "statusEvents": [
+      {
+        "date": "2024-10-02",
+        "status": "shipping",
+        "note": "Pollen announces Reachy 2 is live, in single or dual-arm configurations with a fixed or mobile base",
+        "sourceUrl": "https://x.com/pollenrobotics/status/1841459379997958607",
+        "sourceTitle": "Pollen Robotics on X: Reachy 2 is live"
+      },
+      {
+        "date": "2025-01-08",
+        "status": "shipping",
+        "note": "Shown at CES 2025; customers include Cornell, Carnegie Mellon, CNRS and Hugging Face",
+        "sourceUrl": "https://www.therobotreport.com/pollen-robotics-debuts-reachy-2-humanoid-at-ces-2025/",
+        "sourceTitle": "The Robot Report: Pollen Robotics debuts Reachy 2 humanoid at CES 2025"
+      },
+      {
+        "date": "2025-04-14",
+        "status": "shipping",
+        "note": "Hugging Face acquires Pollen Robotics and says it will sell Reachy 2 for about $70,000",
+        "sourceUrl": "https://www.therobotreport.com/hugging-face-bridges-gap-between-ai-physical-world-pollen-robotics-acquisition/",
+        "sourceTitle": "The Robot Report: Hugging Face bridges gap between AI and physical world with Pollen Robotics acquisition"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Reachy 2 | Pollen Robotics",
+        "url": "https://pollen-robotics.com/reachy-2/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Fox News: Can this $70,000 robot transform AI research?",
+        "url": "https://www.foxnews.com/tech/can-70000-robot-transform-ai-research",
+        "date": "2025-04-18"
+      },
+      {
+        "title": "The Robot Report: Pollen Robotics debuts Reachy 2 humanoid at CES 2025",
+        "url": "https://www.therobotreport.com/pollen-robotics-debuts-reachy-2-humanoid-at-ces-2025/",
+        "date": "2025-01-08"
+      }
+    ]
+  },
+  {
+    "slug": "pollen-reachy-mini",
+    "name": "Reachy Mini",
+    "maker": "Pollen Robotics (Hugging Face)",
+    "category": "kit",
+    "country": "France",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 399,
+    "priceNote": "Lite (USB, runs on your computer) is $399; Wireless (onboard Raspberry Pi CM4) is $499. Launch prices in July 2025 were $299 and $449. Shipping and import duties are extra.",
+    "priceClaim": "shipped",
+    "heightM": 0.28,
+    "weightKg": 1.5,
+    "dof": 9,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": "Raspberry Pi CM4 (Wireless); host Mac/PC (Lite)",
+    "releaseNote": "Orders opened July 2025; kits shipping in batches since fall 2025, with up to 90 days lead time",
+    "summary": "A 28 cm open-source desktop robot you assemble yourself in about two hours. It has a 6-DoF head, a rotating body, animated antennas, a camera, microphones and a speaker, programmed in Python through Hugging Face's tools. It is a developer kit: it cannot move around or pick things up.",
+    "autonomy": {
+      "teleop": "no",
+      "note": "Runs apps and AI models you install; no remote operators involved."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC ID found. At 1.5 kg and stationary it falls outside the 2026-07-28 'advanced robotic device' definition (mobile, over 4.4 lb). It is made in China.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://pollen-robotics.com/reachy-mini/",
+    "statusEvents": [
+      {
+        "date": "2025-05-29",
+        "status": "announced",
+        "note": "Hugging Face unveils Reachy Mini alongside HopeJR",
+        "sourceUrl": "https://techcrunch.com/2025/05/29/hugging-face-unveils-two-new-humanoid-robots/",
+        "sourceTitle": "TechCrunch: Hugging Face unveils two new humanoid robots"
+      },
+      {
+        "date": "2025-07-09",
+        "status": "preorder",
+        "note": "Orders open at $299 (Lite) and $449 (Wireless); Lite due to ship the following month, Wireless later in 2025",
+        "sourceUrl": "https://techcrunch.com/2025/07/09/hugging-face-opens-up-orders-for-its-reachy-mini-desktop-robots",
+        "sourceTitle": "TechCrunch: Hugging Face opens up orders for its Reachy Mini desktop robots"
+      },
+      {
+        "date": "2026-01-06",
+        "status": "shipping",
+        "note": "Seeed Studio, the manufacturing partner, describes the move from prototype to mass production",
+        "sourceUrl": "https://www.seeedstudio.com/blog/2026/01/06/reachy-mini-an-open-journey-built-together-with-hugging-face-pollen-robotics-seeed-studio/",
+        "sourceTitle": "Seeed Studio: Reachy Mini, an open journey"
+      },
+      {
+        "date": "2026-09-27",
+        "status": "shipping",
+        "note": "Store lists $399 Lite / $499 Wireless with up to 90 days lead time",
+        "sourceUrl": "https://pollen-robotics.com/reachy-mini/",
+        "sourceTitle": "Reachy Mini | Pollen Robotics"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Reachy Mini | Pollen Robotics",
+        "url": "https://pollen-robotics.com/reachy-mini/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Reachy Mini Lite kit | Pollen Robotics store",
+        "url": "https://store.pollen-robotics.com/products/reachy-mini-lite-version",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Hugging Face blog: Reachy Mini",
+        "url": "https://huggingface.co/blog/reachy-mini",
+        "date": "2025-07-09"
+      },
+      {
+        "title": "TechCrunch: Hugging Face opens up orders for its Reachy Mini desktop robots",
+        "url": "https://techcrunch.com/2025/07/09/hugging-face-opens-up-orders-for-its-reachy-mini-desktop-robots",
+        "date": "2025-07-09"
+      }
+    ]
+  },
+  {
+    "slug": "hugging-face-hopejr",
+    "name": "HopeJR",
+    "maker": "Hugging Face / The Robot Studio",
+    "category": "kit",
+    "country": "United States",
+    "status": "announced",
+    "statusClaim": "promise",
+    "priceUsd": 3000,
+    "priceNote": "Hugging Face estimated about $3,000 per unit at the May 2025 reveal. We found no store listing.",
+    "priceClaim": "promise",
+    "heightM": null,
+    "weightKg": null,
+    "dof": 66,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Waitlist opened May 2025; the open-source design files are on GitHub, but we found no evidence of shipped kits",
+    "summary": "An open-source, largely 3D-printed full-size humanoid design from Hugging Face and The Robot Studio, with 66 actuated degrees of freedom and tendon-driven hands. Hugging Face said the first units would ship by the end of 2025. As of September 2026, the public work is the arm, hand and teleoperation glove in LeRobot, and the docs call recording and training 'still experimental'.",
+    "autonomy": {
+      "teleop": "yes",
+      "note": "It is driven by an exoskeleton arm and a glove ('homunculus') for teleoperation and data collection. Learned policies are experimental."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC filing found. A self-built kit from open design files may not need one; a pre-built commercial unit would.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://github.com/TheRobotStudio/HOPEJr",
+    "statusEvents": [
+      {
+        "date": "2025-05-29",
+        "status": "announced",
+        "note": "Revealed with a waitlist and a ~$3,000 price estimate; first units expected by end of 2025",
+        "sourceUrl": "https://techcrunch.com/2025/05/29/hugging-face-unveils-two-new-humanoid-robots/",
+        "sourceTitle": "TechCrunch: Hugging Face unveils two new humanoid robots"
+      },
+      {
+        "date": "2026-09-27",
+        "status": "announced",
+        "note": "LeRobot docs cover the HopeJR arm, hand and teleop glove; record, replay and train are labeled 'still experimental'",
+        "sourceUrl": "https://huggingface.co/docs/lerobot/en/hope_jr",
+        "sourceTitle": "HopeJR | LeRobot docs"
+      }
+    ],
+    "sources": [
+      {
+        "title": "TechCrunch: Hugging Face unveils two new humanoid robots",
+        "url": "https://techcrunch.com/2025/05/29/hugging-face-unveils-two-new-humanoid-robots/",
+        "date": "2025-05-29"
+      },
+      {
+        "title": "HopeJR | LeRobot docs",
+        "url": "https://huggingface.co/docs/lerobot/en/hope_jr",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "TheRobotStudio/HOPEJr on GitHub",
+        "url": "https://github.com/TheRobotStudio/HOPEJr",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "mentee-menteebot",
+    "name": "MenteeBot",
+    "maker": "Mentee Robotics (Mobileye)",
+    "category": "humanoid",
+    "country": "Israel",
+    "status": "internal",
+    "statusClaim": "promise",
+    "priceUsd": null,
+    "priceNote": null,
+    "priceClaim": null,
+    "heightM": 1.75,
+    "weightKg": null,
+    "dof": null,
+    "payloadKg": 25,
+    "runtimeH": 3,
+    "speedMps": 1.5,
+    "handsDof": null,
+    "compute": "Dual NVIDIA Jetson AGX Orin",
+    "releaseNote": "MenteeBot V3.0. Customer proof-of-concept trials planned for 2026; series production targeted for 2028, homes around 2030",
+    "summary": "A 175 cm bipedal humanoid from the Israeli startup that Mobileye agreed to buy for $900M in January 2026. It has hot-swappable batteries (company says more than 3 hours) and a claimed 25 kg lift. The plan is warehouse and factory trials in 2026 and series production in 2028. Homes are a 2030 goal, and no price has been published.",
+    "autonomy": {
+      "teleop": "no",
+      "note": "Company claim: Mobileye says the 2026 proof-of-concept deployments are meant to run autonomously without teleoperation. This has not been independently verified."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found. As a new foreign-made humanoid it falls under the 2026-07-28 Covered List listing unless it gets a Department of War exemption or qualifies as a domestic end product.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://menteebot.com/",
+    "statusEvents": [
+      {
+        "date": "2025-01-06",
+        "status": "internal",
+        "note": "MenteeBot V3.0 unveiled with 175 cm height, 25 kg payload, swappable batteries and dual Jetson Orin compute",
+        "sourceUrl": "https://interestingengineering.com/innovation/israel-humanoid-robot-with-360-vision",
+        "sourceTitle": "Interesting Engineering: MenteeBot V3.0"
+      },
+      {
+        "date": "2026-01-06",
+        "status": "internal",
+        "note": "Mobileye agrees to acquire Mentee for $900M; PoC deployments planned for 2026, series production 2028",
+        "sourceUrl": "https://www.mobileye.com/news/mobileye-to-acquire-mentee-robotics-to-accelerate-physical-ai-leadership/",
+        "sourceTitle": "Mobileye To Acquire Mentee Robotics to Accelerate Physical AI Leadership"
+      },
+      {
+        "date": "2026-01-07",
+        "status": "internal",
+        "note": "Roadmap: experimental production batch with Aumovio in 2027, commercial deployment 2028, households around 2030",
+        "sourceUrl": "https://www.therobotreport.com/mobileye-to-acquire-mentee-robotics-for-900m-bid-dominate-physical-ai/",
+        "sourceTitle": "The Robot Report: Mobileye to acquire Mentee Robotics for $900M"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Mobileye To Acquire Mentee Robotics",
+        "url": "https://www.mobileye.com/news/mobileye-to-acquire-mentee-robotics-to-accelerate-physical-ai-leadership/",
+        "date": "2026-01-06"
+      },
+      {
+        "title": "TechCrunch: Mobileye acquires humanoid robot startup Mentee Robotics for $900M",
+        "url": "https://techcrunch.com/2026/01/06/mobileye-acquires-humanoid-robot-startup-mentee-robotics-for-900m/",
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Interesting Engineering: MenteeBot V3.0",
+        "url": "https://interestingengineering.com/innovation/israel-humanoid-robot-with-360-vision",
+        "date": "2025-01-06"
+      }
+    ]
+  },
+  {
+    "slug": "humanoid-hmnd-01",
+    "name": "HMND 01",
+    "maker": "Humanoid",
+    "category": "humanoid",
+    "country": "United Kingdom",
+    "status": "internal",
+    "statusClaim": "promise",
+    "priceUsd": null,
+    "priceNote": "Offered as robots-as-a-service; no price published",
+    "priceClaim": null,
+    "heightM": 2.2,
+    "weightKg": null,
+    "dof": 29,
+    "payloadKg": 15,
+    "runtimeH": null,
+    "speedMps": 2,
+    "handsDof": 12,
+    "compute": null,
+    "releaseNote": "HMND 01 Alpha. Alpha units in paid trials with industrial partners; Beta model due in late 2026, a few hundred units with Bosch in 2027",
+    "summary": "A 220 cm wheeled humanoid (a bipedal version also exists) from a London startup, aimed at warehouse and factory tote handling. It has run trials with SAP, Siemens, Schaeffler and Bosch. The company claims 34,000 preorders but says they are non-binding. The 15 kg payload comes from the 2025 launch; a 2026 SAP trial ran with an 8 kg limit.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "In the SAP / Martur Fompak trial the robot took task orders from SAP software and ran autonomously, per the company. Its teleoperation use is not disclosed."
+    },
+    "legal": {
+      "fcc": "barred",
+      "fccNote": "No FCC authorization found. As a new UK-made humanoid it falls under the 2026-07-28 Covered List listing unless it gets a Department of War exemption.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://thehumanoid.ai/",
+    "statusEvents": [
+      {
+        "date": "2025-09-19",
+        "status": "internal",
+        "note": "HMND 01 Alpha wheeled humanoid unveiled: 220 cm, 7.2 km/h, 15 kg bimanual payload, 29 DoF",
+        "sourceUrl": "https://thehumanoid.ai/humanoid-unveils-the-uks-first-humanoid-robot-for-industrial-use/",
+        "sourceTitle": "Humanoid Unveils the UK's First Humanoid Robot For Industrial Use"
+      },
+      {
+        "date": "2026-03-30",
+        "status": "internal",
+        "note": "Completes logistics proof of concept with SAP and Martur Fompak in a live automotive plant (Jan-Feb 2026)",
+        "sourceUrl": "https://thehumanoid.ai/hmnd-01-alpha-goes-to-work-humanoid-completes-automotive-manufacturing-logistics-poc-with-sap-and-martur-fompak/",
+        "sourceTitle": "HMND 01 Alpha goes to work"
+      },
+      {
+        "date": "2026-09-09",
+        "status": "internal",
+        "note": "Claims 34,000+ non-binding preorders after a $152M Series A in July 2026; Beta due Q4 2026",
+        "sourceUrl": "https://humanoid.guide/humanoid-claims-34000-preorders-for-wheeled-hmnd-01/",
+        "sourceTitle": "Humanoid.guide: Humanoid claims 34,000 HMND 01 preorders"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Humanoid Unveils the UK's First Humanoid Robot For Industrial Use",
+        "url": "https://thehumanoid.ai/humanoid-unveils-the-uks-first-humanoid-robot-for-industrial-use/",
+        "date": "2025-09-19"
+      },
+      {
+        "title": "HMND 01 Alpha goes to work",
+        "url": "https://thehumanoid.ai/hmnd-01-alpha-goes-to-work-humanoid-completes-automotive-manufacturing-logistics-poc-with-sap-and-martur-fompak/",
+        "date": "2026-03-30"
+      },
+      {
+        "title": "Humanoid.guide: Humanoid claims 34,000 HMND 01 preorders",
+        "url": "https://humanoid.guide/humanoid-claims-34000-preorders-for-wheeled-hmnd-01/",
+        "date": "2026-09-09"
+      },
+      {
+        "title": "HMND 01 Alpha Bipedal | Humanoid",
+        "url": "https://thehumanoid.ai/hmnd-01-alpha-bipedal/",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "sunday-memo",
+    "name": "Memo",
+    "maker": "Sunday",
+    "category": "home",
+    "country": "United States",
+    "status": "announced",
+    "statusClaim": "promise",
+    "priceUsd": null,
+    "priceNote": "The 2026 beta is free and invite-only. Sunday says hand-built units cost about $20,000 and expects volume manufacturing to cut costs by at least 50%. Retail price has not been announced.",
+    "priceClaim": null,
+    "heightM": 1.7,
+    "weightKg": 77,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": 4,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Invite-only 'Founding Family' beta of about 50 homes due late 2026; general availability expected 2027-2028",
+    "summary": "A wheeled, two-armed home robot with grippers instead of hands. It is trained on motion data from $200 'Skill Capture Gloves' worn in more than 500 homes. Sunday has demoed it clearing tables, loading dishwashers and folding laundry. The first units go to about 50 invited beta homes in late 2026, and there is no retail price yet.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Sunday says its ACT-1 model learns from glove data rather than teleoperation. It has not said whether beta units will use remote operators."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC filing found. Where it is manufactured is not disclosed, so we cannot tell yet whether the 2026-07-28 foreign-made robot listing applies.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.sunday.ai/",
+    "statusEvents": [
+      {
+        "date": "2025-11-19",
+        "status": "announced",
+        "note": "Sunday unveils Memo (1.7 m, 170 lb, 4 h battery) and ACT-1; free invite-only beta planned for 2026",
+        "sourceUrl": "https://www.humanoidsdaily.com/news/sunday-unveils-memo-a-wheeled-domestic-robot-that-learns-from-200-gloves",
+        "sourceTitle": "Humanoids Daily: Sunday unveils Memo"
+      },
+      {
+        "date": "2026-03-12",
+        "status": "announced",
+        "note": "Raises $165M at $1.15B valuation to begin real-world Memo deployments",
+        "sourceUrl": "https://siliconangle.com/2026/03/12/sunday-raises-165m-1-15b-valuation-launch-memo-household-robot/",
+        "sourceTitle": "SiliconANGLE: Sunday raises $165M at $1.15B valuation to launch Memo"
+      },
+      {
+        "date": "2026-09-27",
+        "status": "announced",
+        "note": "Beta page: invite-only, launching late 2026, general availability expected 2027-2028",
+        "sourceUrl": "https://www.sunday.ai/beta-program",
+        "sourceTitle": "Sunday Beta Program"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Sunday Beta Program",
+        "url": "https://www.sunday.ai/beta-program",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Humanoids Daily: Sunday unveils Memo",
+        "url": "https://www.humanoidsdaily.com/news/sunday-unveils-memo-a-wheeled-domestic-robot-that-learns-from-200-gloves",
+        "date": "2025-11-19"
+      },
+      {
+        "title": "SiliconANGLE: Sunday raises $165M",
+        "url": "https://siliconangle.com/2026/03/12/sunday-raises-165m-1-15b-valuation-launch-memo-household-robot/",
+        "date": "2026-03-12"
+      }
+    ]
+  },
+  {
+    "slug": "amazon-astro",
+    "name": "Astro",
+    "maker": "Amazon",
+    "category": "home",
+    "country": "United States",
+    "status": "homes",
+    "statusClaim": "shipped",
+    "priceUsd": 1599,
+    "priceNote": "$1,599, by invitation only (Day 1 Editions). The 2021 launch price was $999.99 introductory / $1,449.99 regular.",
+    "priceClaim": "shipped",
+    "heightM": 0.44,
+    "weightKg": 9.3,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": 2,
+    "speedMps": 1,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "In US homes by invitation since late 2021; the business version was discontinued in July 2024",
+    "summary": "Amazon's wheeled home-monitoring robot, with Alexa, a periscope camera and Ring integration. It has been in US homes since 2021, but only by invitation, and it never went mass-market. It has no arms, so it patrols and watches but cannot tidy or carry things for you.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "It navigates on its own using SLAM. Owners can also drive it remotely and view its camera from the app."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "Sold in the US since 2021 under an existing authorization, which the 2026-07-28 listing leaves in place. We did not verify the FCC ID.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.aboutamazon.com/news/devices/meet-astro-a-home-robot-unlike-any-other",
+    "statusEvents": [
+      {
+        "date": "2021-09-28",
+        "status": "preorder",
+        "note": "Astro announced; invite requests open at $999.99 intro / $1,449.99 regular, shipping to invitees later in 2021",
+        "sourceUrl": "https://www.aboutamazon.com/news/devices/meet-astro-a-home-robot-unlike-any-other",
+        "sourceTitle": "Amazon: Meet Astro, a home robot unlike any other"
+      },
+      {
+        "date": "2024-07-03",
+        "status": "homes",
+        "note": "Amazon discontinues Astro for Business to focus on the home model",
+        "sourceUrl": "https://techcrunch.com/2024/07/03/amazon-discontinues-astro-for-business-security-robot",
+        "sourceTitle": "TechCrunch: Amazon discontinues Astro for Business security robot"
+      },
+      {
+        "date": "2026-05-20",
+        "status": "homes",
+        "note": "Still sold by invitation at $1,599; owners report little in the way of updates",
+        "sourceUrl": "https://the-gadgeteer.com/2026/05/20/home-robots-available-2026/",
+        "sourceTitle": "The Gadgeteer: Home Robots in 2026: What's Shipping, What's Vaporware"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Amazon: Meet Astro, a home robot unlike any other",
+        "url": "https://www.aboutamazon.com/news/devices/meet-astro-a-home-robot-unlike-any-other",
+        "date": "2021-09-28"
+      },
+      {
+        "title": "Digital Trends: Amazon Astro specs, price and release",
+        "url": "https://www.digitaltrends.com/home/amazon-astro-news-specs-price-release/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "The Gadgeteer: Home Robots in 2026",
+        "url": "https://the-gadgeteer.com/2026/05/20/home-robots-available-2026/",
+        "date": "2026-05-20"
+      },
+      {
+        "title": "GeekWire: Amazon discontinues Astro for Business",
+        "url": "https://www.geekwire.com/2024/amazon-discontinues-astro-for-business-robot-security-guard-to-focus-on-astro-home-robot/",
+        "date": "2024-07-03"
+      }
+    ]
+  },
+  {
+    "slug": "matic-robot",
+    "name": "Matic",
+    "maker": "Matic Robots",
+    "category": "home",
+    "country": "United States",
+    "status": "homes",
+    "statusClaim": "shipped",
+    "priceUsd": 1495,
+    "priceNote": "From $1,495 (one robot, one dock) at maticrobots.com; it has been discounted to about $1,245. It was $1,095 in mid-2025.",
+    "priceClaim": "shipped",
+    "heightM": 0.2,
+    "weightKg": null,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": 2.5,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "On general sale in the US since 2025; ships in about 2 weeks with a 6-month trial",
+    "summary": "A camera-only floor-cleaning robot that vacuums and mops. It builds its maps and runs its AI on the device, so video stays in the home, per the company. It is designed and assembled in Mountain View, California, sold only in the US, and well reviewed. It cleans floors and does nothing else.",
+    "autonomy": {
+      "teleop": "no",
+      "note": "Fully autonomous navigation using on-device vision. No remote operators."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "On sale in the US before the 2026-07-28 listing, so it holds existing authorization. It is US-assembled, and robot vacuums are covered by the rule only if foreign-produced. We did not verify the FCC ID.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://maticrobots.com/",
+    "statusEvents": [
+      {
+        "date": "2023-05-09",
+        "status": "preorder",
+        "note": "Matic takes $125 refundable reservations, sold as a subscription, for fall 2023 shipping",
+        "sourceUrl": "https://spectrum.ieee.org/matic-robot-vacuum",
+        "sourceTitle": "IEEE Spectrum: Matic robot vacuum"
+      },
+      {
+        "date": "2025-06-06",
+        "status": "homes",
+        "note": "Reviewed as available now at $1,095",
+        "sourceUrl": "https://www.howtogeek.com/matic-robot-vacuum-review/",
+        "sourceTitle": "How-To Geek: Matic review"
+      },
+      {
+        "date": "2026-09-27",
+        "status": "homes",
+        "note": "Product page lists from $1,495, ships in 2 weeks, US only",
+        "sourceUrl": "https://maticrobots.com/product",
+        "sourceTitle": "Matic product page"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Matic product page",
+        "url": "https://maticrobots.com/product",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "How-To Geek: Matic review",
+        "url": "https://www.howtogeek.com/matic-robot-vacuum-review/",
+        "date": "2025-06-06"
+      },
+      {
+        "title": "RTINGS: Matic robot vacuum review",
+        "url": "https://www.rtings.com/robot-vacuum/reviews/matic/robot",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "samsung-ballie",
+    "name": "Ballie",
+    "maker": "Samsung",
+    "category": "home",
+    "country": "South Korea",
+    "status": "internal",
+    "statusClaim": "research",
+    "priceUsd": null,
+    "priceNote": "Never priced. Shelved as a consumer product in January 2026.",
+    "priceClaim": null,
+    "heightM": null,
+    "weightKg": null,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Promised for summer 2025 in the US and Korea, missed that date, and was indefinitely shelved in January 2026",
+    "summary": "A rolling ball-shaped home companion with a built-in projector, first shown at CES 2020. Samsung promised a summer 2025 launch with Google Gemini, then missed it. In January 2026 Samsung told Bloomberg that Ballie is an 'active innovation platform' rather than a coming product. Treat it as cancelled for buyers.",
+    "autonomy": {
+      "teleop": "unknown",
+      "note": "Never shipped, so there is no real-world data."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "No FCC authorization confirmed. Any future launch of a foreign-made mobile robot over 4.4 lb would face the 2026-07-28 Covered List listing.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung",
+    "statusEvents": [
+      {
+        "date": "2025-04-09",
+        "status": "announced",
+        "note": "Samsung and Google Cloud say Gemini-powered Ballie will launch in the US and Korea 'this summer'",
+        "sourceUrl": "https://news.samsung.com/us/samsung-google-cloud-expand-partnership-bring-gemini-ballie-home-ai-companion-robot-by-samsung",
+        "sourceTitle": "Samsung and Google Cloud Bring Gemini to Ballie"
+      },
+      {
+        "date": "2025-12-08",
+        "status": "announced",
+        "note": "Summer 2025 launch window passes with no release",
+        "sourceUrl": "https://9to5google.com/2025/12/08/samsung-ballie-still-delayed-again/",
+        "sourceTitle": "9to5Google: Samsung Ballie launch window flies by, and it's still delayed"
+      },
+      {
+        "date": "2026-01-07",
+        "status": "internal",
+        "note": "Absent from CES 2026; Samsung calls Ballie an 'active innovation platform', and Bloomberg reports it is indefinitely shelved",
+        "sourceUrl": "https://www.bloomberg.com/news/articles/2026-01-07/samsung-s-rolling-ballie-robot-indefinitely-shelved-after-delays",
+        "sourceTitle": "Bloomberg: Samsung's Rolling Ballie Robot Indefinitely Shelved After Delays"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Bloomberg: Samsung's Rolling Ballie Robot Indefinitely Shelved After Delays",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-07/samsung-s-rolling-ballie-robot-indefinitely-shelved-after-delays",
+        "date": "2026-01-07"
+      },
+      {
+        "title": "Forbes: Why Samsung Still Hasn't Shipped Ballie After Six Years",
+        "url": "https://www.forbes.com/sites/jonmarkman/2026/03/30/why-samsung-still-hasnt-shipped-ballie-after-six-years/",
+        "date": "2026-03-30"
+      },
+      {
+        "title": "The Gadgeteer: Home Robots in 2026",
+        "url": "https://the-gadgeteer.com/2026/05/20/home-robots-available-2026/",
+        "date": "2026-05-20"
+      },
+      {
+        "title": "9to5Google: Samsung Ballie still delayed",
+        "url": "https://9to5google.com/2025/12/08/samsung-ballie-still-delayed-again/",
+        "date": "2025-12-08"
+      }
+    ]
+  },
+  {
+    "slug": "unitree-go2",
+    "name": "Go2",
+    "maker": "Unitree",
+    "category": "quadruped",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 1600,
+    "priceNote": "Go2 Air from $1,600 and Go2 Pro $2,800 on Unitree's own US store (tax and freight excluded); EDU is quote-only and resellers list it around $11,000-$19,000. Some US resellers now list the Pro higher than Unitree's price.",
+    "priceClaim": "shipped",
+    "heightM": 0.4,
+    "weightKg": 15,
+    "dof": 12,
+    "payloadKg": 7,
+    "runtimeH": 1,
+    "speedMps": 2.5,
+    "handsDof": null,
+    "compute": "8-core CPU; EDU version adds an optional NVIDIA Jetson Orin module (40-100 TOPS)",
+    "releaseNote": "On sale since July 2023; still sold in the US under its pre-ban FCC authorization",
+    "summary": "Unitree's small robot dog is the cheapest mainstream quadruped you can order, with a 4D lidar and app control on every model. The Air and Pro are consumer tricks-and-follow machines; real programming needs the far pricier EDU. Its firmware has a long run of published security flaws, so treat it as a networked device first and a pet second.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Driven by app or remote; has on-board follow mode, obstacle avoidance and voice commands, but no general household task autonomy. Pro and above add 4G remote control."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "FCC ID 2A5PE-YUSHU004 (Go2 user manual on file; remote 2A5PE-YUSHU005). Authorized before the 2026-07-28 Covered List update, so it stays legal to import and sell; Unitree confirmed authorization in its July 2026 prospectus. Exact grant date not verified in the FCC database.",
+      "eu": null,
+      "security": "UniPwn (Sept 2025): hard-coded BLE keys (CVE-2025-60250) plus Wi-Fi setup command injection (CVE-2025-35027) give root over Bluetooth and can spread robot to robot; affects Go2, G1, H1, B2. CVE-2026-27509 (Feb 2026, CVSS 8.5): unauthenticated DDS topic lets a nearby attacker run code as root on Go2 firmware 1.1.7-1.1.11. The older Go1 shipped with an undocumented CloudSail remote-access tunnel (CVE-2025-2894)."
+    },
+    "website": "https://www.unitree.com/go2/",
+    "statusEvents": [
+      {
+        "date": "2023-07-18",
+        "status": "preorder",
+        "note": "Unitree announces Go2 Air, Pro and EDU from $1,600",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/introducing-unitree-go2---quadruped-robot-of-embodied-ai-301879381.html",
+        "sourceTitle": "Introducing Unitree Go2 - Quadruped Robot of Embodied AI (PR Newswire)"
+      },
+      {
+        "date": "2025-09-20",
+        "status": "shipping",
+        "note": "Researchers publish UniPwn, a wormable Bluetooth root exploit affecting every Go2 on current firmware",
+        "sourceUrl": "https://github.com/Bin4ry/UniPwn",
+        "sourceTitle": "UniPwn (GitHub)"
+      },
+      {
+        "date": "2026-02-26",
+        "status": "shipping",
+        "note": "CVE-2026-27509 published: unauthenticated code execution as root via DDS on Go2 firmware 1.1.7-1.1.11",
+        "sourceUrl": "https://github.com/advisories/GHSA-hcv4-2wj7-9p5g",
+        "sourceTitle": "CVE-2026-27509 (GitHub Advisory Database)"
+      },
+      {
+        "date": "2026-07-31",
+        "status": "shipping",
+        "note": "Unitree's prospectus says Go2, B2, A2, G1, H2 and R1 all hold FCC authorization, so they can keep selling in the US after the July 28 Covered List update; future models face uncertainty",
+        "sourceUrl": "https://www.globaltimes.cn/page/202607/1367261.shtml",
+        "sourceTitle": "China's Unitree Robotics flags risks to future US sales under FCC restrictions (Global Times)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Unitree Go2 product page",
+        "url": "https://www.unitree.com/go2/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Unitree online store (all products)",
+        "url": "https://shop.unitree.com/collections/all",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Introducing Unitree Go2 (PR Newswire)",
+        "url": "https://www.prnewswire.com/news-releases/introducing-unitree-go2---quadruped-robot-of-embodied-ai-301879381.html",
+        "date": "2023-07-18"
+      },
+      {
+        "title": "UniPwn: BLE root exploit for Unitree Go2, G1, H1, B2 (GitHub, Bin4ry)",
+        "url": "https://github.com/Bin4ry/UniPwn",
+        "date": "2025-09-20"
+      },
+      {
+        "title": "Undocumented remote access backdoor found in Unitree Go1 robot dog (SecurityWeek)",
+        "url": "https://www.securityweek.com/undocumented-remote-access-backdoor-found-in-unitree-go1-robot-dog/",
+        "date": "2025-04-01"
+      },
+      {
+        "title": "FCC Adds All Foreign-Produced Advanced Robotic Devices to the Covered List (Sidley Austin)",
+        "url": "https://www.sidley.com/en/insights/newsupdates/2026/08/fcc-adds-all-foreign-produced-advanced-robotic-devices-to-the-covered-list",
+        "date": "2026-08-01"
+      }
+    ]
+  },
+  {
+    "slug": "boston-dynamics-spot",
+    "name": "Spot",
+    "maker": "Boston Dynamics",
+    "category": "quadruped",
+    "country": "United States",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 74500,
+    "priceNote": "$74,500 was the 2020 list price for the Spot Explorer kit. Boston Dynamics now sells by quote only; public procurement records show configured units at roughly $150,000-$375,000.",
+    "priceClaim": "shipped",
+    "heightM": 0.61,
+    "weightKg": 33.8,
+    "dof": null,
+    "payloadKg": 14,
+    "runtimeH": 1.5,
+    "speedMps": 1.6,
+    "handsDof": null,
+    "compute": null,
+    "releaseNote": "Commercially sold since June 2020; more than 1,500 deployed with enterprise customers",
+    "summary": "The best-known robot dog is an industrial inspection tool, not a home product. Businesses buy it for plant rounds, thermal and acoustic inspections and security patrols, managed through Boston Dynamics' Orbit software. It is built by a US company, so the 2026 FCC foreign-robot rule does not block it.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Driven from a tablet, or runs pre-recorded autonomous inspection routes (Autowalk/Orbit missions); release 5.1 added autonomous door opening and security patrols."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "Sold in the US since 2020 with FCC Part 15 compliance; FCC ID not located. US-designed and built in Massachusetts, so it is not the target of the July 2026 foreign-produced robot listing (domestic-content status not publicly documented). Boston Dynamics publicly backed the rule.",
+      "eu": "On sale in the EU and UK since September 2020.",
+      "security": null
+    },
+    "website": "https://bostondynamics.com/products/spot/",
+    "statusEvents": [
+      {
+        "date": "2020-06-16",
+        "status": "shipping",
+        "note": "Any US business can buy Spot Explorer for $74,500",
+        "sourceUrl": "https://techcrunch.com/2020/06/16/now-any-us-business-can-buy-boston-dynamics-spot-robot-for-74500/",
+        "sourceTitle": "Now any US business can buy Boston Dynamics' Spot robot for $74,500 (TechCrunch)"
+      },
+      {
+        "date": "2020-09-09",
+        "status": "shipping",
+        "note": "Sales open in Canada, the EU and the UK; about 250 units sold or leased at that point",
+        "sourceUrl": "https://www.therobotreport.com/boston-dynamics-spot-robot-sale-canada-europe/",
+        "sourceTitle": "Boston Dynamics' Spot robot now for sale in Canada, Europe (The Robot Report)"
+      },
+      {
+        "date": "2026-01-21",
+        "status": "shipping",
+        "note": "Spot and Orbit 5.1 add Spot Cam 2, arm-free door opening and security patrol missions",
+        "sourceUrl": "https://www.therobotreport.com/boston-dynamics-releases-spot-and-orbit-5-1-with-new-spot-cam/",
+        "sourceTitle": "Boston Dynamics releases Spot and Orbit 5.1 with new Spot Cam (The Robot Report)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Spot product page (Boston Dynamics)",
+        "url": "https://bostondynamics.com/products/spot/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Now any US business can buy Spot for $74,500 (TechCrunch)",
+        "url": "https://techcrunch.com/2020/06/16/now-any-us-business-can-buy-boston-dynamics-spot-robot-for-74500/",
+        "date": "2020-06-16"
+      },
+      {
+        "title": "Boston Dynamics releases Spot and Orbit 5.1 (The Robot Report)",
+        "url": "https://www.therobotreport.com/boston-dynamics-releases-spot-and-orbit-5-1-with-new-spot-cam/",
+        "date": "2026-01-21"
+      },
+      {
+        "title": "Robot dogs priced at $300,000 a piece are guarding data centers (Fortune)",
+        "url": "https://fortune.com/2026/03/17/robot-dog-patrols-data-centers-ai-infrastructure-buildout/",
+        "date": "2026-03-17"
+      },
+      {
+        "title": "FCC Covered List Bans New Foreign Mobile Robots in US (IEEE Spectrum)",
+        "url": "https://spectrum.ieee.org/fcc-covered-list-mobile-robots",
+        "date": "2026-08-01"
+      }
+    ]
+  },
+  {
+    "slug": "deep-robotics-lite3",
+    "name": "Lite3",
+    "maker": "DEEP Robotics",
+    "category": "quadruped",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 2890,
+    "priceNote": "Basic from $2,890 on DEEP Robotics' US store (listed sold out in Sept 2026); Venture, Pro and LiDAR versions are quote-only, with resellers listing roughly $5,400-$18,900.",
+    "priceClaim": "shipped",
+    "heightM": 0.406,
+    "weightKg": 12,
+    "dof": null,
+    "payloadKg": 5,
+    "runtimeH": 1.5,
+    "speedMps": 4,
+    "handsDof": null,
+    "compute": "Rockchip RK3588 motion host; NVIDIA Jetson Xavier NX perception host on Pro/LiDAR versions",
+    "releaseNote": "Launched 2023; sold to research and education buyers in Asia, Europe and North America",
+    "summary": "A mid-size research robot dog from Hangzhou that competes with Unitree's Go2 EDU, with ROS 1/ROS 2 support and open motion SDKs. It targets labs and developers rather than homes. Its US legal footing after the July 2026 FCC rule depends on a prior FCC authorization we could not confirm.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Remote-controlled by default; Pro and LiDAR versions add obstacle avoidance and autonomous navigation."
+    },
+    "legal": {
+      "fcc": "unknown",
+      "fccNote": "Lite3 manual carries an FCC Part 15 compliance statement, but we could not find an FCC ID or grant date. If it was not authorized before 2026-07-28, new US imports need Conditional Approval.",
+      "eu": "Sold in Western Europe via distributors since 2023; CE status not verified.",
+      "security": null
+    },
+    "website": "https://www.deeprobotics.us/products/lite-3/",
+    "statusEvents": [
+      {
+        "date": "2023-05-31",
+        "status": "announced",
+        "note": "Lite3 debuts at ICRA 2023 in London",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/deep-robotics-debuts-new-lite3-quadrupedal-robots-at-icra-2023-in-london-301838133.html",
+        "sourceTitle": "DEEP Robotics Debuts New Lite3 quadrupedal robots at ICRA 2023 (PR Newswire)"
+      },
+      {
+        "date": "2023-06-06",
+        "status": "preorder",
+        "note": "Basic priced at $2,890; overseas shipping planned from September 2023",
+        "sourceUrl": "https://interestingengineering.com/innovation/deep-robotics-announces-launch-of-latest-intelligent-robot-dog-lite3",
+        "sourceTitle": "Deep Robotics announces launch of Lite3 (Interesting Engineering)"
+      },
+      {
+        "date": "2026-07-28",
+        "status": "shipping",
+        "note": "FCC adds foreign-produced mobile robots to the Covered List; only models authorized before this date may keep being sold in the US",
+        "sourceUrl": "https://www.sidley.com/en/insights/newsupdates/2026/08/fcc-adds-all-foreign-produced-advanced-robotic-devices-to-the-covered-list",
+        "sourceTitle": "FCC Adds All Foreign-Produced Advanced Robotic Devices to the Covered List (Sidley Austin)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "DEEP Robotics Lite 3 (US site)",
+        "url": "https://www.deeprobotics.us/products/lite-3/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "DEEP Robotics Lite3 (US online shop)",
+        "url": "https://shop.deeprobotics.us/products/lite-3",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "The Lite 3 Series (DEEP Robotics)",
+        "url": "https://www.deeprobotics.cn/en/index/product1.html",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Deep Robotics announces launch of Lite3 (Interesting Engineering)",
+        "url": "https://interestingengineering.com/innovation/deep-robotics-announces-launch-of-latest-intelligent-robot-dog-lite3",
+        "date": "2023-06-06"
+      },
+      {
+        "title": "FCC Adds All Foreign-Produced Advanced Robotic Devices to the Covered List (Sidley Austin)",
+        "url": "https://www.sidley.com/en/insights/newsupdates/2026/08/fcc-adds-all-foreign-produced-advanced-robotic-devices-to-the-covered-list",
+        "date": "2026-08-01"
+      }
+    ]
+  },
+  {
+    "slug": "petoi-bittle",
+    "name": "Bittle X",
+    "maker": "Petoi",
+    "category": "kit",
+    "country": "United States",
+    "status": "homes",
+    "statusClaim": "shipped",
+    "priceUsd": 289,
+    "priceNote": "Original Bittle from $289 (final stock); current Bittle X V2 from $319 as a build-it-yourself kit, more pre-assembled or with the arm add-on (petoi.com, Sept 2026).",
+    "priceClaim": "shipped",
+    "heightM": 0.107,
+    "weightKg": 0.269,
+    "dof": 9,
+    "payloadKg": 0.45,
+    "runtimeH": 1,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": "ESP32 (BiBoard, ESP32-WROOM-32D); optional Raspberry Pi socket",
+    "releaseNote": "Kickstarter-funded in 2020; Bittle X shipping since 2024, V2 in 2026",
+    "summary": "A palm-sized, open-source robot dog kit you build in about an hour and program in blocks, Python or C++. It is a coding toy and teaching tool, not a helper: it walks, does tricks and answers voice commands, and an optional gripper lets it pick up light objects. Petoi says it has shipped more than 30,000 robots.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Runs preset skills and offline voice commands; otherwise controlled by app or user code. Needs no network connection."
+    },
+    "legal": {
+      "fcc": "n/a",
+      "fccNote": "At about 0.3 kg it is far below the 4.4 lb (2 kg) threshold in the FCC's 'advanced robotic device' definition, so the July 2026 Covered List rule does not apply. No whole-robot FCC ID found; radio is an ESP32 module.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://www.petoi.com/products/petoi-robot-dog-bittle-x-voice-controlled",
+    "statusEvents": [
+      {
+        "date": "2020-10-08",
+        "status": "preorder",
+        "note": "Kickstarter closes at $567,218 from 2,052 backers; deliveries planned for December 2020",
+        "sourceUrl": "https://www.petoi.com/blogs/blog/petoi-bittle-the-palm-sized-trick-playing-robot-dog-successfully-raised-567k-on-kickstarter",
+        "sourceTitle": "Petoi Bittle successfully raised $567K on Kickstarter (Petoi)"
+      },
+      {
+        "date": "2026-04-08",
+        "status": "homes",
+        "note": "Bittle X V2 adds adapter-free Raspberry Pi support and more sensor options",
+        "sourceUrl": "https://circuitdigest.com/news/petoi-bittle-x-v2-esp32-robot-dog-that-can-even-do-backflips-on-command",
+        "sourceTitle": "Petoi Bittle X V2: An ESP32 Robot Dog That Can Even Backflip on Command (CircuitDigest)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Bittle X product page (Petoi)",
+        "url": "https://www.petoi.com/products/petoi-robot-dog-bittle-x-voice-controlled",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Bittle X technical specifications (Petoi)",
+        "url": "https://www.petoi.com/pages/bittle-x-robot-dog-with-arm-specifications",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Bittle family store listing (Petoi)",
+        "url": "https://www.petoi.com/collections/bittle-family",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "About Petoi",
+        "url": "https://www.petoi.com/pages/about",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "FCC Covered List Bans New Foreign Mobile Robots in US (IEEE Spectrum)",
+        "url": "https://spectrum.ieee.org/fcc-covered-list-mobile-robots",
+        "date": "2026-08-01"
+      }
+    ]
+  },
+  {
+    "slug": "so-101-arm",
+    "name": "SO-101",
+    "maker": "Hugging Face / The Robot Studio",
+    "category": "arm",
+    "country": "United States",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 130,
+    "priceNote": "Hugging Face estimates about $100-$130 for one arm with printed parts and motors. A leader + follower pair is about $230 in parts (RobotStudio BOM); Seeed's dual-arm motor kit is $220-$240 without printed parts, and assembled pairs run up to about $500.",
+    "priceClaim": "shipped",
+    "heightM": null,
+    "weightKg": null,
+    "dof": 6,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": "None on board; runs from a USB-connected PC or NVIDIA Jetson via LeRobot",
+    "releaseNote": "Open-source design released April 2025; kits sold by several vendors",
+    "summary": "A 3D-printable, six-motor desktop arm built for the LeRobot framework, usually sold as a pair: you move a leader arm by hand and the follower copies it, recording data to train a policy. It is the cheapest serious way to try robot learning at home. The gripper is simple and payload is small, so expect pick-and-place demos, not chores.",
+    "autonomy": {
+      "teleop": "yes",
+      "note": "Designed around leader-follower teleoperation for data collection; can then run learned policies (e.g. ACT, SmolVLA) autonomously on narrow tasks."
+    },
+    "legal": {
+      "fcc": "n/a",
+      "fccNote": "A stationary, tethered arm with no radio; outside the FCC 'advanced robotic device' definition, which covers mobile robots only.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://github.com/TheRobotStudio/SO-ARM100",
+    "statusEvents": [
+      {
+        "date": "2025-04-28",
+        "status": "shipping",
+        "note": "Hugging Face launches SO-101 with The Robot Studio, WowRobo, Seeed Studio and PartaBot selling kits",
+        "sourceUrl": "https://techcrunch.com/2025/04/28/hugging-face-releases-a-3d-printed-robotic-arm-starting-at-100",
+        "sourceTitle": "Hugging Face releases a 3D-printed robotic arm starting at $100 (TechCrunch)"
+      },
+      {
+        "date": "2025-05-02",
+        "status": "shipping",
+        "note": "SO-ARM101 dual-arm motor kits listed at $220 (Standard) and $240 (Pro)",
+        "sourceUrl": "https://www.cnx-software.com/2025/05/02/so-arm101-open-source-dual-robotic-arm-kit-works-with-hugging-faces-lerobot/",
+        "sourceTitle": "SO-ARM101 open-source dual robotic arm kit works with Hugging Face's LeRobot (CNX Software)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "SO-ARM100 / SO-101 repository (The Robot Studio)",
+        "url": "https://github.com/TheRobotStudio/SO-ARM100",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Hugging Face releases a 3D-printed robotic arm starting at $100 (TechCrunch)",
+        "url": "https://techcrunch.com/2025/04/28/hugging-face-releases-a-3d-printed-robotic-arm-starting-at-100",
+        "date": "2025-04-28"
+      },
+      {
+        "title": "SO-ARM101 dual robotic arm kit (CNX Software)",
+        "url": "https://www.cnx-software.com/2025/05/02/so-arm101-open-source-dual-robotic-arm-kit-works-with-hugging-faces-lerobot/",
+        "date": "2025-05-02"
+      },
+      {
+        "title": "SO-101 Low-Cost AI Arm Kit Pro (Seeed Studio)",
+        "url": "https://www.seeedstudio.com/SO-101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "lekiwi",
+    "name": "LeKiwi",
+    "maker": "SIGRobotics UIUC / Hugging Face LeRobot",
+    "category": "kit",
+    "country": "United States",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 482,
+    "priceNote": "Full build about $482 (12V) or $499 (5V) in US parts per the project BOM, including the SO-101 arm and Raspberry Pi 5. Seeed sells the base-only kit for $179 without arm, Pi or cameras.",
+    "priceClaim": "shipped",
+    "heightM": null,
+    "weightKg": null,
+    "dof": null,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": 0.4,
+    "handsDof": null,
+    "compute": "Raspberry Pi 5 (streams to a laptop for policy inference)",
+    "releaseNote": "Open-source design published February 2025; DIY and assembled kits sold by several vendors",
+    "summary": "An SO-101 arm on a three-wheel omnidirectional base, making the cheapest open-source mobile manipulator for LeRobot. You drive it with a keyboard and a leader arm to record demonstrations, then train policies on the data. It is a learning platform, top speed 0.4 m/s, not a finished home helper.",
+    "autonomy": {
+      "teleop": "yes",
+      "note": "Teleoperated by leader arm plus keyboard for data collection; learned policies can run autonomously on simple tasks."
+    },
+    "legal": {
+      "fcc": "n/a",
+      "fccNote": "A self-assembled open-source build with no whole-robot FCC authorization; radios are in off-the-shelf modules (Raspberry Pi). The FCC rule's treatment of hobbyist kits is not addressed; weight not published, so the 4.4 lb threshold is unverified.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://github.com/SIGRobotics-UIUC/LeKiwi",
+    "statusEvents": [
+      {
+        "date": "2025-02-04",
+        "status": "shipping",
+        "note": "SIGRobotics at UIUC publishes the open-source LeKiwi design (Apache 2.0) with BOM and build guide",
+        "sourceUrl": "https://github.com/SIGRobotics-UIUC/LeKiwi",
+        "sourceTitle": "LeKiwi - Low-Cost Mobile Manipulator (GitHub)"
+      },
+      {
+        "date": "2026-02-07",
+        "status": "shipping",
+        "note": "Several companies now sell assembled and DIY LeKiwi kits",
+        "sourceUrl": "https://foxglove.dev/blog/upgrading-the-lekiwi-into-a-lidar-equipped-explorer",
+        "sourceTitle": "Upgrading the LeKiwi into a LiDAR-equipped explorer (Foxglove)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "LeKiwi repository (SIGRobotics-UIUC)",
+        "url": "https://github.com/SIGRobotics-UIUC/LeKiwi",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "LeKiwi bill of materials",
+        "url": "https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "LeKiwi docs (Hugging Face LeRobot)",
+        "url": "https://huggingface.co/docs/lerobot/lekiwi",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "LeKiwi Kit (12V) mobile base (Seeed Studio)",
+        "url": "https://www.seeedstudio.com/Lekiwi-Kit-p-6501.html",
+        "date": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "slug": "unitree-b2",
+    "name": "B2",
+    "maker": "Unitree",
+    "category": "quadruped",
+    "country": "China",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 100000,
+    "priceNote": "Listed at $100,000 on Unitree's US store; resellers quote roughly $77,000-$95,000 for base and lidar builds, and far more fully configured.",
+    "priceClaim": "shipped",
+    "heightM": 0.645,
+    "weightKg": 60,
+    "dof": null,
+    "payloadKg": 40,
+    "runtimeH": 5,
+    "speedMps": 6,
+    "handsDof": null,
+    "compute": "Intel Core i5 standard; optional Intel Core i7 or NVIDIA Orin NX",
+    "releaseNote": "Launched November 2023 for industrial inspection and load carrying",
+    "summary": "Unitree's heavy industrial quadruped, an IP67 robot aimed at the same inspection jobs as Spot at a lower list price. It carries over 40 kg while walking and runs more than five hours unloaded. It shares firmware security flaws with the Go2 and is not a consumer product.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Remote-controlled or run on programmed inspection routes; autonomy depends on optional lidar and compute modules."
+    },
+    "legal": {
+      "fcc": "approved",
+      "fccNote": "FCC ID 2A5PE-YUSHU006 (quadruped robot, granted 2023-10-16 per FCC ID listings). Authorized before 2026-07-28; Unitree says B2 holds FCC authorization and may continue to be sold.",
+      "eu": null,
+      "security": "Affected by UniPwn (Sept 2025): hard-coded BLE keys (CVE-2025-60250) and Wi-Fi setup command injection (CVE-2025-35027) allow root takeover over Bluetooth."
+    },
+    "website": "https://www.unitree.com/b2/",
+    "statusEvents": [
+      {
+        "date": "2023-10-16",
+        "status": "announced",
+        "note": "FCC grants authorization for Unitree quadruped 2A5PE-YUSHU006 (B2)",
+        "sourceUrl": "https://fccid.io/2A5PE-YUSHU006",
+        "sourceTitle": "FCC ID 2A5PE-YUSHU006 Quadruped Robot (fccid.io)"
+      },
+      {
+        "date": "2023-11-03",
+        "status": "shipping",
+        "note": "Unitree releases the B2 industrial quadruped",
+        "sourceUrl": "https://shop.unitree.com/blogs/news/unitree-robotics-releases-industrial-quadruped-robot-b2-breaking-through-limits-with-hyper-evolution",
+        "sourceTitle": "Unitree Robotics Releases Industrial Quadruped Robot B2 (Unitree)"
+      },
+      {
+        "date": "2025-09-20",
+        "status": "shipping",
+        "note": "UniPwn Bluetooth root exploit disclosed for Go2, G1, H1 and B2",
+        "sourceUrl": "https://github.com/Bin4ry/UniPwn",
+        "sourceTitle": "UniPwn (GitHub)"
+      },
+      {
+        "date": "2026-07-31",
+        "status": "shipping",
+        "note": "Unitree's prospectus says Go2, B2, A2, G1, H2 and R1 all hold FCC authorization, so they can keep selling in the US after the July 28 Covered List update; future models face uncertainty",
+        "sourceUrl": "https://www.globaltimes.cn/page/202607/1367261.shtml",
+        "sourceTitle": "China's Unitree Robotics flags risks to future US sales under FCC restrictions (Global Times)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Unitree B2 product page",
+        "url": "https://www.unitree.com/b2/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Unitree online store (all products)",
+        "url": "https://shop.unitree.com/collections/all",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Unitree Robotics Releases Industrial Quadruped Robot B2 (Unitree)",
+        "url": "https://shop.unitree.com/blogs/news/unitree-robotics-releases-industrial-quadruped-robot-b2-breaking-through-limits-with-hyper-evolution",
+        "date": "2023-11-03"
+      },
+      {
+        "title": "UniPwn: BLE root exploit for Unitree Go2, G1, H1, B2 (GitHub, Bin4ry)",
+        "url": "https://github.com/Bin4ry/UniPwn",
+        "date": "2025-09-20"
+      },
+      {
+        "title": "China's Unitree Robotics flags risks to future US sales under FCC restrictions (Global Times)",
+        "url": "https://www.globaltimes.cn/page/202607/1367261.shtml",
+        "date": "2026-07-31"
+      }
+    ]
+  },
+  {
+    "slug": "stanford-pupper",
+    "name": "Pupper v3",
+    "maker": "Stanford Student Robotics / Hands-On Robotics",
+    "category": "kit",
+    "country": "United States",
+    "status": "shipping",
+    "statusClaim": "shipped",
+    "priceUsd": 2000,
+    "priceNote": "The project says you can build Pupper v3 yourself for about $2,000. Reseller AIFITLAB sells a parts kit from $1,450 that excludes printed parts, battery and controller.",
+    "priceClaim": "shipped",
+    "heightM": 0.2,
+    "weightKg": 3,
+    "dof": 12,
+    "payloadKg": null,
+    "runtimeH": null,
+    "speedMps": null,
+    "handsDof": null,
+    "compute": "Raspberry Pi 5 (8 GB) with M.2 slot for an AI accelerator",
+    "releaseNote": "Open-source build; v3 is the platform for Stanford's CS 123 course",
+    "summary": "An open-source, 3 kg robot dog with brushless motors, a fisheye camera, a screen face and a microphone, designed to teach motor control and reinforcement learning. Stanford's CS 123 students build one from a starter kit each spring. It is a teaching and research platform you assemble yourself, not a finished pet.",
+    "autonomy": {
+      "teleop": "partial",
+      "note": "Walks under gamepad control; students add learned locomotion, object tracking and voice responses."
+    },
+    "legal": {
+      "fcc": "n/a",
+      "fccNote": "A self-built open-source design with no whole-robot FCC authorization; radios are in the Raspberry Pi. At 3 kg it exceeds the 2 kg mobile-robot threshold, but the July 2026 rule does not address hobbyist kits and it is designed in the US.",
+      "eu": null,
+      "security": null
+    },
+    "website": "https://pupper-v3-documentation.readthedocs.io/",
+    "statusEvents": [
+      {
+        "date": "2021-10-02",
+        "status": "shipping",
+        "note": "Stanford Pupper paper describes an open-source agile quadruped buildable in under 8 hours for under $2,000",
+        "sourceUrl": "https://arxiv.org/abs/2110.00736",
+        "sourceTitle": "Stanford Pupper: A Low-Cost Agile Quadruped Robot for Benchmarking and Education (arXiv)"
+      },
+      {
+        "date": "2025-07-10",
+        "status": "shipping",
+        "note": "Stanford's CS 123, in its third year, has students build AI-powered Pupper robots from a starter kit",
+        "sourceUrl": "https://interestingengineering.com/innovation/us-stanford-students-robot-dog",
+        "sourceTitle": "Stanford students build tiny AI-powered robot dog from basic kit (Interesting Engineering)"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Pupper v3 documentation",
+        "url": "https://pupper-v3-documentation.readthedocs.io/",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Pupper v3 technical specifications",
+        "url": "https://pupper-v3-documentation.readthedocs.io/en/latest/learn_more/tech_specs.html",
+        "date": "2026-09-27"
+      },
+      {
+        "title": "Intro robotics students build AI-powered robot dogs from scratch (Stanford Report)",
+        "url": "https://news.stanford.edu/stories/2025/07/ai-powered-robot-dogs-pupper-cs-123-robotics-students",
+        "date": "2025-07"
+      },
+      {
+        "title": "Pupper V3 parts kit (AIFITLAB)",
+        "url": "https://aifitlab.com/products/pupper-v3-stanford-open-source-robotics-dog",
+        "date": "2026-09-27"
+      }
+    ]
+  }
+]

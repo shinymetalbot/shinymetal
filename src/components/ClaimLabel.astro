@@ -1,0 +1,15 @@
+---
+import { CLAIMS, type ClaimKind } from "../lib/format";
+interface Props { kind: ClaimKind; size?: "sm" | "lg" }
+const { kind, size } = Astro.props;
+const c = CLAIMS[kind] ?? CLAIMS.rumor;
+const G: Record<string, string> = {
+  shipped: '<rect x="1" y="1" width="10" height="10" fill="currentColor"/>',
+  preorder: '<rect x="1" y="1" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1 1h5v10H1z" fill="currentColor"/>',
+  promise: '<rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/>',
+  rumor: '<circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2.2 1.6"/>',
+  research: '<path d="M6 1.5l5 9H1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+};
+const cls = ["fd-claim", `fd-claim-${kind}`, size === "lg" && "fd-claim-lg", size === "sm" && "fd-claim-sm"].filter(Boolean).join(" ");
+---
+<span class={cls} title={c.help}><i class="fd-claim-glyph"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" set:html={G[kind]} /></i><span class="fd-claim-word">{c.word}</span></span>

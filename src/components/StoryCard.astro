@@ -1,0 +1,16 @@
+---
+import Figure from "./Figure.astro";
+import ClaimLabel from "./ClaimLabel.astro";
+import { TYPE_WORD, fmtDate } from "../lib/format";
+interface Props { a: any; shade?: number }
+const { a, shade = 1 } = Astro.props;
+---
+<a class="card-link" href={`/news/${a.slug}`}>
+  <article class="story">
+    <Figure src={a.heroUrl} alt="" ratio="wide" shade={shade} />
+    <div class="fd-row"><ClaimLabel kind={a.claim} size="sm" /><span class="fd-eyebrow" style="font-size:11px">{TYPE_WORD[a.type]}</span></div>
+    <h3 class="story-title">{a.title}</h3>
+    <p>{a.dek}</p>
+    <span class="meta">{fmtDate(a.publishedAt)} · {a.readMinutes} min</span>
+  </article>
+</a>

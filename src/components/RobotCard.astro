@@ -1,0 +1,20 @@
+---
+import Figure from "./Figure.astro";
+import StatusBadge from "./StatusBadge.astro";
+import ClaimLabel from "./ClaimLabel.astro";
+import { robotSpecs, priceLabel, robotImage } from "../lib/format";
+interface Props { robot: any; shade?: number }
+const { robot: r, shade = 1 } = Astro.props;
+const img = robotImage(r);
+---
+<a class="card-link" href={`/robots/${r.slug}`}>
+  <article class="fd-robot">
+    <div class="fd-robot-media"><Figure src={img.src} drawing={img.drawing} alt={img.drawing ? "" : `${r.maker} ${r.name}`} ratio="wide" shade={shade} /></div>
+    <div class="fd-robot-body">
+      <div class="fd-robot-top"><span class="fd-eyebrow">{r.maker}</span><StatusBadge status={r.status} /></div>
+      <h3 class="fd-robot-name">{r.name}</h3>
+      <dl class="fd-specs">{robotSpecs(r).map(([k, v]) => <div class="fd-spec"><dt>{k}</dt><dd class="fd-num">{v}</dd></div>)}</dl>
+      <div class="fd-robot-foot"><span class="fd-price fd-num">{priceLabel(r)}</span>{r.priceUsd != null && r.priceClaim && <ClaimLabel kind={r.priceClaim} size="sm" />}</div>
+    </div>
+  </article>
+</a>

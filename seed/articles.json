@@ -1,0 +1,498 @@
+[
+  {
+    "slug": "xpeng-iron-production-line-decoded",
+    "type": "decoded",
+    "title": "XPeng opens its IRON humanoid production line: what the release does and doesn't say",
+    "dek": "The line is running and the first robot walked off it; capacity, price and a home use case are still missing.",
+    "claim": "promise",
+    "confidence": null,
+    "publishedAt": "2026-09-09",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 3,
+    "robots": [
+      "xpeng-iron"
+    ],
+    "tags": [
+      "humanoid",
+      "manufacturing",
+      "china",
+      "fcc"
+    ],
+    "sourceQuote": "Looking ahead, XPENG robots are scheduled to enter mass production by the end of this year, with initial commercial-scenario rollouts beginning in XPENG's own stores and campuses.",
+    "sourceAttribution": "XPeng press release, 2026-09-07",
+    "heroPrompt": "A tall grey humanoid robot standing still beside a half-assembled robot on a plain factory workstation, cardboard parts boxes and a rolling tool cart around it, overhead daylight from high windows, eye-level documentary photo, no glowing eyes.",
+    "body": "## What they said\n\nOn 7 September 2026 XPeng [announced](https://www.prnewswire.com/news-releases/iron-the-worlds-first-advanced-general-purpose-humanoid-robot-walks-off-the-production-lines-as-xpengs-humanoid-robot-manufacturing-facility-is-officially-commissioned-302871836.html) that its humanoid robot production lines in China are running, and that the first IRON off the line walked away from the final station on its own. The company calls the lines \"the world's first automated production lines for advanced humanoid robots\" and says more than 80% of core processes are automated.\n\nThe release repeats the next-generation IRON's headline specs: 76 degrees of freedom across the body, 21 in each hand, and three in-house Turing AI chips delivering \"up to 2,250 TOPS of effective computing power.\" XPeng says that compute lets IRON \"autonomously perform complex tasks without remote operation.\"\n\nOn timing, XPeng says its robots \"are scheduled to enter mass production by the end of this year,\" with the first commercial use in XPeng's own stores and campuses. Official market launch and delivery in China and overseas are planned for 2027. The release also restates that XPeng's robotics business raised more than US$900 million on 24 August at a post-money valuation of more than US$6.3 billion.\n\n## What is verified\n\nThe event itself is on the record. XPeng is a listed company (NYSE and HKEX) and the announcement went out through PR Newswire; [CnEVPost](https://cnevpost.com/2026/09/08/xpeng-opens-iron-humanoid-robot-production-line/) reported the line opening the next day. CnEVPost notes that IRON was first unveiled in November 2025, so the path from reveal to a running line took about ten months.\n\nThe specs are XPeng's own numbers. The degrees of freedom, hand count and TOPS figure all come from the company, and we have not seen independent measurement of any of them.\n\n## What is missing\n\nQuite a lot, and all of it matters to a buyer.\n\n- **Capacity.** \"Over 80% of core processes automated\" describes how the line works, not how many robots it makes. XPeng gives no units per day, per week or per year.\n- **Price.** There is no price. The release says only that gross margin per unit \"is expected to be significantly higher than that of new energy vehicles,\" which tells you about XPeng's business plan and nothing about what a robot will cost you.\n- **Height, weight, runtime and payload.** None of the basics a home buyer compares are in the release.\n- **What \"without remote operation\" covers.** XPeng says IRON can perform complex tasks without a remote operator. It does not say which tasks, how often it succeeds, or whether remote help exists as a fallback.\n- **Who the first customers are.** The first deployments are in XPeng's own stores and campuses. That is a controlled setting run by the maker, not a customer's building, and certainly not a home.\n\n## What it means for a home robot\n\nA working production line is real progress, and it is the step many humanoid companies have not reached. Building a robot that walks off an assembly line under its own power is a different problem from building one that does a useful job in a stranger's kitchen, though. XPeng's own plan puts shop floors and showrooms first, with a broader launch in 2027.\n\nFor readers in the US there is a second wall. On 28 July 2026 the FCC added foreign-produced \"advanced robotic devices,\" including humanoids, to its Covered List. The [International Federation of Robotics](https://ifr.org/ifr-press-releases/news/fcc-restrictions-on-foreign-produced-advanced-robotic-devices) summarises the effect: new covered products \"will no longer be eligible to receive the FCC equipment authorizations required for importation, marketing, and sale in the United States.\" A new China-built humanoid such as the next-generation IRON would need a Conditional Approval to be sold here, and we have seen no sign that XPeng has applied.\n\nSo we label this **promise**. The line is real; the robot for sale, the price and the home use case are all still dated in the future. We will move IRON's status when XPeng publishes production numbers or ships to a customer outside its own walls.",
+    "sources": [
+      {
+        "title": "IRON walks off the production lines as XPENG's humanoid robot manufacturing facility is officially commissioned",
+        "url": "https://www.prnewswire.com/news-releases/iron-the-worlds-first-advanced-general-purpose-humanoid-robot-walks-off-the-production-lines-as-xpengs-humanoid-robot-manufacturing-facility-is-officially-commissioned-302871836.html",
+        "date": "2026-09-07"
+      },
+      {
+        "title": "Xpeng opens Iron humanoid robot production line, paving way for year-end mass production",
+        "url": "https://cnevpost.com/2026/09/08/xpeng-opens-iron-humanoid-robot-production-line/",
+        "date": "2026-09-08"
+      },
+      {
+        "title": "FCC restrictions on foreign-produced advanced robotic devices",
+        "url": "https://ifr.org/ifr-press-releases/news/fcc-restrictions-on-foreign-produced-advanced-robotic-devices",
+        "date": "2026-08-07"
+      }
+    ]
+  },
+  {
+    "slug": "agility-digit-5-decoded",
+    "type": "decoded",
+    "title": "Agility's Digit 5 is built to work next to people. Here is what that claim rests on",
+    "dek": "A 50 lb lift, a 9-minute charge and a new safety system, backed by $300 million in orders with conditions attached.",
+    "claim": "promise",
+    "confidence": null,
+    "publishedAt": "2026-09-16",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 3,
+    "robots": [
+      "agility-digit"
+    ],
+    "tags": [
+      "humanoid",
+      "safety",
+      "industrial",
+      "standards"
+    ],
+    "sourceQuote": "Digit 5 is removing a major barrier to scaling humanoid robots in industrial environments.",
+    "sourceAttribution": "Peggy Johnson, CEO, Agility Robotics press release, 2026-09-15",
+    "heroPrompt": "A humanoid robot carrying a plastic tote down a warehouse aisle while a worker in a hi-vis vest walks past a few metres away, stacked pallets and shrink-wrap on the floor, even fluorescent light, eye-level photo, no glowing eyes.",
+    "body": "## What they said\n\nOn 15 September 2026 Agility Robotics [unveiled Digit 5](https://www.prnewswire.com/news-releases/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale-302878540.html), the next version of its warehouse and factory humanoid. The pitch is safety: Agility says Digit 5 is its first robot \"engineered for cooperatively safe work at scale,\" able to work close to people \"without the physical safety barriers required by traditional automation.\"\n\nThe safety system has three parts, in Agility's words:\n\n- **Safe human detection** that uses \"proprietary AI algorithms and multiple sensor technologies\" to watch for people and respond by \"autonomously avoiding, stopping or assuming a seated position.\"\n- **Safety cues**, visual and audible, that signal where the robot is about to move.\n- **Safe motion control**, an independent safety controller that triggers those responses when a person gets too close.\n\nThe hardware changes are concrete. Agility lists a 50 lb (22.7 kg) repeat lift, 40% more than Digit 4; a 90-minute battery that charges in 9 minutes, for a 10:1 run-to-charge ratio against Digit 4's 2:1; swappable grippers on ISO-standard flanges; a height of 1.81 m, a weight of 129 kg and a reach of 2.2 m.\n\nCEO Peggy Johnson said the market \"has responded with more than $300 million in multi-year orders.\" Agility says early access starts in the first half of 2027, with general availability near the end of 2027.\n\n## What is verified\n\nDigit is one of the few humanoids with a real work history. The release says Digit 4 has logged more than 65,000 hours across customer sites including GXO, Schaeffler, Amazon and Toyota Motor Manufacturing Canada, and that at GXO's Flowery Branch site near Atlanta it moved 100,000 totes at about 98% accuracy \"while on-task.\" These are Agility's figures, but they name customers who could contradict them, and Agility says Digit has nearly three years of continuous commercial deployment behind it.\n\nAgility also says Digit was the first humanoid to pass an independent field evaluation on a customer production line for OSHA-administered industrial safety standards. The company is a contributor to two standards still being written: ANSI/A3 TR R15.108 for dynamically stable industrial mobile robots, and ISO 25785-1 for humanoids.\n\n## What is missing\n\n- **Certification.** The standards Agility is helping write are not finished. \"Cooperatively safe\" is Agility's design goal, not a certified rating, and the release does not claim otherwise.\n- **The order book's fine print.** The $300 million is \"as of May 2026\" and \"subject to satisfaction of certain contractual milestones.\" [RuntimeWire](https://runtimewire.com/article/agility-digit-5-humanoid-spac-safety) reports the figure represents potential multi-year value tied to about 1,000 robots on three-year robot-as-a-service contracts, \"rather than current-period revenue.\" Customers for Digit 5 are not named.\n- **Real-world charging.** The 9-minute charge and \"more than 20 hours of productive work in a 24-hour day\" are design claims. Nothing public yet shows Digit 5 holding that rhythm through a real shift.\n- **New skills.** Digit 4 has mostly moved totes. Depalletizing, machine tending, kitting and inspection are listed as what Digit 5 \"will\" do through Agility's training approach.\n\nThe announcement also lands as Agility heads for the public markets. The release notes a planned business combination with Churchill Capital Corp XI (Nasdaq: CCXI), and RuntimeWire puts the pre-money valuation at $2.5 billion. That doesn't make the specs wrong, but it is a reason to read the order numbers carefully.\n\n## What it means for a home robot\n\nDigit 5 is not for sale to households and Agility is not pretending otherwise: every customer and use case in the release is industrial. The early-access window is 2027, for manufacturing, warehouse and distribution operators.\n\nThe part that matters for homes is the safety work. The biggest open question for any humanoid in a living room is what it does when a person, a child or a pet steps into its path. Agility's approach (detect people, signal intent, and let a separate controller stop or sit the robot down) is the kind of layered design a home robot will need. So is the standards work. A finished ISO 25785-1 would give every humanoid maker, including the ones selling to homes, a shared bar to meet.\n\nWe label the product **promise**: announced, with orders, but not yet delivered. Digit 4, the model actually at work, stays shipping to business customers. We will update when early-access units reach a customer site.",
+    "sources": [
+      {
+        "title": "Agility unveils Digit 5 humanoid robot built for cooperatively safe work at scale",
+        "url": "https://www.prnewswire.com/news-releases/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale-302878540.html",
+        "date": "2026-09-15"
+      },
+      {
+        "title": "Agility unveils Digit 5 humanoid robot built for cooperatively safe work at scale",
+        "url": "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
+        "date": "2026-09-15"
+      },
+      {
+        "title": "Agility unveils Digit 5 as it pitches a $2.5B pre-money valuation",
+        "url": "https://runtimewire.com/article/agility-digit-5-humanoid-spac-safety",
+        "date": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "slug": "fcc-conditional-approvals-anscer-decoded",
+    "type": "decoded",
+    "title": "The first FCC robot approvals are out. What they mean for foreign-made home robots",
+    "dek": "ANSCER's warehouse robots cleared the new FCC process; your existing robot is fine, but new foreign models face a slower road.",
+    "claim": "shipped",
+    "confidence": null,
+    "publishedAt": "2026-09-22",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 3,
+    "robots": [
+      "unitree-g1",
+      "unitree-go2",
+      "unitree-r1",
+      "xpeng-iron"
+    ],
+    "tags": [
+      "fcc",
+      "regulation",
+      "policy",
+      "home"
+    ],
+    "sourceQuote": "Conditional Approval is a transitional authorization tied to ongoing U.S.-manufacturing and reporting commitments, and is distinct from a standard, unconditional FCC equipment authorization.",
+    "sourceAttribution": "ANSCER Robotics press release, 2026-09-18",
+    "heroPrompt": "A robot dog and a small robot lawn mower resting on the floor of a cluttered suburban garage next to shipping boxes with customs labels, afternoon light through the open door, eye-level photo, no glowing eyes.",
+    "body": "## What they said\n\nOn 18 September 2026 ANSCER Robotics, an autonomous mobile robot maker headquartered in Bengaluru, India, [announced](https://www.roboticstomorrow.com/news/2026/09/18/anscer-robotics-secures-fcc-conditional-approval-for-its-ar250-ar650-and-ar1250-autonomous-mobile-robots/27123/) that three of its warehouse robots, the AR250, AR650 and AR1250, have been granted Conditional Approval by the FCC, effective the same day. ANSCER says the listing places it \"among the first robotics companies, alongside Husqvarna, to appear in the FCC's robotic-device conditional approvals.\"\n\nIts US subsidiary's CEO, Ribin Mathew, said customers \"can move forward with confidence that ANSCER's AMRs are cleared for continued deployment here.\" The release describes Conditional Approval as \"a transitional authorization tied to ongoing U.S.-manufacturing and reporting commitments,\" distinct from a standard FCC equipment authorization. [Robotics 24/7](https://www.robotics247.com/article/anscer-robotics-secures-fcc-conditional-approval-for-three-amrs) carried the same announcement.\n\nThis is a small release about warehouse carts. We are decoding it because it is one of the first public looks at how the FCC's July robot rule works in practice.\n\n## What is verified\n\nThe rule itself is well documented. On 28 July 2026 the FCC added foreign-produced \"advanced robotic devices\" to its Covered List. The [International Federation of Robotics](https://ifr.org/ifr-press-releases/news/fcc-restrictions-on-foreign-produced-advanced-robotic-devices) says the list covers mobile, ground-based robots with sensors and connectivity, \"encompassing service robots, autonomous mobile robots (AMRs), humanoids, and quadrupeds,\" and that the test is where a robot is made, not where the company is based. A US company building robots overseas is covered too.\n\nLaw firm [K&L Gates](https://www.klgates.com/thought-leadership/FCC-Adds-Foreign-Produced-Advanced-Robotic-Devices-to-the-Covered-List-Five-Things-to-Know-8-3-2026) reads the definition as a mobile device over 4.4 lb (2 kg) with sensors, network connectivity and autonomous control software, and notes the FCC confirmed that \"robot vacuums and robot lawn mowers are included if they meet the definition.\" It also reports that previously authorized foreign-produced robots \"may continue to be produced, marketed, imported, and used unless the FCC acts further.\" [IEEE Spectrum](https://spectrum.ieee.org/fcc-covered-list-mobile-robots) reports the same: robots already certified are not restricted for sale or use.\n\nAccording to [Morgan Lewis](https://www.morganlewis.com/pubs/2026/08/fcc-adds-foreign-produced-advanced-robotic-devices-and-power-inverters-to-covered-list-opens-conditional-approval-process), only the Department of War can grant a Conditional Approval for robots, and applications are due by 1 January 2028. ANSCER's release confirms that approvals are now being granted and published, and that at least two companies have them.\n\n## What is missing\n\n- **The criteria.** ANSCER does not say what it had to promise. IEEE Spectrum reports that applicants must supply a time-bound plan to build or expand US manufacturing, plus ownership and supply-chain disclosures. How much US manufacturing is enough, and on what deadline, is not public for ANSCER.\n- **The full list.** The release names Husqvarna, but we have not seen which Husqvarna products are covered. Husqvarna sells robot lawn mowers to homeowners, which would make it the first clear consumer-robot case. We are treating that as unconfirmed until the product list is public.\n- **Humanoids.** Neither company makes humanoids or quadrupeds. We have seen no public Conditional Approval for a new foreign-made humanoid.\n- **Updates to older robots.** K&L Gates says only minor software changes are allowed on previously authorized models, and hardware changes need a separate waiver. Makers have not said how this affects future updates to robots people already own.\n\n## What it means for a home robot\n\nFor owners, the short version holds: if your robot was authorized before 28 July 2026, you can keep using it, and stores can keep selling that model. That covers the foreign-made humanoids and robot dogs on sale today that were approved before the cut-off.\n\nThe change is for **new** models. A next-generation robot built outside the US, whether a humanoid from China or a robot mower from Europe, now needs a Department of War Conditional Approval before it can be authorized for sale here. ANSCER shows that path exists and that a non-Chinese maker with a US subsidiary and a manufacturing plan can get through it. It says nothing yet about whether a Chinese humanoid maker can.\n\nIn practice, expect new foreign-made home robots to reach US shelves later than they reach other markets, and expect \"Conditional Approval\" to start appearing in spec sheets. We will track approvals on each robot's page as the FCC publishes them.",
+    "sources": [
+      {
+        "title": "ANSCER Robotics secures FCC Conditional Approval for its AR250, AR650, and AR1250 autonomous mobile robots",
+        "url": "https://www.roboticstomorrow.com/news/2026/09/18/anscer-robotics-secures-fcc-conditional-approval-for-its-ar250-ar650-and-ar1250-autonomous-mobile-robots/27123/",
+        "date": "2026-09-18"
+      },
+      {
+        "title": "ANSCER Robotics secures FCC Conditional Approval for three AMRs",
+        "url": "https://www.robotics247.com/article/anscer-robotics-secures-fcc-conditional-approval-for-three-amrs",
+        "date": "2026-09-18"
+      },
+      {
+        "title": "FCC restrictions on foreign-produced advanced robotic devices",
+        "url": "https://ifr.org/ifr-press-releases/news/fcc-restrictions-on-foreign-produced-advanced-robotic-devices",
+        "date": "2026-08-07"
+      },
+      {
+        "title": "FCC adds foreign-produced advanced robotic devices to the Covered List: five things to know",
+        "url": "https://www.klgates.com/thought-leadership/FCC-Adds-Foreign-Produced-Advanced-Robotic-Devices-to-the-Covered-List-Five-Things-to-Know-8-3-2026",
+        "date": "2026-08-03"
+      },
+      {
+        "title": "FCC adds foreign-produced advanced robotic devices and power inverters to Covered List, opens Conditional Approval process",
+        "url": "https://www.morganlewis.com/pubs/2026/08/fcc-adds-foreign-produced-advanced-robotic-devices-and-power-inverters-to-covered-list-opens-conditional-approval-process",
+        "date": "2026-08"
+      },
+      {
+        "title": "FCC Covered List bans new foreign mobile robots in US",
+        "url": "https://spectrum.ieee.org/fcc-covered-list-mobile-robots",
+        "date": "2026-08"
+      }
+    ]
+  },
+  {
+    "slug": "openai-humanoid-robot-rumor",
+    "type": "rumor",
+    "title": "OpenAI says it will build a humanoid. How far that statement goes",
+    "dek": "Sam Altman's \"definitely\" is on the record; a prototype, a date and a price are not.",
+    "claim": "rumor",
+    "confidence": 70,
+    "publishedAt": "2026-09-11",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 3,
+    "robots": [
+      "figure-03",
+      "1x-neo"
+    ],
+    "tags": [
+      "humanoid",
+      "ai-labs",
+      "openai"
+    ],
+    "sourceQuote": null,
+    "sourceAttribution": null,
+    "heroPrompt": "An empty robotics lab bench with a single disassembled humanoid robot arm, loose actuators, cables and a laptop on a cluttered table, soft window light, eye-level photo, no glowing eyes.",
+    "body": "## The rumor\n\nOpenAI is building its own humanoid robot. For most of 2026 this sat somewhere between reasonable guess and industry gossip: the company had a robotics team and was hiring hardware engineers, but had never said what it was building. In early September, CEO Sam Altman said it out loud.\n\n\"We will definitely do a humanoid,\" Altman said, according to [Humanoids Daily](https://www.humanoidsdaily.com/news/sam-altman-confirms-openai-will-definitely-do-a-humanoid), which reported the interview on 2 September 2026. \"We will do other form factors as well.\"\n\nWe are filing this as a rumor, not a decoded announcement, because what exists is a sentence from a CEO in an interview, not a product. There is no prototype, no spec, no date and no price.\n\n## Source trail\n\n- **The quote.** Humanoids Daily attributes the line to Altman's interview on the Sources podcast and quotes him at length. Asked whether OpenAI was aiming at an everyday household companion, Altman said \"I don't think that's the most important first thing to do,\" pointing instead to building and maintaining data centers and manufacturing. He then added: \"Someday. I think everyone should have a personal robot.\"\n- **A second report.** [The Rundown](https://www.therundown.ai/news/openai-altman-humanoid-robots-hardware-training-data), writing on 6 September, attributes Altman's \"definitely\" to a 26 August TIME interview. The two outlets disagree on the venue, and we could not open either original. The wording and the substance match, so we treat the statement as real and the exact venue as unsettled.\n- **Hiring.** The Rundown also points to an OpenAI robotics job listing focused on data collection facilities, operator management and data quality. That is what a company does when it plans to gather its own robot training data at scale.\n- **Team.** Humanoids Daily reports OpenAI set up an internal robotics division earlier in 2026 under VP of Research Aditya Ramesh, with job postings for custom actuators, simulation pipelines and data collection fleets.\n- **Roundups.** An [ObjectWays September roundup](https://objectways.com/blog/humanoid-robots-news-roundup-for-september-2026/) sums up the state of play: OpenAI \"hasn't announced a ship date, production target, or manufacturing partner.\"\n\nMissing from the trail: any photo, filing, supplier report or demo of an OpenAI-built humanoid.\n\n## What would confirm it\n\nWe would move this from rumor to promise on any one of these:\n\n- A shown prototype, even a lab video, clearly labeled as OpenAI hardware.\n- A named manufacturing partner or supplier order.\n- A spec sheet, a target date or a price.\n- Regulatory filings. A robot sold in the US needs FCC equipment authorization, and filings tend to appear before launches.\n\nWe would lower our confidence if OpenAI started describing its robotics work as software-only or partner-only, which is the model it followed before it and Figure parted ways.\n\n## Our read\n\n**Confidence: 70/100** that OpenAI is building humanoid hardware of its own. The CEO said so on the record, the hiring matches, and the company has the money. We hold back 30 points because \"definitely do a humanoid\" has no date, and tech companies drop hardware projects all the time.\n\nOur confidence that an OpenAI humanoid is in anyone's home within the next two years is far lower, well under 10/100. Altman himself put household robots in the \"someday\" column and named industrial work first. For a home buyer, the useful takeaway is the direction of travel, not a product to wait for. The biggest AI lab now says the humanoid shape is worth building because, in Altman's words, \"the world is very much designed for people.\"\n\nWhat you can actually buy or reserve for your home today still comes from robot makers, not AI labs. OpenAI's move matters most in how it changes the market around them. It adds a well-funded competitor for the same engineers, the same actuator suppliers and the same training data, and it puts pressure on companies such as Figure, which [Humanoids Daily](https://www.humanoidsdaily.com/news/sam-altman-confirms-openai-will-definitely-do-a-humanoid) notes ended its partnership with OpenAI after arguing the lab lacked commitment to physical robots.",
+    "sources": [
+      {
+        "title": "Sam Altman confirms OpenAI \"will definitely do a humanoid\"",
+        "url": "https://www.humanoidsdaily.com/news/sam-altman-confirms-openai-will-definitely-do-a-humanoid",
+        "date": "2026-09-02"
+      },
+      {
+        "title": "Altman says OpenAI will build humanoids, opening a path beyond software",
+        "url": "https://www.therundown.ai/news/openai-altman-humanoid-robots-hardware-training-data",
+        "date": "2026-09-06"
+      },
+      {
+        "title": "Humanoid robots news roundup for September 2026",
+        "url": "https://objectways.com/blog/humanoid-robots-news-roundup-for-september-2026/",
+        "date": "2026-09"
+      }
+    ]
+  },
+  {
+    "slug": "tesla-optimus-15000-units-rumor",
+    "type": "rumor",
+    "title": "Tesla's reported 15,000-unit Optimus parts order: what the source trail shows",
+    "dek": "Supplier orders and Chinese factory audits look real; the production numbers come from supply-chain chatter, not Tesla.",
+    "claim": "rumor",
+    "confidence": 45,
+    "publishedAt": "2026-09-24",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 3,
+    "robots": [
+      "tesla-optimus"
+    ],
+    "tags": [
+      "humanoid",
+      "tesla",
+      "manufacturing",
+      "supply-chain"
+    ],
+    "sourceQuote": null,
+    "sourceAttribution": null,
+    "heroPrompt": "Rows of plastic crates holding robot actuators and hand assemblies on a supplier's factory floor, a clipboard and a coffee cup on a workbench, flat industrial daylight, eye-level documentary photo, no robots posing.",
+    "body": "## The rumor\n\nTesla is ordering parts for about 15,000 Optimus humanoid robots in 2026, with suppliers told to reach roughly 1,000 units a week by the end of September and 2,000 to 2,500 a week by year-end. A second thread says a Tesla team began mass-production audits at Chinese auto-parts suppliers in Ningbo in mid-September.\n\nIf both are true, Optimus is moving from hand-built prototypes toward real volume. None of it comes from Tesla.\n\n## Source trail\n\n- **The first report, 7 September.** [NextBigFuture](https://www.nextbigfuture.com/2026/09/optimus-confirmed-15000-bots-this-year-tesla-to-3000.html) published the 15,000-unit figure, crediting a post by the account @tslaming that cited \"supply-chain vendors and today's report by Jiemian News.\" That post says Tesla \"has issued an initial batch order for roughly 5,000 Optimus robots.\" The 15,000 total and the weekly rates appear to be extrapolated from supplier guidance, not stated by Tesla. The headline on that piece says \"confirmed\"; the article contains no Tesla confirmation.\n- **The audit report, 16 to 17 September.** [BigGo Finance](https://finance.biggo.com/news/fac74b48-d94a-4511-9404-025c05deac9a) reported that a Tesla robotics team arrived in Ningbo on 16 September and started production audits the next day at suppliers including Joyson Electronics, Tuopu Group and Sanhua Intelligent Controls. It described \"batch purchase orders for approximately 5,000 Optimus components\" placed in early September. Joyson's shares hit the daily limit on 17 September, which tells you the Chinese market took the report seriously.\n- **Secondary write-ups.** [XenoSpectrum](https://xenospectrum.com/en/tesla-optimus-gen3-china-supplier-audit/), on 21 September, traces the audit story to China's *21st Century Business Herald* and notes that a separate 50,000-unit annual target comes from supply-chain sources, not Tesla. It also notes that Tesla has not published an official list of approved Optimus suppliers. [RobotAIGeek](https://www.robotaigeek.com/news/tesla-audits-chinese-suppliers-as-optimus-orders-surge) puts it plainly: \"The distinction between a provisional supplier and a certified mass-production partner is the actual substance of this story.\"\n- **What Tesla has said.** In its [quarterly filing for the period ending 30 June 2026](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026049270/tsla-20260630.htm), Tesla says it is advancing Optimus \"as we make preparations and investments in large-scale production,\" and warns those plans are \"subject to uncertainties inherent in establishing and ramping manufacturing operations.\" No unit count.\n\n## What would confirm it\n\n- Tesla stating an Optimus production number, on an earnings call or in a filing. The Q3 2026 results are the obvious place.\n- Named suppliers confirming Optimus contracts in their own filings. Several of the Chinese companies named are listed and have disclosure duties.\n- Evidence of Optimus robots doing work outside Tesla's own buildings.\n- For home buyers: a price and an order page.\n\nWe would lower our confidence if Tesla's Q3 update describes Optimus volume in the hundreds or talks only about \"preparations\" again.\n\n## Our read\n\n**Confidence: 45/100** that Tesla builds anything close to 15,000 Optimus robots in 2026.\n\nThe supplier activity looks real. Two separate threads (Jiemian's order report and the Ningbo audit report) point the same way, the named suppliers are established Tesla auto-parts vendors, and a share-price jump is hard to fake. We believe Tesla has placed orders at the thousands-of-units level and is qualifying suppliers.\n\nParts orders are not robots, though. A 5,000-unit batch order and a 15,000-unit year are separated by weekly rates that, as far as the public record shows, Tesla has not reached. Tesla has missed Optimus timelines before: an [ObjectWays roundup](https://objectways.com/blog/humanoid-robots-news-roundup-for-september-2026/) notes the company missed its 2025 target of about 10,000 units. The single original source for the precise weekly figures is a social-media post relaying a Chinese news report, and the most-shared version of the story added \"confirmed\" to a headline without a confirmation.\n\nFor your home, this changes little in 2026. Tesla has not published a consumer price, an order page or a delivery date, and the reports all describe factory-grade production for Tesla's own use first. If the volume is real, the knock-on effect is on parts: more actuators, hands and batteries built at car-industry scale, which is what eventually brings humanoid prices down for everyone. We will revisit this after Tesla's Q3 results.",
+    "sources": [
+      {
+        "title": "Optimus confirmed: 15,000 bots this year",
+        "url": "https://www.nextbigfuture.com/2026/09/optimus-confirmed-15000-bots-this-year-tesla-to-3000.html",
+        "date": "2026-09-07"
+      },
+      {
+        "title": "Tesla's Optimus mass-production audit lands in Ningbo; China A-share supply chain stocks surge",
+        "url": "https://finance.biggo.com/news/fac74b48-d94a-4511-9404-025c05deac9a",
+        "date": "2026-09-17"
+      },
+      {
+        "title": "Tesla starts supplier audits in China for Optimus mass production, with a reported 50,000-unit annual target",
+        "url": "https://xenospectrum.com/en/tesla-optimus-gen3-china-supplier-audit/",
+        "date": "2026-09-21"
+      },
+      {
+        "title": "Tesla audits Chinese suppliers as Optimus orders surge",
+        "url": "https://www.robotaigeek.com/news/tesla-audits-chinese-suppliers-as-optimus-orders-surge",
+        "date": "2026-09-19"
+      },
+      {
+        "title": "Tesla, Inc. Form 10-Q for the quarter ended June 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026049270/tsla-20260630.htm",
+        "date": "2026-07"
+      },
+      {
+        "title": "Humanoid robots news roundup for September 2026",
+        "url": "https://objectways.com/blog/humanoid-robots-news-roundup-for-september-2026/",
+        "date": "2026-09"
+      }
+    ]
+  },
+  {
+    "slug": "figure-helix-2-5-chores-in-30-unseen-homes",
+    "type": "research",
+    "title": "Figure's Helix 2.5 did chores in 30 homes it had never seen, and finished about half",
+    "dek": "A model pretrained on human video let Figure 03 tidy, fold towels and make beds in unfamiliar homes at 56% full-task success, up from 9%.",
+    "claim": "research",
+    "confidence": null,
+    "publishedAt": "2026-09-19",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 4,
+    "robots": [
+      "figure-03"
+    ],
+    "tags": [
+      "humanoid",
+      "home",
+      "research",
+      "foundation-model",
+      "figure"
+    ],
+    "sourceQuote": "A person can walk into an unfamiliar home and start working immediately. This is currently not true for robots.",
+    "sourceAttribution": "Figure, Helix 2.5 announcement, 2026-09-17",
+    "heroPrompt": "A humanoid robot in a lived-in suburban bedroom pulling a rumpled comforter straight over an unmade bed, laundry basket of towels on the floor, afternoon window light, eye-level documentary photo, no glowing eyes, no sci-fi styling.",
+    "body": "## The result\n\nFigure [introduced Helix 2.5 on September 17, 2026](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization), and the headline number is modest on purpose: 56%. That is the share of full chores its Figure 03 humanoid completed in 30 Bay Area homes it had never been inside, across three jobs: tidying a living room, folding towels and making a bed. A comparable model trained without Figure's new pretraining data managed 9% on the same test.\n\nThe scoring was strict. Figure says a tidy only counted if \"all 13-15 toys scattered in the scene are picked and placed in the basket,\" a towel run only counted if every towel was folded and put away, and a bed only counted if both pillows and the comforter corners were at the top with the comforter pulled smooth. Half a job was a failure. If a person had to step in for safety, the run was aborted and marked as failed.\n\nFigure also says Helix 2.5 matched the success rate of its January model, [Helix 02](https://www.figure.ai/news/helix-02), \"while using half as much adaptation data,\" and did it without collecting any data in the test homes.\n\n## How it works (plain words)\n\nMost robot learning so far has worked like private tutoring. You bring the robot to a place, show it the task many times in that place, and it gets good at that place. Move the furniture and the skill often falls apart.\n\nHelix 2.5 changes the order of operations. First, Figure pretrains one large model on [Index](https://www.figure.ai/news/introducing-index), a dataset of people doing ordinary physical tasks, recorded through a phone app. Figure took Index out of stealth on August 25, 2026, and says it has 264,000 app downloads in 108 countries, more than 16 million uploaded videos, and $15 million paid to the people who record them. Figure says that per 1,000 hours, the data covers 373 unique tasks, 1,146 unique objects and 116 unique environments.\n\nThen Figure teaches each chore with a smaller batch of robot data collected elsewhere, and sends the same model into homes it has never seen. According to [The AI Insider's write-up](https://theaiinsider.tech/2026/09/17/figure-unveils-helix-2-5-with-zero-shot-humanoid-generalization-across-30-homes/), no single evaluation task made up more than 1.9% of the pretraining data, so the model was not simply memorising towel folding from human video.\n\nThe bet is the same one language models made: watch enough of the world and you pick up the general shape of how things work, then a small amount of specific teaching goes a long way. Figure says it has committed $3.5B of compute to training Helix.\n\n## What it means for a home robot\n\nThis is the first result we have seen that tests the thing buyers actually care about: does the robot work in *my* house, not in the maker's showroom? Thirty homes is a small sample, but they were real homes with real layouts, and the model got no warm-up in any of them.\n\nFor a future owner, three things stand out.\n\n- **Setup could get shorter.** If a robot needs less teaching per home, the installer visit (or remote teaching session) that early home robots rely on could shrink.\n- **Whole-body chores are on the table.** Bed making and floor-level tidying mean walking, crouching and using both hands together. Those are exactly the jobs a wheeled arm on a counter cannot do.\n- **The data flywheel is people, not robots.** Index pays humans to film their chores. That scales faster than building robots to collect data, and it is why Figure can talk about variety across homes at all.\n\n## Caveats\n\nA 56% full-task success rate is a research number, not a product number. Roughly one chore in two ended with something left undone, or with a person stepping in. You would not keep a dishwasher that finished one load in two.\n\nFigure has not published per-task success rates, completion times or speeds in its announcement, so we cannot tell whether towels went better than beds, or whether a tidy took two minutes or twenty. The objects were chosen by Figure and checked to be absent from training, which is good practice, but the homes were all in one region. \"Zero-shot\" here means no data from the test home; each chore was still taught with robot data gathered elsewhere.\n\nThere is also a privacy question the announcement does not answer. Index is built from videos people record inside their own homes and workplaces, and Figure's Index page does not describe how that footage is stored or used beyond training.\n\nFigure's own framing is fair: \"The point is not that general humanoid robotics is solved.\" Figure 03 is not on sale to households, and Helix 2.5 is a research result. We are labelling this Research, and we will want to see the per-task breakdown and an outside evaluation before reading it as a buying signal.",
+    "sources": [
+      {
+        "title": "Helix 2.5: Zero-Shot 30-Home Generalization",
+        "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+        "date": "2026-09-17"
+      },
+      {
+        "title": "Introducing Index: Building The World's Largest and Most Diverse Physical Dataset",
+        "url": "https://www.figure.ai/news/introducing-index",
+        "date": "2026-08-25"
+      },
+      {
+        "title": "Figure Unveils Helix 2.5 With Zero-Shot Humanoid Generalization Across 30 Homes",
+        "url": "https://theaiinsider.tech/2026/09/17/figure-unveils-helix-2-5-with-zero-shot-humanoid-generalization-across-30-homes/",
+        "date": "2026-09-17"
+      },
+      {
+        "title": "Introducing Helix 02: Full-Body Autonomy",
+        "url": "https://www.figure.ai/news/helix-02",
+        "date": "2026-01-27"
+      }
+    ]
+  },
+  {
+    "slug": "skild-s1-learns-a-chore-from-one-video",
+    "type": "research",
+    "title": "Skild's S1 learns a new task from one video of a person doing it",
+    "dek": "Skild AI says its S1 model picks up unseen tasks like repotting a plant from a single first-person video, with no retraining.",
+    "claim": "research",
+    "confidence": null,
+    "publishedAt": "2026-09-12",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 3,
+    "robots": [],
+    "tags": [
+      "research",
+      "foundation-model",
+      "learning-from-video",
+      "home"
+    ],
+    "sourceQuote": "A single demonstration in context is worth roughly 380 post-training examples",
+    "sourceAttribution": "Skild AI, S1 blog post, August 2026",
+    "heroPrompt": "Two robot arms on a cluttered kitchen counter repotting a houseplant beside a bag of soil and a watering can, a phone propped up showing a paused video of human hands, soft daylight, eye level, documentary photo style, no sci-fi.",
+    "body": "## The result\n\nSkild AI says its new robot model, S1, can learn a chore it has never seen from a single video of a person doing it, with no retraining. Skild [introduced S1 in August 2026](https://www.skild.ai/blogs/s1), and NVIDIA [wrote it up on September 10, 2026](https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/).\n\nThe tasks Skild showed are homey: repotting a plant, flipping pancakes, making pour-over coffee and assembling a kit. Skild says the tasks run up to 10 minutes and were never seen during pretraining. The prompt for each was \"one egocentric human video demonstration,\" meaning a first-person recording of a person's hands doing the job.\n\nThe key numbers, as Skild reports them:\n\n- On unseen tasks, \"one example in context puts it at a 66% success rate.\" NVIDIA describes this as a per-step success rate, compared with 9% for a model prompted with words alone.\n- \"A single demonstration in context is worth roughly 380 post-training examples.\" NVIDIA puts that at 50 to 100 hours of manual data collection saved.\n- For the plant-potting task, \"the time from demonstration to autonomous execution was 11 minutes.\" Skild adds that most of its time went into moving furniture and setting up the scene.\n\n## How it works (plain words)\n\nToday, teaching a robot a new job usually means fine-tuning: collect dozens or hundreds of robot demonstrations, run a training job, ship an updated model. That takes days and a data team.\n\nS1 skips the training step. It treats the demonstration video the way a chatbot treats the text in your prompt. The video goes into the model's short-term context, the model's weights stay frozen, and the robot works out how to do the same job with its own body in the scene in front of it. Researchers call this in-context learning. Skild's pitch is simple: \"Show it a video of a task, short or long, seen or unseen, and it executes.\"\n\nThe hard part hidden in that sentence is translation. A human hand is not a robot gripper, the camera angle is different, and the kitchen in the video may not match the kitchen the robot is standing in. S1 has to map what it sees a person do onto what its own arms can do. Skild says the benefit grows as it scales pretraining, and reports 96% success on seen tasks at scale.\n\n## What it means for a home robot\n\nIf this holds up, it changes who can teach a home robot. Every home has a few jobs nobody else has: the way you like the dog bowl rinsed, the odd latch on the pantry, the plants on the back step. A robot that needs a data-collection team for each of those jobs will never learn them. A robot that can watch you do it once, on your own phone, might.\n\nIt also changes the teaching model that early home humanoids rely on. [1X plans to use remote teleoperators](https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/) to guide its NEO through chores it doesn't yet know. One-video learning points toward a future where the owner is the teacher and nobody at the company has to drive the robot through your home.\n\n## Caveats\n\nThis is a company blog result, not a peer-reviewed paper, and Skild's post does not describe the robot hardware it used or how many trials sit behind each number. We could not find failure cases in the post.\n\nRead the 66% carefully. A per-step success rate is not the same as finishing the whole job. On a task with dozens of steps, a robot that gets two steps in three right will rarely finish on its own. That makes this a very different number from Figure's [whole-chore 56% for Helix 2.5](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization), and the two should not be compared directly.\n\nSkild also sells into industry first. NVIDIA reports that Skild has 60 or more deployment partnerships across manufacturing, logistics, inspection, security and food preparation, and [other coverage](https://roboticsandautomationnews.com/2026/09/14/skild-ai-unveils-s1-robot-foundation-model-that-learns-tasks-from-video-demonstrations/104791/) says S1 is going to a limited set of industrial partners first. There is no Skild home robot you can buy, and none has been announced.\n\nSo we are filing S1 under Research. The idea that matters for your home is teaching by showing, and on that, S1 is the most concrete claim we have seen this year.",
+    "sources": [
+      {
+        "title": "Introducing S1: In-Context Learning for Robotics",
+        "url": "https://www.skild.ai/blogs/s1",
+        "date": "2026-08"
+      },
+      {
+        "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+        "url": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+        "date": "2026-09-10"
+      },
+      {
+        "title": "Skild AI unveils S1 robot foundation model that learns tasks from video demonstrations",
+        "url": "https://roboticsandautomationnews.com/2026/09/14/skild-ai-unveils-s1-robot-foundation-model-that-learns-tasks-from-video-demonstrations/104791/",
+        "date": "2026-09-14"
+      },
+      {
+        "title": "NEO humanoid designed for household use, available for preorder",
+        "url": "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/",
+        "date": "2025-10-30"
+      },
+      {
+        "title": "Helix 2.5: Zero-Shot 30-Home Generalization",
+        "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+        "date": "2026-09-17"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-robotics-2-whole-body-control-scorecard",
+    "type": "research",
+    "title": "Gemini Robotics 2 drives a whole humanoid, and DeepMind published the scorecard",
+    "dek": "Google DeepMind's new robot models let Apptronik's Apollo 2 walk, crouch and grasp, with floor pickups succeeding 45.7% of the time.",
+    "claim": "research",
+    "confidence": null,
+    "publishedAt": "2026-09-06",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 3,
+    "robots": [
+      "apptronik-apollo",
+      "so-101-arm"
+    ],
+    "tags": [
+      "humanoid",
+      "research",
+      "foundation-model",
+      "dexterity",
+      "google-deepmind"
+    ],
+    "sourceQuote": "While our robots have more to advance in movement speed, this is an important step towards the skills needed to complete more complex, real-world tasks that require whole-body coordination.",
+    "sourceAttribution": "Google DeepMind blog, 2026-07-30",
+    "heroPrompt": "A grey humanoid robot crouching on a living-room rug to pick up a child's shoe among scattered toys and a watering can, late-morning window light, eye-level candid photo, cluttered real home, no glowing eyes, no sci-fi.",
+    "body": "## The result\n\nGoogle DeepMind [released Gemini Robotics 2 on July 30, 2026](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/): a family of three AI models for robots. The headline is whole-body control. In DeepMind's words, it is \"teaching robots intelligent whole-body control, fine dexterity, and teamwork,\" from feet to fingertips, so a humanoid can walk, crouch and reach while it handles things.\n\nDeepMind showed this on Apptronik's Apollo 2 humanoid, which it says can now \"walk, crouch, stretch, and manipulate objects to clean up a cluttered room.\" It also ran the model on two-armed robots, including a Franka Duo, and on the low-cost SO101 arm.\n\nUnusually, DeepMind published task-by-task success rates. On Apollo 2 with Inspire hands:\n\n- Picking something up from a table: 68.4%\n- Picking something up from a shelf: 76.3%\n- Picking something up from the floor: 45.7%\n\nOn Apollo 2 with the five-fingered, 22-degree-of-freedom SharpaWave hand, unscrewing a light bulb succeeded 92% of the time and tying a trash bag 44% of the time.\n\n## How it works (plain words)\n\nGemini Robotics 2 is really three models with different jobs.\n\n- **Gemini Robotics 2** is the \"hands and feet\" model. It takes in camera images and a spoken or typed instruction, and outputs motor commands. DeepMind's example is asking Apollo 2 to \"put the watering can into the green bin in the bottom shelf.\"\n- **[Gemini Robotics ER 2](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/)** is the planner. Google calls it \"a high-level brain for robots.\" It watches live video, breaks a job into steps, tracks whether each step is done, and can coordinate more than one robot in the same space.\n- **Gemini Robotics On-Device 2** is a smaller version that runs on the robot itself. DeepMind says it can adapt to a new robot body with \"just a few hours of data.\"\n\nThe split matters. A planner that understands \"clean up this room\" is not the same skill as a controller that can close five fingers around a mug without dropping it. DeepMind is building both and letting one direct the other.\n\n## What it means for a home robot\n\nThe floor number is the one to watch. Almost everything that makes a home messy ends up on the floor: shoes, toys, laundry, a dropped fork. A humanoid that can bend down and pick things up is the main reason to want legs instead of a wheeled base with arms. At 45.7%, floor pickups work a bit less than half the time, and it is useful to see that written down rather than hidden behind a highlight reel.\n\nThe dexterity results point the same way. Unscrewing a bulb worked 92% of the time. Tying a trash bag, a task every household does weekly, worked 44% of the time. Soft, floppy things are still hard.\n\nThe On-Device model matters for privacy and reliability. A home robot that must send every camera frame to a data centre stops working when the Wi-Fi drops, and puts your living room on someone else's server. A capable local model is a prerequisite for a robot we would recommend.\n\nFinally, DeepMind is a model supplier, not a robot maker. If Gemini Robotics becomes the \"Android\" of robot brains, the home humanoid you eventually buy may come from a company you have never heard of, running Google's model underneath.\n\n## Caveats\n\nThese are lab results on DeepMind's chosen tasks, with numbers DeepMind measured. DeepMind says itself that \"our robots have more to advance in movement speed,\" and that it is \"continuing to advance the level of precision and speed to achieve human-level dexterity.\" A 44% trash-bag score is a fair measure of how far that still is.\n\nAccess is limited too. The ER 2 planner is available to developers through the Gemini API and Google AI Studio. The VLA and On-Device models are for early-access partners who apply. Apollo 2 is not a product you can order for your home.\n\nDeepMind also introduced ASIMOV-Agentic, a new benchmark for safety in robots that plan and act on their own, and calls this \"our safest robotics model to date.\" We welcome a published safety benchmark. We would like to see outside groups run it.\n\nWe are labelling this Research. It is the clearest public scorecard yet of what a general robot brain can do with a full humanoid body, and it shows how far there is still to go.",
+    "sources": [
+      {
+        "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+        "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+        "date": "2026-07-30"
+      },
+      {
+        "title": "Introducing Gemini Robotics ER 2",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/",
+        "date": "2026-07-30"
+      },
+      {
+        "title": "Google DeepMind Ships Three Physical AI Models For Whole Body Control, Dexterity And Multi Robot Collaboration",
+        "url": "https://www.marktechpost.com/2026/07/30/google-deepmind-gemini-robotics-2-whole-body-control-dexterity-multi-robot-collaboration/",
+        "date": "2026-07-30"
+      }
+    ]
+  },
+  {
+    "slug": "can-a-humanoid-do-the-laundry-yet",
+    "type": "case",
+    "title": "Can a humanoid do your laundry yet? Folding, mostly",
+    "dek": "We walked one load from hamper to drawer and checked each step against what robots have actually shown in public.",
+    "claim": "research",
+    "confidence": null,
+    "publishedAt": "2026-09-22",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 4,
+    "robots": [
+      "figure-03",
+      "1x-neo"
+    ],
+    "tags": [
+      "case-study",
+      "laundry",
+      "home",
+      "humanoid"
+    ],
+    "sourceQuote": null,
+    "sourceAttribution": null,
+    "heroPrompt": "A humanoid robot in a small cramped laundry room folding a towel on top of a dryer, overflowing hamper and detergent bottles nearby, a sock on the floor, flat natural light from a small window, eye-level documentary photo, no sci-fi.",
+    "body": "## The setting\n\nLaundry is the chore home-robot makers name first. [1X lists \"folding laundry\"](https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/) among the jobs its $20,000 NEO is meant to do. LG built its [CLOiD concept robot](https://www.engadget.com/home/smart-home/lg-reveals-its-laundry-folding-robot-at-ces-2026-215121021.html) around starting wash cycles and folding what comes out of the dryer. Figure picked towel folding as one of three test chores for [Helix 2.5](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization).\n\nIt is easy to see why. Laundry is frequent, boring and physical, and it happens in every home. It is also a good test of a robot, because cloth has no fixed shape. A mug is always a mug. A T-shirt pulled from a dryer is a different puzzle every time.\n\nWe walked through a single load, from hamper to drawer, and checked each step against what has actually been shown in public.\n\n## What a humanoid would need to do\n\nA full load breaks into roughly six jobs:\n\n1. **Collect.** Find the hamper, or pick clothes off the floor, and carry them to the machine.\n2. **Sort.** Separate darks from lights and pull out anything that should not go in the wash. This means reading labels or at least colours.\n3. **Load and start.** Open the washer, put the clothes in, add detergent, choose a cycle, press start.\n4. **Transfer.** Move wet, heavy, tangled clothes into the dryer, then start it.\n5. **Fold.** Take out a jumble of mixed items and fold each one the way the household likes: towels, shirts, trousers, pairing socks.\n6. **Put away.** Carry the piles to the right rooms and into the right drawers and shelves.\n\nEach step also needs the robot to cope with small surprises: a sock stuck to the drum, a door that sticks, a cat in the basket.\n\n## What has actually been demonstrated\n\n**Folding towels in unfamiliar homes.** This is the strongest evidence. In September 2026, Figure reported that one Helix 2.5 model tidied rooms, folded towels and made beds across 30 homes it had never seen, with no data collected in any of them. Success was all-or-nothing: \"all towels are folded and placed in the basket.\" Across the three chores together, Figure 03 finished 56% of attempts. Figure did not publish the towel-only rate.\n\n**Folding laundry as one skill among many.** Physical Intelligence says its π0.7 model, [released in April 2026](https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/), matched specialist models on tasks including \"making coffee, folding laundry, and assembling boxes.\" That is a claim about a general model keeping up with purpose-trained ones, not about handling a whole load.\n\n**Starting a wash and folding, as a concept.** LG showed CLOiD at CES in January 2026 doing laundry tasks, but [Engadget reported](https://www.engadget.com/home/smart-home/lg-reveals-its-laundry-folding-robot-at-ces-2026-215121021.html) that LG itself called it \"more of a concept,\" with no product plans. [Tom's Guide watched it on the show floor](https://www.tomsguide.com/home/smart-home/watch-the-lg-cloid-robot-failing-to-fold-laundry-is-the-most-mesmerizing-thing-ive-seen-at-ces-2026) and described it as \"quite slow and deliberate,\" leaving one towel \"in a crumpled heap\" while a company rep stepped in to straighten it.\n\n**Laundry with a human at the controls.** 1X's plan for NEO is honest about the gap. For \"any chore that NEO doesn't yet know, owners could schedule a 1X teleoperator to guide it,\" according to [The Robot Report](https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/). 1X [opened its Hayward, California factory on April 30, 2026](https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html) with first customer shipments planned for 2026. We have not seen a published measure of how much of NEO's laundry work runs without a remote operator.\n\n**Learning a new chore from one video.** Skild AI says its S1 model can pick up an unseen task from a single human video, at a [66% per-step success rate](https://www.skild.ai/blogs/s1). No laundry task was shown, but if it works in homes, it is the kind of method that could teach a robot your particular way of folding.\n\n## The gap\n\nPut the steps next to the evidence and the picture is lopsided.\n\n- **Folding** has real, measured progress, mostly on towels, which are the easiest item: flat, rectangular, forgiving. We have seen no public, measured result for a mixed load of shirts, trousers, fitted sheets and socks.\n- **Collecting and carrying** are plausible. Figure's living-room tidy shows a humanoid can find and pick up many small objects in a real home, and bending to the floor is exactly what legs are for.\n- **Sorting, loading, dosing detergent and running the machines** are the missing middle. We found no public demonstration with success rates of a humanoid sorting a load, operating a washer and dryer, and moving wet clothes between them.\n- **Putting away** into the right drawers in the right rooms has not been shown in any source we could find.\n- **Speed** is unknown. None of the results above publish how long a fold takes.\n\nOur read: the first laundry help you can buy will be folding-and-carrying, with a person, or a remote operator, handling the machines. A robot that does the whole load, hamper to drawer, on its own has not been demonstrated anywhere we can find. When one is, we will want to see the success rate, the time per load and how many of those loads needed a human.",
+    "sources": [
+      {
+        "title": "Helix 2.5: Zero-Shot 30-Home Generalization",
+        "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+        "date": "2026-09-17"
+      },
+      {
+        "title": "Physical Intelligence says its new robot brain can figure out tasks it was never taught",
+        "url": "https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/",
+        "date": "2026-04-16"
+      },
+      {
+        "title": "LG reveals its laundry-folding robot at CES 2026",
+        "url": "https://www.engadget.com/home/smart-home/lg-reveals-its-laundry-folding-robot-at-ces-2026-215121021.html",
+        "date": "2026-01-04"
+      },
+      {
+        "title": "I saw the LG CLOiD robot fold laundry at CES 2026 — it did not go well",
+        "url": "https://www.tomsguide.com/home/smart-home/watch-the-lg-cloid-robot-failing-to-fold-laundry-is-the-most-mesmerizing-thing-ive-seen-at-ces-2026",
+        "date": "2026-01-07"
+      },
+      {
+        "title": "NEO humanoid designed for household use, available for preorder",
+        "url": "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/",
+        "date": "2025-10-30"
+      },
+      {
+        "title": "1X Opens NEO Factory in Hayward, CA, with Consumer Shipments Planned for 2026",
+        "url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1x-opens-neo-factory-in-hayward-ca-america-s-first-vertically-integrated-humanoid-robot-factory-with-consumer-shipments-planned-for-2026.html",
+        "date": "2026-04-30"
+      },
+      {
+        "title": "Introducing S1: In-Context Learning for Robotics",
+        "url": "https://www.skild.ai/blogs/s1",
+        "date": "2026-08"
+      }
+    ]
+  },
+  {
+    "slug": "what-a-humanoid-can-really-do-in-your-kitchen",
+    "type": "case",
+    "title": "What a humanoid can really do in your kitchen today",
+    "dek": "Robots have loaded dishwashers, worked an air fryer and flipped pancakes on video; cooking a meal and cleaning up have not been shown.",
+    "claim": "research",
+    "confidence": null,
+    "publishedAt": "2026-09-25",
+    "author": "ShinyMetal Desk",
+    "readMinutes": 4,
+    "robots": [
+      "figure-03",
+      "apptronik-apollo"
+    ],
+    "tags": [
+      "case-study",
+      "kitchen",
+      "home",
+      "humanoid"
+    ],
+    "sourceQuote": null,
+    "sourceAttribution": null,
+    "heroPrompt": "A humanoid robot unloading plates from an open dishwasher in an ordinary family kitchen with cereal boxes, a fruit bowl and an air fryer on the counter, morning daylight, eye-level documentary photo, no glowing eyes, no sci-fi.",
+    "body": "## The setting\n\nThe kitchen is where a home robot would earn its keep and where it could do the most damage. It is full of jobs people would happily hand off, such as unloading the dishwasher, wiping counters and prepping ingredients. It is also full of hot surfaces, sharp edges, breakable glass and food that goes wrong if you get the timing wrong.\n\nIt is also the room robot makers most like to film. Over 2026, humanoids and robot arms have been shown loading dishwashers, flipping pancakes, working air fryers and brewing coffee. We lined those demos up against the actual work of running a kitchen to see how much of it is covered.\n\n## What a humanoid would need to do\n\nWe split kitchen help into five kinds of work, from easiest to hardest:\n\n1. **Put things where they go.** Unload a dishwasher, store groceries, clear a table.\n2. **Run appliances.** Open, load, set and start a dishwasher, microwave, air fryer or kettle.\n3. **Handle food.** Pour, scoop, flip, open packets, seal bags.\n4. **Cook.** Follow a recipe with heat and timing, and notice when something is burning.\n5. **Clean up.** Wipe spills, scrub pans, take out the rubbish.\n\nAll five need the robot to work safely next to people, in a room it did not design, with objects it has not seen before.\n\n## What has actually been demonstrated\n\n**A full dishwasher cycle, once, on video.** In January 2026, Figure showed [Helix 02](https://www.figure.ai/news/helix-02) unloading and reloading a dishwasher across a full-sized kitchen, then starting it. Figure calls it \"a four-minute, end-to-end autonomous task that integrates walking, manipulation, and balance with no resets and no human intervention,\" made up of 61 separate actions. Figure did not publish how many attempts it took or how often the task succeeds. The same post showed fine-grained skills such as unscrewing a bottle cap and dispensing exactly 5 ml from a syringe, and Figure said plainly that \"the results are early.\"\n\n**An appliance it had barely seen.** Physical Intelligence says its π0.7 model [operated an air fryer](https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/) with only two related clips in its training data. The catch is in how it got there. Without guidance the attempt failed; with step-by-step spoken coaching it worked, and one air-fryer test went from 5% to 95% success after about 30 minutes of refining the instructions. A Physical Intelligence researcher told TechCrunch: \"You can't tell it, 'Hey, go make me some toast'.\"\n\n**Cooking-adjacent tasks from one video.** Skild AI says its [S1 model](https://www.skild.ai/blogs/s1) learned tasks including pancake flipping and pour-over coffee from a single first-person video of a person, with no retraining. Skild reports 66% success on unseen tasks, which [NVIDIA describes](https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/) as a per-step rate. Skild did not say which robot hardware it used.\n\n**Soft, fiddly packaging.** Google DeepMind says [Gemini Robotics 2](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) can drive a five-fingered hand on Apptronik's Apollo 2 humanoid to tie knots and seal a ziplock bag. DeepMind's published numbers show where the edge is: tying a trash bag succeeded 44% of the time, and picking an object up from the floor 45.7%.\n\n## The gap\n\nAgainst our five kinds of work, the record looks like this.\n\n- **Putting things away** is the most advanced. The dishwasher demo covers it end to end, but it is one run in one kitchen with no published success rate. Figure's newer [Helix 2.5](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization) shows chores carrying over to 30 unfamiliar homes at 56% full-task success, but none of its three test chores was in the kitchen.\n- **Running appliances** works with help. The air-fryer result is real progress, but it needed a person to talk the robot through it. That is closer to supervising a new helper than to handing off a job.\n- **Handling food** has good demos and weak numbers. Pancakes, coffee and bags have all been shown; the success rates we can see run from under half to about two in three per step.\n- **Cooking** a meal, with heat and timing and judgement, has not been demonstrated in any source we found.\n- **Cleaning** is almost untested in public. We found no measured results for wiping counters or scrubbing pans with a humanoid.\n\nTwo more gaps sit across all five. The first is safety. None of these posts reports how the robots behave around a hot hob, a knife or a child reaching in. DeepMind has introduced a safety benchmark, ASIMOV-Agentic, but we have not seen independent results. The second is breakage. Real kitchens have glass and ceramic, and a humanoid that succeeds half the time will drop things.\n\nOur read: a humanoid in your kitchen in the next few years looks like a dishwasher unloader and a tidier, with appliances run under supervision. Cooking is a research goal, not a feature, and anyone selling it today should be able to show you the success rate.",
+    "sources": [
+      {
+        "title": "Introducing Helix 02: Full-Body Autonomy",
+        "url": "https://www.figure.ai/news/helix-02",
+        "date": "2026-01-27"
+      },
+      {
+        "title": "Physical Intelligence says its new robot brain can figure out tasks it was never taught",
+        "url": "https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/",
+        "date": "2026-04-16"
+      },
+      {
+        "title": "Introducing S1: In-Context Learning for Robotics",
+        "url": "https://www.skild.ai/blogs/s1",
+        "date": "2026-08"
+      },
+      {
+        "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+        "url": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+        "date": "2026-09-10"
+      },
+      {
+        "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+        "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+        "date": "2026-07-30"
+      },
+      {
+        "title": "Helix 2.5: Zero-Shot 30-Home Generalization",
+        "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+        "date": "2026-09-17"
+      }
+    ]
+  }
+]

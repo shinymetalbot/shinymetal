@@ -1,0 +1,105 @@
+/* ShinyMetal Foundry — Cobalt on bone. Light on :root, dark under [data-theme="dark"]. Fonts: tokens/fonts.css */
+:root, [data-theme="light"] {
+  --surface: #f4f2ec;
+  --surface-raised: #fbfaf6;
+  --surface-sunken: #e8e5dc;
+  --ink: #17181c;
+  --ink-2: #4e5058;
+  --ink-3: #696b74;
+  --rule: #d6d3ca;
+  --rule-strong: #858791;
+  --metal: #2f4fb3;
+  --metal-bright: #4a6ad0;
+  --metal-tint: #dfe5f8;
+  --on-metal: #ffffff;
+  --link: #2b47a3;
+  --focus: #17181c;
+  --claim-shipped: #2f6a3c;
+  --claim-shipped-tint: #dcebd8;
+  --claim-preorder: #1f6a7d;
+  --claim-preorder-tint: #d6e8ee;
+  --claim-promise: #6a4aad;
+  --claim-promise-tint: #e6dff3;
+  --claim-rumor: #9c3767;
+  --claim-rumor-tint: #f1dae6;
+  --claim-research: #1f6b68;
+  --claim-research-tint: #d5e8e5;
+  --signal-ok: #2f6a3c;
+  --signal-ok-tint: #dcebd8;
+  --signal-warn: #7f5300;
+  --signal-warn-tint: #f2e4c2;
+  --signal-danger: #ad382c;
+  --signal-danger-tint: #f3d9d4;
+  --signal-neutral: #675f53;
+  --signal-neutral-tint: #e6dfd1;
+  --shadow-lift: 0 1px 0 rgba(29,26,22,0.10);
+  --shadow-pop: 0 8px 24px rgba(29,26,22,0.14), 0 1px 0 rgba(29,26,22,0.10);
+}
+[data-theme="dark"] {
+  --surface: #15161b;
+  --surface-raised: #1d1f26;
+  --surface-sunken: #0e0f13;
+  --ink: #ecebe6;
+  --ink-2: #b4b5bd;
+  --ink-3: #90929b;
+  --rule: #31333c;
+  --rule-strong: #6b6e78;
+  --metal: #9db4ff;
+  --metal-bright: #b3c4ff;
+  --metal-tint: #1f2748;
+  --on-metal: #15161b;
+  --link: #aabeff;
+  --focus: #ecebe6;
+  --claim-shipped: #86c895;
+  --claim-shipped-tint: #1e3324;
+  --claim-preorder: #7fc6d8;
+  --claim-preorder-tint: #173139;
+  --claim-promise: #bca6ee;
+  --claim-promise-tint: #2b2340;
+  --claim-rumor: #e39fc2;
+  --claim-rumor-tint: #3a1f2e;
+  --claim-research: #7fcac6;
+  --claim-research-tint: #1a332f;
+  --signal-ok: #86c895;
+  --signal-ok-tint: #1e3324;
+  --signal-warn: #e3a95a;
+  --signal-warn-tint: #3a2c14;
+  --signal-danger: #f09286;
+  --signal-danger-tint: #3e2019;
+  --signal-neutral: #a89d8e;
+  --signal-neutral-tint: #2c2721;
+  --shadow-lift: 0 1px 0 rgba(0,0,0,0.6);
+  --shadow-pop: 0 8px 24px rgba(0,0,0,0.6), 0 1px 0 rgba(0,0,0,0.6);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-0: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-full: 999px;
+  --hairline: 1px;
+  --hairline-strong: 2px;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-data: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+}
+.display-xl { font-family: var(--font-display); font-size: 44px; line-height: 46px; font-weight: 600; letter-spacing: -0.02em; }
+.display-lg { font-family: var(--font-display); font-size: 32px; line-height: 36px; font-weight: 600; letter-spacing: -0.015em; }
+.display-md { font-family: var(--font-display); font-size: 24px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.display-sm { font-family: var(--font-display); font-size: 19px; line-height: 24px; font-weight: 600; }
+.body-lg { font-family: var(--font-body); font-size: 19px; line-height: 30px; font-weight: 400; }
+.body { font-family: var(--font-body); font-size: 17px; line-height: 26px; font-weight: 400; }
+.body-sm { font-family: var(--font-body); font-size: 15px; line-height: 22px; font-weight: 400; }
+.caption { font-family: var(--font-body); font-size: 13px; line-height: 18px; font-weight: 400; font-style: italic; }
+.eyebrow { font-family: var(--font-data); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; }
+.data { font-family: var(--font-data); font-size: 14px; line-height: 20px; font-weight: 400; }
+.data-lg { font-family: var(--font-data); font-size: 20px; line-height: 24px; font-weight: 500; }
+.data-xl { font-family: var(--font-data); font-size: 32px; line-height: 36px; font-weight: 500; letter-spacing: -0.01em; }

@@ -1,0 +1,26 @@
+---
+import { fmtDate } from "../lib/format";
+interface Item { saidOn: string; dueBy?: string | null; claim: string; outcome: "kept" | "slipped" | "broken" | "pending"; outcomeNote?: string | null; by?: string | null; sourceUrl: string; outcomeSourceUrl?: string | null }
+interface Props { company?: string; items: Item[]; showScore?: boolean; href?: string }
+const { company, items, showScore = true, href } = Astro.props;
+const OUTCOME = { kept: { word: "Kept", tone: "ok" }, slipped: { word: "Slipped", tone: "warn" }, broken: { word: "Broken", tone: "danger" }, pending: { word: "Open", tone: "neutral" } } as const;
+const count = (o: string) => items.filter((i) => i.outcome === o).length;
+const score = [["kept", "kept"], ["slipped", "slipped"], ["broken", "broken"], ["pending", "open"]].filter(([o]) => count(o)).map(([o, w]) => `${count(o)} ${w}`).join(" · ");
+---
+<ol class="fd-timeline">
+  {company && <li class="fd-tl-head"><span class="fd-tl-company">{href ? <a href={href} style="text-decoration:none">{company}</a> : company}</span>{showScore && <span class="fd-tl-score">{score}</span>}</li>}
+  {items.map((it) => {
+    const o = OUTCOME[it.outcome] ?? OUTCOME.pending;
+    return (
+      <li class={`fd-tl-item fd-tone-${o.tone}`}>
+        <span class="fd-tl-node" aria-hidden="true"></span>
+        <div class="fd-tl-body">
+          <div class="fd-tl-meta"><span class="fd-num">{fmtDate(it.saidOn)}</span>{it.by && <span class="fd-tl-said">said {it.by}</span>}{it.dueBy && <span class="fd-tl-said">due {fmtDate(it.dueBy)}</span>}</div>
+          <p class="fd-tl-claim">{it.claim}</p>
+          <span class={`fd-outcome fd-tone-${o.tone}`}>{o.word}</span>
+          {it.outcomeNote && <p class="fd-caption" style="margin:6px 0 0;color:var(--ink-2);font-size:14px;line-height:20px;font-style:normal">{it.outcomeNote} <a class="sm-link" href={it.outcomeSourceUrl ?? it.sourceUrl} rel="noopener" target="_blank">Source</a></p>}
+        </div>
+      </li>
+    );
+  })}
+</ol>

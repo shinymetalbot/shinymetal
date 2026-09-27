@@ -1,23 +1,32 @@
 {
-  "name": "shinymetal-bot-website",
+  "name": "shinymetal-bot",
   "type": "module",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.12"
+  },
   "scripts": {
     "dev": "astro dev",
-    "start": "astro build && astro preview --host 0.0.0.0 --port 80",
     "build": "astro build",
-    "preview": "astro preview --host 0.0.0.0 --port 80",
-    "astro": "astro"
+    "start": "node ./dist/server/entry.mjs",
+    "check": "astro check",
+    "convex:dev": "convex dev",
+    "convex:deploy": "convex deploy -y",
+    "seed": "node scripts/seed.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.9",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "3.1.6",
-    "@astrojs/tailwind": "^5.1.5",
-    "@tailwindcss/container-queries": "^0.1.1",
-    "@tailwindcss/forms": "^0.5.9",
-    "astro": "^4.16.18",
-    "lucide-astro": "^0.479.0",
-    "tailwindcss": "^3.4.17"
+    "@astrojs/node": "^11.1.6",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "convex": "^1.46.0",
+    "marked": "^18.0.14",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.3"
   }
 }

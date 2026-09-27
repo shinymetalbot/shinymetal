@@ -1,0 +1,17 @@
+---
+import Base from "../layouts/Base.astro";
+import NewsletterForm from "../components/NewsletterForm.astro";
+import ArticleItem from "../components/ArticleItem.astro";
+import { q, api } from "../lib/convex";
+const latest = await q(api.articles.listPublished, { limit: 5 });
+---
+<Base title="Newsletter" description="The weekly ShinyMetal email: what shipped, what slipped and what is only a rumor in home and humanoid robots. Free.">
+  <div class="page-head">
+    <span class="fd-eyebrow">Newsletter</span>
+    <h1>The weekly signal</h1>
+    <p>Once a week: the robot news that matters, each item labeled shipped, preorder, promise, rumor or research, plus any promise that came due. Five minutes, free.</p>
+  </div>
+  <NewsletterForm source="newsletter-page" compact />
+  <h2 class="section-title"><span>What we've been covering</span><a href="/news">All news</a></h2>
+  <ul class="fd-list" style="margin:0">{latest.map((a) => <ArticleItem a={a} />)}</ul>
+</Base>

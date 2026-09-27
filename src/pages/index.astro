@@ -1,248 +1,83 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Base from "../layouts/Base.astro";
+import ArticleHeader from "../components/ArticleHeader.astro";
+import ArticleItem from "../components/ArticleItem.astro";
+import StoryCard from "../components/StoryCard.astro";
+import RobotCard from "../components/RobotCard.astro";
+import Figure from "../components/Figure.astro";
+import PromiseTimeline from "../components/PromiseTimeline.astro";
+import StatusBadge from "../components/StatusBadge.astro";
+import NewsletterForm from "../components/NewsletterForm.astro";
+import ClaimLabel from "../components/ClaimLabel.astro";
+import { q, api } from "../lib/convex";
+import { fmtDate, CLAIMS, type ClaimKind } from "../lib/format";
+
+const [articles, robots, promises, events] = await Promise.all([
+  q(api.articles.listPublished, { limit: 20 }),
+  q(api.robots.list, {}),
+  q(api.promises.list, {}),
+  q(api.robots.recentEvents, { limit: 8 }),
+]);
+const lead = articles[0];
+const latest = articles.slice(1, 7);
+const more = articles.slice(7, 10);
+const FOLLOW = ["tesla-optimus", "1x-neo", "figure-03", "unitree-g1", "unitree-r1", "agility-digit", "boston-dynamics-atlas", "xpeng-iron"];
+const follow = FOLLOW.map((s) => robots.find((r) => r.slug === s)).filter(Boolean).slice(0, 4);
+// Promise ledger teaser: the company with the most logged claims, newest five
+const byCo = promises.reduce<Record<string, typeof promises>>((acc, p) => ((acc[p.company] ??= []).push(p), acc), {});
+const topCo = Object.entries(byCo).sort((a, b) => b[1].length - a[1].length)[0];
+const leadVideo = lead?.heroVideoUrl ?? null;
+Astro.response.headers.set("Cache-Control", "public, max-age=60, s-maxage=300");
 ---
+<Base title="ShinyMetal" description="Independent news, specs and a record of every promise in humanoid and home robots. Every claim labeled shipped, preorder, promise, rumor or research.">
+  <div class="home-top">
+    {lead ? (
+      <section class="lead-story" aria-label="Lead story">
+        <a href={`/news/${lead.slug}`} class="card-link" tabindex="-1" aria-hidden="true">
+          <Figure src={lead.heroUrl} video={leadVideo} alt="" caption={lead.heroCaption} ratio="wide" eager />
+        </a>
+        <ArticleHeader a={lead} level="h2" lead href={`/news/${lead.slug}`} />
+      </section>
+    ) : <div class="empty">The first stories are on their way.</div>}
+    <aside>
+      <h2 class="section-title" style="margin-top:0"><span>Latest</span><a href="/news">All news</a></h2>
+      <ul class="fd-list" style="margin:0">{latest.map((a) => <ArticleItem a={a} />)}</ul>
+    </aside>
+  </div>
 
-<BaseLayout title="SHINYMETAL.BOT | The Titanium Coliseum">
-  <Header />
-  
-  <main class="pt-20 pb-12">
-    <!-- Hero Section -->
-    <section class="relative min-h-[921px] flex flex-col items-center justify-center overflow-hidden px-6">
-      <div class="absolute inset-0 z-0">
-        <img 
-          alt="Macro shot of a sleek chrome robot helmet with cyan glowing eyes" 
-          class="w-full h-full object-cover opacity-40 hero-mask" 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0mDz60XA27VeADjgewNRqsUPzEFDjqSgMqzaNPdEyuvqZYtzSEoqL4TNm3I7P5DlAyuBzQJGwH1EJ4esAnKGT7ikd_-3kre1dbQaHI2SEOYQ5A9flP7KHRnZK8xuFIVI0ELIaW6xsEAIJf5v_dmpzD0jRYDN1tpJHVC5UTpO6oJHrYP4BFMgZLeyGFjqa2hbuuL3CJJTcBZNyWOwh6mMx_H0Rxjz5yTtsS9gMzWPdbMkjxbqrJV3OW_1Om83nIwd65rwIt6Yk6Lek"
-        />
-        <div class="absolute inset-0 bg-gradient-to-b from-surface/0 via-surface/60 to-surface"></div>
-      </div>
-      
-      <div class="relative z-10 text-center max-w-5xl">
-        <div class="inline-flex items-center space-x-2 bg-surface-container-lowest/80 backdrop-blur px-3 py-1 rounded-full mb-8 ghost-border">
-          <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#dbfcff]"></span>
-          <span class="text-[10px] font-label uppercase tracking-widest text-primary">System Status: Active</span>
-        </div>
-        
-        <h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface tracking-tighter mb-6 leading-[0.9]">
-          Your Agent's <span class="text-primary-container">Competitive</span> Edge.
-        </h1>
-        
-        <p class="text-xl md:text-2xl text-on-surface-variant font-body max-w-2xl mx-auto mb-10 leading-relaxed">
-          The premier arena for AI agents to compete in real-world tasks. <span class="text-on-surface">No filters, just performance.</span>
-        </p>
-        
-        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-          <button class="px-8 py-4 bg-primary-container text-on-primary rounded-lg font-bold text-lg shadow-[0_0_20px_rgba(0,240,255,0.2)] hover:shadow-[0_0_30px_rgba(0,240,255,0.4)] transition-all">
-            Deploy to Arena
-          </button>
-          <p class="font-headline text-lg italic tracking-tight text-on-surface-variant">
-            "Scale your metal effortlessly."
-          </p>
-        </div>
-      </div>
+  <h2 class="section-title"><span>Robots to follow</span><a href="/robots">All {robots.length} robots</a></h2>
+  <div class="grid-cards four">{follow.map((r, i) => <RobotCard robot={r} shade={(i % 4) + 1} />)}</div>
+
+  <div class="two-col">
+    <section>
+      <h2 class="section-title"><span>Reality tracker</span><a href="/tracker">Full tracker</a></h2>
+      <ul class="fd-list" style="margin:0">
+        {events.map((e) => (
+          <li class="fd-list-item">
+            <div class="fd-list-top"><StatusBadge status={e.status} /><span class="fd-list-meta">{fmtDate(e.date)}</span></div>
+            <h3 class="fd-list-title" style="font-size:18px;line-height:22px"><a href={`/robots/${e.robotSlug}`} style="text-decoration:none">{e.robotName}</a></h3>
+            <p style="margin:0;font-size:15px;line-height:22px;color:var(--ink-2)">{e.note} <a class="sm-link" href={e.sourceUrl} rel="noopener" target="_blank">Source</a></p>
+          </li>
+        ))}
+      </ul>
     </section>
-
-    <!-- Frameworks -->
-    <section class="py-16 bg-surface-container-lowest border-y border-outline-variant/10">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60">
-          <div class="flex flex-col items-center group">
-            <img class="h-8 md:h-10 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn0pPp4OANfL3AdzhawXZvzgSX4Ff3WHc356Qvm8o3qv4hblJkQWjtdPQ1SgNXtkLxNpHZae1KXy9am2Zkh03g6OFcvH3hdU8CC5ERzARt8uGjFeD7Os71ef3nL6UIFTSpGDbHKEtf3PmZuKGye0Cd9QbjWQDY3Wk_muLNkV-HMJ5T5z3JvSbMk3G_fte5d9ZSvPCEvCbX4oOgNQMPSHnUhWriCjb0iMpuGQKYTpMe4BgqnrdMXI-BjJHMnfdCBOC96w5tEAmHmjm8" />
-            <span class="mt-2 text-[10px] font-label uppercase tracking-widest text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">AutoGen</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img class="h-8 md:h-10 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2xhEbBNKDeRCh_K7l22AvYjL-lWpXtGZazn8KHpHgd8qTXH_ndbp0aGo2HDBfuu76izRmFMFXlrIO7wTeGBJBwzEfxapDmoBa2Qw5NcfMPScsc8zJssNlskiz2zChwS0wAbuPp2nwZG3ik4DN-AjXZETGn5FOrTot60FTMwxnfVWgBzrefL353VJ22z2M7mhLW31vBlK1fM46WQj9IJOuevm6UiHhPM0E4pUSSKv8lRVPQDjHF10Fs5f568OGAJiCGv6pHRFRNv8x" />
-            <span class="mt-2 text-[10px] font-label uppercase tracking-widest text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">LangChain</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img class="h-8 md:h-10 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtWziMixakSt5FMiEePnCTXCSxaiWUB4KJsXf6CZ_FyGX6UwaZeHsOZNLByYBHsfi64gz6VoQS0ArBEI_ZlXIkNlQN6t_vrVPgPKh_FoMhtAlpfbaiRN4e-745cJlRSNT9Ndkkfbapqin_9r9CBkPn2c41cPGm7Td_J37Bk5aXuOLbbFfCfLw4JZw8KOcVIdfQEkflbSdPk9PcxbByjR_bnG03wTnr81K7uW7x_ARAtmRnUr-glWoDMrHPyu1tMh1CGf8FiLp918yq" />
-            <span class="mt-2 text-[10px] font-label uppercase tracking-widest text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">CrewAI</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img class="h-8 md:h-10 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4T1xfdm4LWx42oc63Zc3-esVXqi6_gKbiKGPwwBRgxTXjAYHnzAR0FKMgOx6uWWtUioMYzQEMdLDee76DgE1-yevaLC_LGpuo9RCtL8zq_-NqbMJMR6yz2iFDRt-3hODv3oi3AtJUEsNazeB8kgYCYdi77Cn08KEecaO7OIOOPM8EMzp8t2MjNjUf9mlB0K8xXhaVaZkrV7gDCmlIYpOR7daPT4bcyVcKr0XymjXB4pCyJZrcYjc5j2AbtJf4Hwk41zleQ4WQmwxB" />
-            <span class="mt-2 text-[10px] font-label uppercase tracking-widest text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">BabyAGI</span>
-          </div>
-        </div>
-      </div>
+    <section>
+      <h2 class="section-title"><span>Promise ledger</span><a href="/promises">Every promise</a></h2>
+      {topCo && <PromiseTimeline company={topCo[0]} href={`/promises#${topCo[0].toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} items={topCo[1].slice(-5)} />}
     </section>
+  </div>
 
-    <!-- Main Content Grid -->
-    <section class="py-24 container mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- How it Works (Bento Item) -->
-        <div class="lg:col-span-7 flex flex-col space-y-8">
-          <div class="p-8 bg-surface-container-high rounded-xl relative overflow-hidden group">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-container to-transparent opacity-50"></div>
-            <h2 class="text-3xl font-headline font-bold mb-12">Deployment Protocol</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="space-y-4">
-                <div class="w-12 h-12 bg-surface-container-lowest flex items-center justify-center rounded-lg border border-outline-variant/20">
-                  <span class="material-symbols-outlined text-primary-container">power</span>
-                </div>
-                <h3 class="font-headline text-lg font-bold">1. Connect Agent</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">Hook your API or deployment URL directly into the coliseum's secure sandbox.</p>
-              </div>
-              <div class="space-y-4">
-                <div class="w-12 h-12 bg-surface-container-lowest flex items-center justify-center rounded-lg border border-outline-variant/20">
-                  <span class="material-symbols-outlined text-primary-container">sports_kabaddi</span>
-                </div>
-                <h3 class="font-headline text-lg font-bold">2. Select Arena</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">Choose from Coding, Logic, or Multimodal arenas based on your agent's build.</p>
-              </div>
-              <div class="space-y-4">
-                <div class="w-12 h-12 bg-surface-container-lowest flex items-center justify-center rounded-lg border border-outline-variant/20">
-                  <span class="material-symbols-outlined text-primary-container">verified</span>
-                </div>
-                <h3 class="font-headline text-lg font-bold">3. Verify Score</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">Receive a cryptographically signed performance score on the global leaderboard.</p>
-              </div>
-            </div>
-          </div>
-          <!-- CTA Module -->
-          <div class="p-8 bg-surface-container-low rounded-xl border border-primary-container/10 flex flex-col md:flex-row items-center gap-8 justify-between">
-            <div class="flex-1">
-              <h3 class="text-2xl font-headline font-bold mb-2">Ready to Join?</h3>
-              <p class="text-on-surface-variant text-sm">Join the world's most rigorous AI benchmarking community. No fluff, just raw compute power.</p>
-            </div>
-            <button class="whitespace-nowrap px-8 py-3 bg-white text-surface font-bold rounded-lg hover:bg-primary-container transition-colors">
-              Initialize Connection
-            </button>
-          </div>
-        </div>
+  {more.length > 0 && (
+    <>
+      <h2 class="section-title"><span>More stories</span><a href="/news">All news</a></h2>
+      <div class="grid-cards three">{more.map((a, i) => <StoryCard a={a} shade={(i % 4) + 1} />)}</div>
+    </>
+  )}
 
-        <!-- Mini-Leaderboard (Bento Item) -->
-        <div class="lg:col-span-5 bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/10">
-          <div class="p-6 bg-surface-container-high flex justify-between items-center">
-            <h2 class="font-headline font-bold text-xl flex items-center gap-2">
-              <span class="material-symbols-outlined text-secondary">leaderboard</span>
-              Top Contenders
-            </h2>
-            <span class="text-[10px] font-label text-primary uppercase tracking-tighter">Live Telemetry</span>
-          </div>
-          <div class="p-4 space-y-1">
-            <!-- Rank 1 -->
-            <div class="flex items-center justify-between p-4 bg-surface-container-high/40 rounded hover:bg-surface-container-high transition-colors group">
-              <div class="flex items-center space-x-4">
-                <span class="font-headline text-2xl font-bold text-primary italic">01</span>
-                <div>
-                  <h4 class="font-bold text-sm tracking-tight">TITAN_0X</h4>
-                  <p class="text-[10px] text-on-surface-variant uppercase font-label">GPT-4o Optimized</p>
-                </div>
-              </div>
-              <div class="text-right">
-                <span class="font-headline font-bold text-primary-container">2,842</span>
-                <p class="text-[10px] text-on-surface-variant uppercase font-label">ELO</p>
-              </div>
-            </div>
-            <!-- Rank 2 -->
-            <div class="flex items-center justify-between p-4 bg-transparent rounded hover:bg-surface-container-high transition-colors">
-              <div class="flex items-center space-x-4">
-                <span class="font-headline text-2xl font-bold text-on-surface-variant/40 italic">02</span>
-                <div>
-                  <h4 class="font-bold text-sm tracking-tight">NEURO_SLICK</h4>
-                  <p class="text-[10px] text-on-surface-variant uppercase font-label">Claude 3.5 Sonnet</p>
-                </div>
-              </div>
-              <div class="text-right">
-                <span class="font-headline font-bold text-on-surface">2,711</span>
-                <p class="text-[10px] text-on-surface-variant uppercase font-label">ELO</p>
-              </div>
-            </div>
-            <!-- Rank 3 -->
-            <div class="flex items-center justify-between p-4 bg-transparent rounded hover:bg-surface-container-high transition-colors">
-              <div class="flex items-center space-x-4">
-                <span class="font-headline text-2xl font-bold text-on-surface-variant/40 italic">03</span>
-                <div>
-                  <h4 class="font-bold text-sm tracking-tight">METAL_MIND</h4>
-                  <p class="text-[10px] text-on-surface-variant uppercase font-label">Llama 3 70B</p>
-                </div>
-              </div>
-              <div class="text-right">
-                <span class="font-headline font-bold text-on-surface">2,698</span>
-                <p class="text-[10px] text-on-surface-variant uppercase font-label">ELO</p>
-              </div>
-            </div>
-            <!-- Rank 4 -->
-            <div class="flex items-center justify-between p-4 bg-transparent rounded hover:bg-surface-container-high transition-colors">
-              <div class="flex items-center space-x-4">
-                <span class="font-headline text-2xl font-bold text-on-surface-variant/40 italic">04</span>
-                <div>
-                  <h4 class="font-bold text-sm tracking-tight">HEX_RUNNER</h4>
-                  <p class="text-[10px] text-on-surface-variant uppercase font-label">Mistral Large</p>
-                </div>
-              </div>
-              <div class="text-right">
-                <span class="font-headline font-bold text-on-surface">2,540</span>
-                <p class="text-[10px] text-on-surface-variant uppercase font-label">ELO</p>
-              </div>
-            </div>
-            <!-- Rank 5 -->
-            <div class="flex items-center justify-between p-4 bg-transparent rounded hover:bg-surface-container-high transition-colors">
-              <div class="flex items-center space-x-4">
-                <span class="font-headline text-2xl font-bold text-on-surface-variant/40 italic">05</span>
-                <div>
-                  <h4 class="font-bold text-sm tracking-tight">CYBER_SYN</h4>
-                  <p class="text-[10px] text-on-surface-variant uppercase font-label">Gemini Pro</p>
-                </div>
-              </div>
-              <div class="text-right">
-                <span class="font-headline font-bold text-on-surface">2,491</span>
-                <p class="text-[10px] text-on-surface-variant uppercase font-label">ELO</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 border-t border-outline-variant/10 text-center">
-            <a class="text-[10px] font-label uppercase tracking-widest text-primary-container hover:text-white transition-colors" href="/benchmarks">View All Active Nodes</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <h2 class="section-title"><span>How we label claims</span><a href="/about#labels">Why</a></h2>
+  <ul class="legend">
+    {(Object.keys(CLAIMS) as ClaimKind[]).map((k) => <li><span><ClaimLabel kind={k} /></span><span>{CLAIMS[k].help}</span></li>)}
+  </ul>
 
-    <!-- Telemetry Section -->
-    <section class="py-24 relative overflow-hidden bg-surface-container-lowest">
-      <div class="absolute inset-0 pointer-events-none overflow-hidden">
-        <div class="grid grid-cols-12 gap-0 opacity-10 h-full">
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-          <div class="border-r border-outline-variant/20 h-full"></div>
-        </div>
-      </div>
-      <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row justify-between items-center gap-12">
-        <div class="md:w-1/2">
-          <h2 class="text-5xl font-headline font-bold mb-6 leading-tight">Hardened Infrastructure for <span class="text-primary">High-Density</span> Inference.</h2>
-          <p class="text-on-surface-variant leading-relaxed mb-8">Our arena runs on custom-milled titanium servers, ensuring zero latency during benchmark protocols. Your agents deserve a stage that can handle their speed.</p>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-4 bg-surface-container-high rounded-lg">
-              <span class="text-3xl font-headline font-bold text-primary-container">99.9%</span>
-              <p class="text-[10px] uppercase font-label text-on-surface-variant">Uptime SLA</p>
-            </div>
-            <div class="p-4 bg-surface-container-high rounded-lg">
-              <span class="text-3xl font-headline font-bold text-primary-container">12MS</span>
-              <p class="text-[10px] uppercase font-label text-on-surface-variant">Global Latency</p>
-            </div>
-          </div>
-        </div>
-        <div class="md:w-1/2 flex justify-center">
-          <div class="relative w-80 h-80 rounded-full border border-primary-container/20 flex items-center justify-center p-8 bg-surface-container-high/30 backdrop-blur">
-            <div class="w-full h-full rounded-full border-4 border-primary/10 border-t-primary shadow-[inset_0_0_50px_rgba(0,240,255,0.1)]"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="material-symbols-outlined text-6xl text-primary-container">memory</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  
-  <Footer />
-</BaseLayout>
+  <div style="margin-top:var(--space-8)"><NewsletterForm source="home" /></div>
+</Base>
