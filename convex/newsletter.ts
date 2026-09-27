@@ -79,3 +79,13 @@ export const syncAll = internalAction({
     return ids.length;
   },
 });
+
+/** Deletes a subscriber row (deletion requests, test cleanup). Remove the Resend contact separately. */
+export const removeByEmail = internalMutation({
+  args: { email: v.string() },
+  handler: async (ctx, { email }) => {
+    const s = await ctx.db.query("subscribers").withIndex("by_email", (q) => q.eq("email", email.trim().toLowerCase())).unique();
+    if (s) await ctx.db.delete(s._id);
+    return !!s;
+  },
+});

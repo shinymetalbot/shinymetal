@@ -20,6 +20,17 @@ const http = httpRouter();
 const json = (status: number, body: unknown) =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
 
+/** Run a mutation and turn validator/handler errors into a readable 400 instead of Convex's opaque 500. */
+async function safe(fn: () => Promise<unknown>): Promise<Response | null> {
+  try {
+    await fn();
+    return null;
+  } catch (err: any) {
+    const msg = String(err?.message ?? err).replace(/^\[Request ID: [^\]]+\] /, "").slice(0, 600);
+    return json(400, { error: msg });
+  }
+}
+
 function authed(req: Request) {
   const token = process.env.PUBLISH_TOKEN;
   return !!token && req.headers.get("Authorization") === `Bearer ${token}`;
@@ -52,7 +63,8 @@ http.route({
       ...a,
       readMinutes: a.readMinutes ?? Math.max(2, Math.round(a.body.split(/\s+/).length / 230)),
     };
-    await ctx.runMutation(internal.articles.upsert, { slug: a.slug, article });
+    const fail = await safe(() => ctx.runMutation(internal.articles.upsert, { slug: a.slug, article }));
+    if (fail) return fail;
     return json(200, { ok: true, slug: a.slug, url: `https://shinymetal.bot/news/${a.slug}` });
   }),
 });
@@ -64,7 +76,8 @@ http.route({
     if (!authed(req)) return json(401, { error: "unauthorized" });
     const b = await req.json().catch(() => null);
     if (!b?.slug || !["draft", "published"].includes(b.status)) return json(400, { error: "slug + status required" });
-    await ctx.runMutation(internal.articles.setStatus, { slug: b.slug, status: b.status });
+    const fail = await safe(() => ctx.runMutation(internal.articles.setStatus, { slug: b.slug, status: b.status }));
+    if (fail) return fail;
     return json(200, { ok: true });
   }),
 });
@@ -77,7 +90,8 @@ http.route({
     const r = await req.json().catch(() => null);
     if (!r || !SLUG.test(r.slug ?? "") || !r.name || !r.maker || !r.status || !r.summary)
       return json(400, { error: "slug, name, maker, status, summary required" });
-    await ctx.runMutation(internal.robots.upsert, { slug: r.slug, robot: r });
+    const fail = await safe(() => ctx.runMutation(internal.robots.upsert, { slug: r.slug, robot: r }));
+    if (fail) return fail;
     return json(200, { ok: true, slug: r.slug });
   }),
 });
@@ -91,7 +105,8 @@ http.route({
     const key = p?.id ?? p?.key;
     if (!key || !p.company || !p.claim || !p.saidOn || !p.sourceUrl || !p.outcome)
       return json(400, { error: "id, company, claim, saidOn, sourceUrl, outcome required" });
-    await ctx.runMutation(internal.promises.upsert, { key, promise: p });
+    const fail = await safe(() => ctx.runMutation(internal.promises.upsert, { key, promise: p }));
+    if (fail) return fail;
     return json(200, { ok: true, key });
   }),
 });

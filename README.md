@@ -4,7 +4,7 @@ The owner's manual for the robot age: an independent publication about home and 
 Every claim is labeled **Shipped / Preorder / Promise / Rumor / Research**.
 
 - **Frontend**: Astro 7 (server output, `@astrojs/node` standalone) + Tailwind v4 loading the
-  approved *Foundry* design system (`src/styles/foundry/`, copied from `../new_design_system`).
+  approved *Foundry* design system (`src/styles/foundry/`, copied from `../docs/design-system`).
 - **Backend**: Convex (`convex/`). Tables: `robots`, `robotStatusEvents`, `promises`, `articles`,
   `subscribers`, `siteMedia`. Pages query Convex at request time through a 60 s in-process cache.
 - **Deploy**: Coolify app `udcqismdh8u2z8rg2bydj9a6` builds `Dockerfile` from `main`.
